@@ -94,6 +94,19 @@ export default function App() {
     setPhase("workspace");
   };
 
+  const restartFlow = () => {
+    const nextParams = new URLSearchParams(window.location.search);
+    nextParams.set("flow", "full");
+    nextParams.delete("phase");
+    nextParams.delete("processing");
+    window.history.pushState(
+      {},
+      "",
+      `${window.location.pathname}?${nextParams.toString()}${window.location.hash}`,
+    );
+    setPhase("upload");
+  };
+
   if (phase === "upload") {
     return <UploadScreen onStart={() => setPhase("processing")} />;
   }
@@ -118,6 +131,7 @@ export default function App() {
         duration={duration}
         memoryCount={memories.length}
         pipeline={session.pipeline}
+        onRestart={restartFlow}
       />
 
       <div className="appBody">

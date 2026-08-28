@@ -5,6 +5,7 @@ export interface HeaderStatusProps {
   title: string;
   duration: string;
   memoryCount: number;
+  onRestart: () => void;
   /** 실제 강의 세션에만 있다 */
   pipeline?: PipelineStats;
 }
@@ -14,17 +15,23 @@ export function HeaderStatus({
   title,
   duration,
   memoryCount,
+  onRestart,
   pipeline,
 }: HeaderStatusProps) {
   return (
     <header className={styles.header}>
       <div className={styles.identity}>
-        <span className={styles.logo}>
+        <button
+          type="button"
+          className={styles.logo}
+          aria-label="AnythingNote — 자료 입력 화면으로 돌아가기"
+          onClick={onRestart}
+        >
           <span className={styles.logoMark} aria-hidden="true">
             AN
           </span>
           AnythingNote
-        </span>
+        </button>
         <span className={styles.divider} aria-hidden="true" />
         <h1 className={styles.title} title={`Topic : ${title}`}>
           Topic : <span>{title}</span>

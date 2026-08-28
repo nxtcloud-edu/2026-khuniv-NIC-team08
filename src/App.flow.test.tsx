@@ -56,4 +56,16 @@ describe("업로드 → 처리 → 작업 공간 흐름", () => {
 
     expect(screen.getByRole("progressbar")).toBeInTheDocument();
   });
+
+  it("상단 AnythingNote를 누르면 자료 입력 화면으로 돌아간다", () => {
+    window.history.replaceState({}, "", "/?demo=example");
+    render(<App />);
+
+    fireEvent.click(
+      screen.getByRole("button", { name: "AnythingNote — 자료 입력 화면으로 돌아가기" }),
+    );
+
+    expect(screen.getByText("무엇이든, 기억으로 만들어 보세요")).toBeInTheDocument();
+    expect(window.location.search).toBe("?demo=example&flow=full");
+  });
 });
