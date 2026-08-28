@@ -78,6 +78,22 @@ export default function App() {
     if (segment) setCurrentPage(segment.pageNumber);
   };
 
+  const finishProcessing = () => {
+    if (fullFlow) {
+      const nextParams = new URLSearchParams(window.location.search);
+      nextParams.delete("flow");
+      nextParams.delete("phase");
+      nextParams.delete("processing");
+      const nextSearch = nextParams.toString();
+      window.history.replaceState(
+        {},
+        "",
+        `${window.location.pathname}${nextSearch ? `?${nextSearch}` : ""}${window.location.hash}`,
+      );
+    }
+    setPhase("workspace");
+  };
+
   if (phase === "upload") {
     return <UploadScreen onStart={() => setPhase("processing")} />;
   }
@@ -87,7 +103,7 @@ export default function App() {
       <ProcessingScreen
         session={session}
         durationMs={processingMs}
-        onDone={() => setPhase("workspace")}
+        onDone={finishProcessing}
       />
     );
   }

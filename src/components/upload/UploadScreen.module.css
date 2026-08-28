@@ -1,196 +1,317 @@
 .screen {
-  height: 100%;
+  min-height: 100%;
   display: grid;
   place-items: center;
-  padding: var(--space-6);
+  padding: 56px 24px 40px;
   overflow: auto;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(14, 124, 134, 0.07), transparent 34%),
+    var(--color-bg);
 }
 
-.card {
-  width: min(920px, 100%);
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
-  padding: var(--space-7) var(--space-6) var(--space-6);
-  text-align: center;
-}
-
-.head {
+.hero {
+  width: min(760px, 100%);
   display: grid;
-  gap: var(--space-3);
   justify-items: center;
-  margin-bottom: var(--space-6);
 }
 
-.logo {
+.brand {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-2);
-  font-size: var(--text-sm);
-  font-weight: 700;
-  color: var(--color-text-muted);
-  letter-spacing: 0.02em;
+  gap: 10px;
+  margin-bottom: 72px;
+  color: var(--color-text);
+  font-size: 20px;
+  font-weight: 750;
+  letter-spacing: -0.02em;
 }
 
-.logoMark {
-  display: grid;
-  place-items: center;
-  width: 24px;
-  height: 24px;
-  border-radius: var(--radius-sm);
+.brandMark {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
   background: var(--color-accent);
-  color: var(--color-text-inverse);
-  font-size: 11px;
-  font-weight: 700;
+  box-shadow: 0 6px 16px rgba(14, 124, 134, 0.2);
+}
+
+.brandMark::before,
+.brandMark span {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 14px;
+  top: 8px;
+  border: 2px solid white;
+  border-radius: 2px;
+}
+
+.brandMark::before {
+  left: 7px;
+  transform: rotate(-8deg);
+  opacity: 0.72;
+}
+
+.brandMark span {
+  right: 7px;
+  background: var(--color-accent);
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .title {
   margin: 0;
-  font-size: var(--text-2xl);
-  line-height: var(--leading-tight);
   color: var(--color-text);
+  font-size: clamp(28px, 4vw, 38px);
+  line-height: 1.25;
+  letter-spacing: -0.045em;
 }
 
 .subtitle {
-  margin: 0;
-  max-width: 46ch;
-  font-size: var(--text-md);
-  line-height: var(--leading-normal);
+  margin: 12px 0 0;
   color: var(--color-text-muted);
+  font-size: 15px;
 }
 
-.slots {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-4);
-  margin-bottom: var(--space-6);
-}
-
-.slot {
+.composer {
   position: relative;
-  border: 2px dashed var(--color-border-strong);
-  border-radius: var(--radius-md);
+  width: 100%;
+  padding: 14px 14px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  background: var(--color-surface);
+  box-shadow: 0 14px 40px rgba(22, 35, 60, 0.11), 0 2px 5px rgba(22, 35, 60, 0.04);
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.composer:focus-within,
+.composer[data-dragging="true"] {
+  border-color: var(--color-accent);
+  box-shadow: 0 14px 40px rgba(22, 35, 60, 0.11), 0 0 0 3px var(--color-accent-ring);
+}
+
+.files {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  padding: 0 2px 8px;
+  overflow-x: auto;
+}
+
+.file {
+  flex: 0 1 220px;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr) 24px;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 7px 7px 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 11px;
   background: var(--color-surface-muted);
-  transition: border-color 120ms ease, background-color 120ms ease;
 }
 
-.slot[data-over="true"],
-.slot:focus-within {
-  border-color: var(--color-accent);
+.fileIcon {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 28px;
+  border-radius: 7px;
   background: var(--color-accent-soft);
+  color: var(--color-accent-strong);
 }
 
-.slot[data-filled="true"] {
-  border-style: solid;
-  border-color: var(--color-accent);
-  background: var(--color-accent-soft);
+.fileIcon svg {
+  width: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linejoin: round;
 }
 
-/* 화면에서 감추되 키보드 초점과 라벨 연결은 살려둔다 */
+.fileName {
+  overflow: hidden;
+  color: var(--color-text);
+  font-size: 12px;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.remove {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--color-text-subtle);
+  font-size: 19px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.remove:hover {
+  background: var(--color-border);
+  color: var(--color-text);
+}
+
+.prompt {
+  display: block;
+  width: 100%;
+  min-height: 88px;
+  max-height: 220px;
+  padding: 7px 8px;
+  resize: vertical;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--color-text);
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.prompt::placeholder {
+  color: var(--color-text-subtle);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .input {
   position: absolute;
   width: 1px;
   height: 1px;
-  padding: 0;
   margin: -1px;
+  padding: 0;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
 }
 
-.slotBody {
-  display: grid;
-  gap: var(--space-1);
-  justify-items: center;
-  padding: var(--space-5) var(--space-3);
+.attach {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 38px;
+  padding: 0 13px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  font-size: 13px;
+  font-weight: 650;
   cursor: pointer;
-  min-height: 168px;
-  align-content: center;
 }
 
-.slotIcon {
-  font-size: 26px;
-  line-height: 1;
-  margin-bottom: var(--space-1);
-}
-
-.slot[data-filled="true"] .slotIcon {
-  color: var(--color-accent);
-  font-weight: 700;
-}
-
-.slotLabel {
-  font-size: var(--text-md);
-  font-weight: 600;
+.attach:hover {
+  border-color: var(--color-border-strong);
+  background: var(--color-surface-muted);
   color: var(--color-text);
 }
 
-.slotHint {
-  font-size: var(--text-xs);
+.attach svg {
+  width: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
+.hint {
   color: var(--color-text-subtle);
-  font-family: var(--font-mono);
+  font-size: 12px;
 }
 
-.slotAction {
-  font-size: var(--text-sm);
-  color: var(--color-text-muted);
-  margin-top: var(--space-2);
-}
-
-.fileName {
-  max-width: 100%;
-  font-size: var(--text-sm);
-  color: var(--color-accent-strong);
-  font-weight: 600;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.fileSize {
-  font-size: var(--text-xs);
-  color: var(--color-text-muted);
-  font-family: var(--font-mono);
-}
-
-.start {
-  width: min(320px, 100%);
-  padding: var(--space-3) var(--space-5);
+.send {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  padding: 0;
   border: 0;
-  border-radius: var(--radius-pill);
+  border-radius: 50%;
   background: var(--color-accent);
-  color: var(--color-text-inverse);
-  font-size: var(--text-md);
-  font-weight: 700;
+  color: white;
   cursor: pointer;
-  transition: background-color 120ms ease;
+  transition: transform 120ms ease, background-color 120ms ease;
 }
 
-.start:hover:not(:disabled) {
+.send:hover:not(:disabled) {
   background: var(--color-accent-strong);
+  transform: translateY(-1px);
 }
 
-.start:focus-visible {
-  outline: none;
-  box-shadow: var(--shadow-focus);
-}
-
-.start:disabled {
+.send:disabled {
   background: var(--color-border-strong);
   cursor: not-allowed;
 }
 
-.note {
-  margin: var(--space-3) 0 0;
-  font-size: var(--text-sm);
+.send svg {
+  width: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.dropOverlay {
+  position: absolute;
+  inset: 8px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  border: 2px dashed var(--color-accent);
+  border-radius: 18px;
+  background: rgba(226, 241, 242, 0.96);
+  color: var(--color-accent-strong);
+  font-size: 15px;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.footnote {
+  margin: 16px 0 0;
   color: var(--color-text-subtle);
+  font-size: 12px;
+}
+
+@media (max-width: 560px) {
+  .screen {
+    place-items: start center;
+    padding: 36px 16px 28px;
+  }
+
+  .brand {
+    margin-bottom: 64px;
+  }
+
+  .subtitle {
+    max-width: 34ch;
+  }
+
+  .hint {
+    display: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .slot,
-  .start {
+  .composer,
+  .send {
     transition: none;
   }
 }

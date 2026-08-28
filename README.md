@@ -88,12 +88,12 @@ cp .env.example .env
 | 명령어 | 용도 | 접속 주소 |
 | --- | --- | --- |
 | `npm run dev` | 기본 mock 세션으로 개발 서버 실행 | `http://localhost:5173/` |
-| `npm run dev:example` | 실제 강의 데이터로 개발 서버 실행 | `http://localhost:5173/?demo=example` |
-| `npm run dev:demo` | 업로드와 처리 화면부터 전체 흐름 실행 | `http://localhost:5173/?demo=example&flow=full` |
+| `npm run dev:example` | 자료 입력부터 실제 강의 데모까지 전체 흐름 실행 | `http://localhost:5173/?demo=example&flow=full` |
+| `npm run dev:demo` | `dev:example`과 같은 전체 시연 흐름 실행 | `http://localhost:5173/?demo=example&flow=full` |
 | `npm run build` | 타입 검사 후 프로덕션 빌드 생성 | - |
 | `npm run preview` | 생성된 프로덕션 빌드 미리보기 | 터미널에 표시된 주소 |
 
-`flow=full`을 사용하면 업로드와 처리 화면부터 시작합니다. 처리 화면은 **건너뛰기** 버튼이나 `Space`, `Enter`, `Esc` 키로 넘길 수 있습니다.
+`flow=full`을 사용하면 자료와 프롬프트 입력 화면부터 시작합니다. 자료를 하나 이상 첨부해 노트 만들기를 누르면 처리 화면을 거치고, 완료 후 주소가 `?demo=example`로 바뀌며 작업 공간이 열립니다. 처리 화면은 **바로 열기** 버튼이나 `Space`, `Enter`, `Esc` 키로 넘길 수 있습니다.
 
 | 쿼리 매개변수 | 값 예시 | 설명 |
 | --- | --- | --- |
@@ -128,16 +128,16 @@ npm run smoke
 npm run dev:example
 ```
 
-브라우저가 자동으로 열리지 않으면 `http://localhost:5173/?demo=example`에 접속합니다.
+브라우저가 자동으로 열리지 않으면 `http://localhost:5173/?demo=example&flow=full`에 접속합니다.
 
 #### 🎬 시연 순서
 
-1. 상단에서 세션 제목 `ML Basics · Model, Loss Function, Optimizer`, 강의 길이, Memory Unit 개수를 확인합니다.
-2. 오른쪽 발언 타임라인에서 항목을 선택하고 연결된 PDF 페이지와 영상 시각으로 이동하는지 확인합니다.
-3. 하단 질문창에 예시 질문을 입력하고 **검색**을 선택합니다.
-4. 답변 아래의 근거 카드에서 발언 원문, 시각, 페이지를 확인합니다.
-5. 근거 카드를 선택하고 PDF 페이지, 타임라인 강조, 영상 재생 위치가 같은 장면으로 이동하는지 확인합니다.
-6. 영상을 재생해 화면에 표시된 PDF 페이지가 영상 진행에 따라 바뀌는지 확인합니다.
+1. 시작 화면에서 강의 자료를 하나 이상 첨부하고 프롬프트를 입력한 뒤 노트 만들기를 선택합니다.
+2. 노트 생성 아이콘과 진행 바가 끝난 뒤 주소가 `?demo=example`로 바뀌는지 확인합니다.
+3. 상단에서 세션 제목 `ML Basics · Model, Loss Function, Optimizer`, 강의 길이, Memory Unit 개수를 확인합니다.
+4. 발언 타임라인에서 항목을 선택하고 연결된 PDF 페이지와 영상 시각으로 이동하는지 확인합니다.
+5. 질문창에 예시 질문을 입력하고 **검색**을 선택합니다.
+6. 답변 아래의 근거 카드를 선택하고 PDF 페이지, 타임라인 강조, 영상 재생 위치가 같은 장면으로 이동하는지 확인합니다.
 
 #### 💬 질문 예시
 

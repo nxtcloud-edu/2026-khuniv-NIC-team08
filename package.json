@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "dev:example": "vite --open \"/?demo=example\"",
+    "dev:example": "vite --open \"/?demo=example&flow=full\"",
     "dev:demo": "vite --open \"/?demo=example&flow=full\"",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
