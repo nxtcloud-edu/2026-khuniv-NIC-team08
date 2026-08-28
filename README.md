@@ -1,6 +1,6 @@
 <div align="center">
 
-# AnythingNote
+# 📝 AnythingNote
 
 ### 말과 화면을 함께 기억하는 멀티모달 AI 노트
 
@@ -11,7 +11,7 @@
 [![Vite](https://img.shields.io/badge/Vite-8.2-646CFF?logo=vite&logoColor=white)](https://vite.dev/)
 [![Vitest](https://img.shields.io/badge/Vitest-4.1-6E9F18?logo=vitest&logoColor=white)](https://vitest.dev/)
 
-[프로젝트 소개](#프로젝트-소개) · [핵심 기능](#핵심-기능) · [설치 및 실행](#설치-및-실행) · [테스트 실행 방법](#테스트-실행-방법) · [파이프라인](#파이프라인)
+[🎯 프로젝트 소개](#-프로젝트-소개) · [✨ 핵심 기능](#-핵심-기능) · [⚙️ 설치 및 실행](#️-설치-및-실행) · [🧪 테스트 실행 방법](#-테스트-실행-방법) · [🔄 파이프라인](#-파이프라인)
 
 **2026 경희대학교 Nexus Innovation Challenge · 08팀 AOM**
 
@@ -19,7 +19,7 @@
 
 ---
 
-## 프로젝트 소개
+## 🎯 프로젝트 소개
 
 강의를 들으며 기록한 음성과 문서가 서로 분리되어 있으면, 나중에 전사를 읽더라도 특정 발언이 어떤 슬라이드를 가리키는지 찾기 어렵습니다. AnythingNote는 강의 발언, 타임스탬프, 당시의 PDF 페이지, 중요도를 하나의 **Memory Unit**으로 연결해 이 문제를 해결합니다.
 
@@ -32,34 +32,34 @@
 | 문서 | 당시 화면에 표시된 PDF 페이지 | 12페이지 |
 | 중요도 | 시험·과제·핵심·일반 분류 | `exam` |
 
-## 핵심 기능
+## ✨ 핵심 기능
 
-### 발언과 문서 연결
+### 🔗 발언과 문서 연결
 
 강의 전사의 타임스탬프와 해당 시점의 PDF 페이지를 연결합니다. 텍스트만으로는 알기 어려운 시각적 맥락을 발언과 함께 보존합니다.
 
-### 근거 기반 질의응답
+### 💬 근거 기반 질의응답
 
 질문에 대한 답변과 함께 발언 시각, PDF 페이지, 발언 원문, 요약을 근거 카드로 제공합니다. 세션 안에서 관련 근거를 찾지 못하면 내용을 추측하지 않고 근거가 없음을 안내합니다.
 
-### 강의 장면 동기화
+### 🎬 강의 장면 동기화
 
 타임라인의 발언이나 답변의 근거 카드를 선택하면 문서 뷰어와 타임라인이 함께 이동합니다. 영상이 포함된 세션에서는 재생 위치도 해당 발언 시각으로 맞춰집니다.
 
-### OpenAI 및 로컬 검색 지원
+### 🔌 OpenAI 및 로컬 검색 지원
 
 OpenAI API 키를 연결하면 근거를 바탕으로 자연어 답변을 생성합니다. 키가 없거나 API 호출에 실패하면 결정적인 로컬 키워드 검색으로 자동 전환되므로 기본 검색 기능은 네트워크 없이도 사용할 수 있습니다.
 
-## 설치 및 실행
+## ⚙️ 설치 및 실행
 
-### 요구 사항
+### 📋 요구 사항
 
 - Node.js `^20.19.0` 또는 `>=22.12.0`
 - npm
 
 데이터를 다시 생성할 때만 FFmpeg가 추가로 필요합니다.
 
-### 설치
+### 📦 설치
 
 ```bash
 git clone https://github.com/nxtcloud-edu/2026-khuniv-NIC-team08.git
@@ -67,7 +67,7 @@ cd 2026-khuniv-NIC-team08
 npm install
 ```
 
-### OpenAI 연결
+### 🔑 OpenAI 연결
 
 API 키 없이도 로컬 검색으로 서비스를 사용할 수 있습니다. OpenAI 답변을 사용하려면 화면 상단의 **OpenAI 연결** 패널에 API 키를 입력하거나 로컬 개발용 `.env` 파일을 설정합니다.
 
@@ -83,7 +83,7 @@ cp .env.example .env
 | `VITE_OPENAI_MODEL` | 답변 생성에 사용할 모델 |
 | `VITE_OPENAI_BASE_URL` | OpenAI 호환 API 기본 URL |
 
-### 명령어 모음
+### 🧰 명령어 모음
 
 | 명령어 | 용도 | 접속 주소 |
 | --- | --- | --- |
@@ -102,9 +102,9 @@ cp .env.example .env
 
 실제 강의 데이터의 구성과 재생성 방법은 [data/EXAMPLE.md](data/EXAMPLE.md)에서 확인할 수 있습니다.
 
-## 테스트 실행 방법
+## 🧪 테스트 실행 방법
 
-### 자동 테스트
+### ✅ 자동 테스트
 
 | 명령어 | 검증 범위 |
 | --- | --- |
@@ -122,7 +122,7 @@ npm run smoke
 
 테스트 환경에서는 OpenAI 설정을 비워 두므로 실제 API를 호출하지 않고 로컬 검색 경로를 검증합니다.
 
-### 실제 강의 데이터로 시연
+### 🎓 실제 강의 데이터로 시연
 
 ```bash
 npm run dev:example
@@ -130,7 +130,7 @@ npm run dev:example
 
 브라우저가 자동으로 열리지 않으면 `http://localhost:5173/?demo=example`에 접속합니다.
 
-#### 시연 순서
+#### 🎬 시연 순서
 
 1. 상단에서 세션 제목 `ML Basics · Model, Loss Function, Optimizer`, 강의 길이, Memory Unit 개수를 확인합니다.
 2. 오른쪽 발언 타임라인에서 항목을 선택하고 연결된 PDF 페이지와 영상 시각으로 이동하는지 확인합니다.
@@ -139,7 +139,7 @@ npm run dev:example
 5. 근거 카드를 선택하고 PDF 페이지, 타임라인 강조, 영상 재생 위치가 같은 장면으로 이동하는지 확인합니다.
 6. 영상을 재생해 화면에 표시된 PDF 페이지가 영상 진행에 따라 바뀌는지 확인합니다.
 
-#### 질문 예시
+#### 💬 질문 예시
 
 | 질문 | 확인할 근거 |
 | --- | --- |
@@ -150,7 +150,7 @@ npm run dev:example
 
 업로드부터 작업 공간까지의 전체 흐름을 검증하려면 `npm run dev:demo`를 사용하고 같은 순서로 확인합니다.
 
-## 파이프라인
+## 🔄 파이프라인
 
 ```mermaid
 flowchart LR
@@ -183,7 +183,7 @@ flowchart LR
     SESSION --> QUESTION
 ```
 
-### 데이터 준비
+### 1️⃣ 데이터 준비
 
 1. PDF에서 68개 페이지 이미지를 추출합니다.
 2. 공개용 강의 영상을 1초 간격으로 분석하고 PDF 페이지와 정규화 상관도로 비교합니다.
@@ -201,11 +201,11 @@ npm run session:build -- --skip-llm
 
 `--skip-llm` 옵션은 외부 API 없이 규칙 기반 요약을 사용합니다. 공개용 영상을 다시 만들려면 `npm run example:prepare`를 실행합니다.
 
-### 질의응답과 장면 복원
+### 2️⃣ 질의응답과 장면 복원
 
 OpenAI 경로는 세션의 Memory Unit만 컨텍스트로 사용하고 응답의 `memoryId`가 실제 데이터에 있는지 검증합니다. 로컬 경로는 질문과 발언·요약·키워드·중요도를 비교해 가장 관련성 높은 Memory Unit을 선택합니다. 선택된 Memory Unit의 `pageNumber`, `id`, `timestamp`는 각각 문서 페이지, 타임라인 항목, 영상 재생 위치를 동기화합니다.
 
-### Memory Unit 데이터 구조
+### 🧩 Memory Unit 데이터 구조
 
 ```ts
 interface MemoryUnit {
@@ -223,6 +223,6 @@ interface MemoryUnit {
 
 <div align="center">
 
-**AnythingNote — 들은 말과 본 장면을 하나의 기억으로**
+**AnythingNote — 들은 말과 본 장면을 하나의 기억으로 📝**
 
 </div>
