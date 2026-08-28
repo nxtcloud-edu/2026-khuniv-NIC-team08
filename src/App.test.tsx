@@ -1,0 +1,105 @@
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { act, fireEvent, render, screen } from "@testing-library/react";
+
+import App from "./App";
+import { demoSession } from "./data/demoSession";
+
+const EVIDENCE_CARD = /선택하면 해당 장면으로 이동합니다/;
+
+function ask(question: string) {
+  fireEvent.change(screen.getByLabelText("질문"), {
+    target: { value: question },
+  });
+  fireEvent.click(screen.getByRole("button", { name: "검색" }));
+  act(() => {
+    vi.runAllTimers();
+  });
+}
+
+describe("App 통합 흐름", () => {
+  beforeEach(() => {
+    vi.useFakeTimers();
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
+  it("최초 실행 시 데모 세션과 첫 페이지를 보여준다", () => {
+    render(<App />);
+
+    expect(screen.getByText(demoSession.title)).toBeInTheDocument();
+    expect(screen.getByText(`${demoSession.memories.length}개`)).toBeInTheDocument();
+    expect(screen.getByAltText(/PDF 10페이지/)).toBeInTheDocument();
+    // 아직 선택된 발언이 없으므로 근거 강조도 없다
+    expect(screen.queryByText("근거 페이지")).not.toBeInTheDocument();
+    expect(screen.queryByRole("button", { current: true })).not.toBeInTheDocument();
+  });
+
+  it("시험 질문 → 근거 카드 선택 → 12페이지와 00:18:32 발언이 동시에 강조된다", () => {
+    render(<App />);
+
+    ask("시험에 나온다고 한 부분이 뭐야?");
+
+    const evidence = screen.getByRole("button", { name: EVIDENCE_CARD });
+    expect(evidence).toHaveTextContent("18:32 · PDF 12페이지");
+
+    fireEvent.click(evidence);
+
+    expect(screen.getByAltText(/PDF 12페이지/)).toBeInTheDocument();
+    expect(screen.getByText("근거 페이지")).toBeInTheDocument();
+
+    const selected = screen.getByRole("button", { current: true });
+    expect(selected).toHaveTextContent("00:18:32");
+    expect(selected).toHaveTextContent("이 부분은 시험에 나옵니다.");
+  });
+
+  it("타임라인에서 발언을 고르면 해당 페이지로 함께 이동한다", () => {
+    render(<App />);
+
+    fireEvent.click(screen.getByRole("button", { name: /00:23:10/ }));
+
+    expect(screen.getByAltText(/PDF 15페이지/)).toBeInTheDocument();
+    expect(screen.getByText("근거 페이지")).toBeInTheDocument();
+  });
+
+  it("문서 이동 버튼은 현재 페이지만 바꾸고 선택된 발언은 유지한다", () => {
+    render(<App />);
+
+    fireEvent.click(screen.getByRole("button", { name: /00:18:32/ }));
+    expect(screen.getByAltText(/PDF 12페이지/)).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole("button", { name: "다음 페이지" }));
+
+    expect(screen.getByAltText(/PDF 15페이지/)).toBeInTheDocument();
+    // 선택된 발언은 그대로, 다른 페이지이므로 근거 강조만 사라진다
+    expect(screen.getByRole("button", { current: true })).toHaveTextContent("00:18:32");
+    expect(screen.queryByText("근거 페이지")).not.toBeInTheDocument();
+  });
+
+  it("관련 없는 질문은 근거 없음을 알리고 기존 화면 상태를 유지한다", () => {
+    render(<App />);
+
+    fireEvent.click(screen.getByRole("button", { name: /00:23:10/ }));
+    ask("오늘 점심 메뉴가 뭐야?");
+
+    expect(screen.getByText("관련 근거를 찾지 못했습니다.")).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: EVIDENCE_CARD })).not.toBeInTheDocument();
+    expect(screen.getByAltText(/PDF 15페이지/)).toBeInTheDocument();
+    expect(screen.getByRole("button", { current: true })).toHaveTextContent("00:23:10");
+  });
+
+  it("과제·핵심 질문도 각각의 Memory Unit을 근거로 돌려준다", () => {
+    render(<App />);
+
+    ask("과제는 언제까지야?");
+    expect(screen.getByRole("button", { name: EVIDENCE_CARD })).toHaveTextContent(
+      "23:10 · PDF 15페이지",
+    );
+
+    ask("핵심 개념이 뭐야?");
+    expect(screen.getByRole("button", { name: EVIDENCE_CARD })).toHaveTextContent(
+      "12:05 · PDF 10페이지",
+    );
+  });
+});
