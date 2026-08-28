@@ -4,3 +4,4 @@ dist
 *.local
 PLAN.md
 ROLE.md
+.review-*
