@@ -1,6 +1,10 @@
 /* 1440×900 녹화 기준 레이아웃. 세로·가로 스크롤이 생기지 않도록 고정한다. */
 
 .appShell {
+  --text-xs: 11px;
+  --text-sm: 13px;
+  --text-md: 13px;
+
   height: 100%;
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
@@ -10,18 +14,18 @@
 .appBody {
   min-height: 0;
   display: grid;
-  /* 위: 문서·타임라인, 아래: 질문과 답변(대화가 쌓여도 높이가 고정됨) */
-  grid-template-rows: minmax(300px, 1fr) minmax(200px, 260px);
+  /* 왼쪽: 강의 자료, 오른쪽: 질문과 답변 */
+  grid-template-columns: minmax(0, 17fr) minmax(340px, 8fr);
   gap: var(--space-4);
   padding: var(--space-4);
 }
 
-/* 문서 60 : 타임라인 40 */
+/* 위: 영상과 PDF, 아래: 전체 너비 타임라인 */
 .appWorkspace {
   min-height: 0;
   display: grid;
-  grid-template-columns: 6fr 4fr;
-  gap: var(--space-4);
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
 }
 
 .appWorkspace > * {
@@ -29,8 +33,32 @@
   min-height: 0;
 }
 
-.appSideColumn {
+.appPrimaryRow {
+  min-width: 0;
+  min-height: 0;
   display: grid;
-  grid-template-rows: auto minmax(0, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--space-3);
+}
+
+.appPrimaryRow > * {
+  min-width: 0;
+  min-height: 0;
+}
+
+.appPrimaryRowWithoutVideo {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (max-width: 960px) {
+  .appShell {
+    height: auto;
+    min-height: 100%;
+    overflow: visible;
+  }
+
+  .appBody {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(720px, 100vh) minmax(520px, 70vh);
+  }
 }

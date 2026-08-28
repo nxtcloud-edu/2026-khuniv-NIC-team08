@@ -14,11 +14,19 @@
 .log {
   flex: 1;
   min-height: 0;
+  min-width: 0;
   overflow-y: auto;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
   padding-right: var(--space-1);
+}
+
+/* 대화가 길어져도 flex 항목을 압축하지 않고 로그 영역만 스크롤한다. */
+.log > * {
+  flex: 0 0 auto;
+  min-width: 0;
 }
 
 .placeholder {
@@ -39,40 +47,48 @@
   color: var(--color-text-inverse);
   font-size: var(--text-md);
   line-height: var(--leading-normal);
+  overflow-wrap: anywhere;
 }
 
 .form {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
+  display: block;
 }
 
-.label {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--color-text);
+.composer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+}
+
+.composer:focus-within {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-focus);
 }
 
 .input {
   flex: 1;
+  min-width: 0;
   padding: var(--space-3) var(--space-4);
   font-family: inherit;
-  font-size: 16px;
+  font-size: var(--text-sm);
   color: var(--color-text);
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+  background: transparent;
+  border: 0;
 }
 
 .input:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 1px;
+  outline: 0;
 }
 
 .submit {
-  padding: var(--space-3) var(--space-5);
+  flex: none;
+  padding: var(--space-2) var(--space-4);
   font-family: inherit;
-  font-size: 15px;
+  font-size: var(--text-sm);
   font-weight: 700;
   color: #ffffff;
   background: var(--color-accent);
@@ -87,13 +103,13 @@
 }
 
 .submit:focus-visible {
-  outline: 2px solid var(--color-text);
-  outline-offset: 2px;
+  outline: 2px solid var(--color-text-inverse);
+  outline-offset: -4px;
 }
 
 .note {
   margin: 0;
-  font-size: 12px;
+  font-size: var(--text-xs);
   color: var(--color-text-muted);
 }
 
@@ -109,7 +125,7 @@
   align-items: center;
   gap: var(--space-2);
   margin: 0;
-  font-size: 15px;
+  font-size: var(--text-sm);
   color: var(--color-text-muted);
 }
 
@@ -136,21 +152,45 @@
 
 .answer {
   margin: 0;
-  font-size: 17px;
+  font-size: var(--text-sm);
   line-height: 1.6;
   color: var(--color-text);
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.streamCursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 3px;
+  vertical-align: -0.12em;
+  background: var(--color-accent);
+  animation: blink 0.8s steps(1, end) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .streamCursor {
+    animation: none;
+  }
 }
 
 .evidenceTitle {
   margin: 0;
-  font-size: 13px;
+  font-size: var(--text-sm);
   font-weight: 700;
-  color: var(--color-text-muted);
+  color: var(--color-evidence);
 }
 
 .empty {
   margin: 0;
-  font-size: 16px;
+  font-size: var(--text-sm);
   color: var(--color-text-muted);
 }
 

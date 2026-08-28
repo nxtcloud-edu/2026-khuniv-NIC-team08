@@ -4,6 +4,13 @@ import { QuestionPanel } from "./QuestionPanel";
 import { demoSession } from "../../data/demoSession";
 
 const memories = demoSession.memories;
+const encoder = new TextEncoder();
+
+function streamDelta(content: string): Uint8Array {
+  return encoder.encode(
+    `data: ${JSON.stringify({ choices: [{ delta: { content } }] })}\n\n`,
+  );
+}
 
 function ask(question: string) {
   fireEvent.change(screen.getByLabelText("질문"), {
@@ -133,25 +140,34 @@ describe("QuestionPanel · OpenAI 연결", () => {
     ask(question);
   }
 
-  it("키를 넣으면 GPT 답변과 GPT가 고른 근거를 보여준다", async () => {
+  it("GPT 답변은 스트리밍하고 근거는 완료 후 보여준다", async () => {
+    let controller!: ReadableStreamDefaultController<Uint8Array>;
     vi.spyOn(globalThis, "fetch").mockResolvedValue({
       ok: true,
-      json: async () => ({
-        choices: [
-          {
-            message: {
-              content: JSON.stringify({
-                answer: "18:32에 PDF 12페이지를 보며 시험 범위를 언급했습니다.",
-                memoryId: "memory-003",
-              }),
-            },
-          },
-        ],
+      body: new ReadableStream<Uint8Array>({
+        start(streamController) {
+          controller = streamController;
+        },
       }),
     } as Response);
 
     render(<QuestionPanel memories={memories} onSelectEvidence={() => {}} />);
     connectAndAsk("시험 얘기 정리해줘");
+
+    await act(async () => {
+      controller.enqueue(streamDelta('{"answer":"18:32에 PDF 12페이지를 보며 '));
+    });
+
+    expect(screen.getByText(/18:32에 PDF 12페이지를 보며/)).toBeInTheDocument();
+    expect(screen.queryByText("18:32 · PDF 12페이지")).not.toBeInTheDocument();
+
+    await act(async () => {
+      controller.enqueue(
+        streamDelta('시험 범위를 언급했습니다.","memoryId":"memory-003"}'),
+      );
+      controller.enqueue(encoder.encode("data: [DONE]\n\n"));
+      controller.close();
+    });
 
     expect(await screen.findByText(/시험 범위를 언급했습니다/)).toBeInTheDocument();
     expect(screen.getByText("18:32 · PDF 12페이지")).toBeInTheDocument();

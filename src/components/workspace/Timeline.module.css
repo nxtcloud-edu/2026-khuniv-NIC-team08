@@ -69,13 +69,13 @@
 
 /* 선택된 발언: 문서 강조·근거 카드와 같은 청록 강조 */
 .itemSelected {
-  background: var(--color-accent-soft);
-  border-color: var(--color-accent);
-  border-left-color: var(--color-accent);
+  background: var(--color-evidence-soft);
+  border-color: var(--color-evidence);
+  border-left-color: var(--color-evidence);
 }
 
 .itemSelected:hover {
-  background: var(--color-accent-soft);
+  background: var(--color-evidence-soft);
 }
 
 /* 재생 중 지나가는 발언: 선택 강조보다 약하게, 왼쪽 띠로만 표시 */

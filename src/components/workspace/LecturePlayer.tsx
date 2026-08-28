@@ -30,7 +30,7 @@ export function LecturePlayer({ src, seek, onTimeUpdate, onPlayingChange }: Lect
   return (
     <section className={styles.player} aria-label="강의 영상">
       <div className={styles.header}>
-        <h2 className={styles.title}>실제 강의 영상</h2>
+        <h2 className={styles.title}>Video</h2>
         <span className={styles.hint}>재생하면 문서와 타임라인이 따라 이동</span>
       </div>
       <video

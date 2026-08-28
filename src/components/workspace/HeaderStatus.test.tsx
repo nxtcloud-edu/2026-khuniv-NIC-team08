@@ -15,7 +15,7 @@ describe("HeaderStatus", () => {
 
     expect(
       screen.getByRole("heading", {
-        name: "운영체제 5주차 · 프로세스와 컨텍스트 스위치",
+        name: "Topic : 운영체제 5주차 · 프로세스와 컨텍스트 스위치",
       }),
     ).toBeInTheDocument();
     expect(screen.getByText("00:45:00")).toBeInTheDocument();

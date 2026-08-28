@@ -3,7 +3,9 @@ import { demoSession } from "../data/demoSession";
 import {
   API_KEY_STORAGE_KEY,
   askGpt,
+  askGptStream,
   parseGptAnswer,
+  parsePartialGptAnswer,
   readStoredApiKey,
   resolveConfig,
   writeStoredApiKey,
@@ -88,6 +90,15 @@ describe("parseGptAnswer", () => {
   });
 });
 
+describe("parsePartialGptAnswer", () => {
+  it("완성 전 JSON에서도 answer 문자열만 복원한다", () => {
+    expect(parsePartialGptAnswer('{"answer":"첫 문단\\n두 번째')).toBe(
+      "첫 문단\n두 번째",
+    );
+    expect(parsePartialGptAnswer('{"answer":"설명 중\\')).toBe("설명 중");
+  });
+});
+
 describe("askGpt", () => {
   const config = { apiKey: "sk-test", model: "gpt-4o-mini", baseUrl: "https://api.openai.com/v1" };
 
@@ -105,6 +116,8 @@ describe("askGpt", () => {
 
     const body = JSON.parse(init?.body as string);
     expect(body.model).toBe("gpt-4o-mini");
+    expect(body.messages[0].content).toContain("개념의 정의");
+    expect(body.messages[0].content).not.toContain("2~3문장 이내");
     expect(body.messages[1].content).toContain(memories[0].id);
     expect(body.messages[1].content).toContain("시험 범위가 뭐야?");
   });
@@ -117,5 +130,43 @@ describe("askGpt", () => {
     } as Response);
 
     await expect(askGpt("질문", memories, config)).rejects.toThrow(/401/);
+  });
+
+  it("스트리밍 중에는 답변을 갱신하고 완료 후 근거를 반환한다", async () => {
+    const encoder = new TextEncoder();
+    const deltas = [
+      '{"answer":"충분한 ',
+      `설명입니다.","memoryId":"${memories[0].id}"}`,
+    ];
+    const body = new ReadableStream<Uint8Array>({
+      start(controller) {
+        for (const content of deltas) {
+          controller.enqueue(
+            encoder.encode(
+              `data: ${JSON.stringify({ choices: [{ delta: { content } }] })}\n\n`,
+            ),
+          );
+        }
+        controller.enqueue(encoder.encode("data: [DONE]\n\n"));
+        controller.close();
+      },
+    });
+    const fetchMock = vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      body,
+    } as Response);
+    const onAnswerUpdate = vi.fn();
+
+    const result = await askGptStream(
+      "자세히 설명해줘",
+      memories,
+      config,
+      onAnswerUpdate,
+    );
+
+    expect(onAnswerUpdate).toHaveBeenLastCalledWith("충분한 설명입니다.");
+    expect(result).toEqual({ answer: "충분한 설명입니다.", memory: memories[0] });
+    const bodyPayload = JSON.parse(fetchMock.mock.calls[0][1]?.body as string);
+    expect(bodyPayload.stream).toBe(true);
   });
 });

@@ -56,7 +56,7 @@ export function Timeline({
   return (
     <section className={styles.timeline} aria-label="발언 타임라인">
       <div className={styles.head}>
-        <h2 className={styles.headTitle}>발언 타임라인</h2>
+        <h2 className={styles.headTitle}>Timeline</h2>
         <span className={styles.headHint}>발언을 선택하면 해당 페이지로 이동</span>
       </div>
 

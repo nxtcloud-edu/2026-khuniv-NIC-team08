@@ -122,34 +122,28 @@ export default function App() {
 
       <div className="appBody">
         <div className="appWorkspace">
-          <DocumentViewer
-            pages={pages}
-            currentPage={currentPage}
-            highlightedPage={selectedMemory?.pageNumber}
-            onPageChange={handlePageChange}
-          />
-          {videoPath ? (
-            <div className="appSideColumn">
+          <div className={`appPrimaryRow ${videoPath ? "" : "appPrimaryRowWithoutVideo"}`}>
+            {videoPath ? (
               <LecturePlayer
                 src={videoPath}
                 seek={seekRequest}
                 onTimeUpdate={handleTimeUpdate}
                 onPlayingChange={handlePlayingChange}
               />
-              <Timeline
-                memories={memories}
-                selectedMemoryId={selectedMemory?.id}
-                playheadMemoryId={playheadMemoryId}
-                onSelect={selectMemory}
-              />
-            </div>
-          ) : (
-            <Timeline
-              memories={memories}
-              selectedMemoryId={selectedMemory?.id}
-              onSelect={selectMemory}
+            ) : null}
+            <DocumentViewer
+              pages={pages}
+              currentPage={currentPage}
+              highlightedPage={selectedMemory?.pageNumber}
+              onPageChange={handlePageChange}
             />
-          )}
+          </div>
+          <Timeline
+            memories={memories}
+            selectedMemoryId={selectedMemory?.id}
+            playheadMemoryId={playheadMemoryId}
+            onSelect={selectMemory}
+          />
         </div>
 
         <QuestionPanel memories={memories} onSelectEvidence={selectMemory} />

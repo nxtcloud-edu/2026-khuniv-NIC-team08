@@ -34,6 +34,11 @@
   --color-accent-soft: #e2f1f2;
   --color-accent-ring: rgba(14, 124, 134, 0.35);
 
+  /* 질문의 근거로 선택된 장면 강조 */
+  --color-evidence: #c43d3d;
+  --color-evidence-soft: #fdeaea;
+  --color-evidence-ring: rgba(196, 61, 61, 0.3);
+
   /* 중요도 배지 */
   --color-exam: #d96a14;
   --color-exam-soft: #fdeddc;

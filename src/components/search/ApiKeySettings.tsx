@@ -13,10 +13,11 @@ export function ApiKeySettings({ apiKey, onChange }: ApiKeySettingsProps) {
   return (
     <details className={styles.box}>
       <summary className={styles.summary}>
-        <span className={styles.summaryLabel}>OpenAI 연결</span>
         <span className={styles.state} data-connected={connected}>
-          {connected ? `연결됨 · ${envModel()}` : "미연결 · 로컬 검색"}
+          <span className={styles.dot} aria-hidden="true" />
+          {connected ? "연결됨" : "연결 안 됨"}
         </span>
+        <span className={styles.model}>Model : {envModel()}</span>
       </summary>
 
       <div className={styles.body}>

@@ -2,9 +2,8 @@ import { useEffect, useRef, useState, type FormEvent } from "react";
 import type { MemoryUnit } from "../../types/session";
 import { buildAnswer, searchMemory } from "../../lib/search";
 import {
-  askGpt,
+  askGptStream,
   envApiKey,
-  envModel,
   readStoredApiKey,
   resolveConfig,
   writeStoredApiKey,
@@ -29,7 +28,7 @@ interface Outcome {
 
 type ChatEntry =
   | { kind: "question"; id: string; text: string }
-  | { kind: "answer"; id: string; outcome: Outcome };
+  | { kind: "answer"; id: string; outcome: Outcome; streaming?: boolean };
 
 /** 로컬 키워드 검색 결과 (OpenAI 키가 없거나 호출이 실패했을 때의 경로) */
 function localOutcome(question: string, memories: MemoryUnit[]): Outcome {
@@ -55,6 +54,15 @@ export function QuestionPanel({ memories, onSelectEvidence }: QuestionPanelProps
   // 늦게 도착한 이전 요청의 응답을 버리기 위한 순번
   const requestIdRef = useRef(0);
   const logRef = useRef<HTMLDivElement>(null);
+  const followsLogRef = useRef(true);
+
+  const streamingAnswerLength = entries.reduce(
+    (total, entry) =>
+      entry.kind === "answer" && entry.streaming
+        ? total + (entry.outcome.answer?.length ?? 0)
+        : total,
+    0,
+  );
 
   useEffect(() => {
     return () => {
@@ -62,10 +70,18 @@ export function QuestionPanel({ memories, onSelectEvidence }: QuestionPanelProps
     };
   }, []);
 
-  // 새 말풍선이 쌓이면 항상 마지막이 보이게 한다
+  // 사용자가 최신 대화를 보고 있을 때만 스트리밍을 따라 내려간다.
   useEffect(() => {
-    if (logRef.current) logRef.current.scrollTop = logRef.current.scrollHeight;
-  }, [entries.length, pending]);
+    if (logRef.current && followsLogRef.current) {
+      logRef.current.scrollTop = logRef.current.scrollHeight;
+    }
+  }, [entries.length, pending, streamingAnswerLength]);
+
+  const handleLogScroll = () => {
+    if (!logRef.current) return;
+    const { scrollHeight, scrollTop, clientHeight } = logRef.current;
+    followsLogRef.current = scrollHeight - scrollTop - clientHeight < 80;
+  };
 
   const updateApiKey = (nextKey: string) => {
     setApiKey(nextKey);
@@ -75,6 +91,29 @@ export function QuestionPanel({ memories, onSelectEvidence }: QuestionPanelProps
   const answer = (requestId: number, outcome: Outcome) => {
     if (requestIdRef.current !== requestId) return;
     setEntries((current) => [...current, { kind: "answer", id: `a-${requestId}`, outcome }]);
+    setPending(false);
+  };
+
+  const updateStreamingAnswer = (requestId: number, text: string) => {
+    if (requestIdRef.current !== requestId) return;
+    setEntries((current) =>
+      current.map((entry) =>
+        entry.id === `a-${requestId}` && entry.kind === "answer"
+          ? { ...entry, outcome: { ...entry.outcome, answer: text } }
+          : entry,
+      ),
+    );
+  };
+
+  const finishStreamingAnswer = (requestId: number, outcome: Outcome) => {
+    if (requestIdRef.current !== requestId) return;
+    setEntries((current) =>
+      current.map((entry) =>
+        entry.id === `a-${requestId}` && entry.kind === "answer"
+          ? { ...entry, outcome, streaming: false }
+          : entry,
+      ),
+    );
     setPending(false);
   };
 
@@ -97,10 +136,22 @@ export function QuestionPanel({ memories, onSelectEvidence }: QuestionPanelProps
       return;
     }
 
-    askGpt(trimmed, memories, config)
-      .then((gpt) => answer(requestId, { memory: gpt.memory, answer: gpt.answer }))
+    setEntries((current) => [
+      ...current,
+      {
+        kind: "answer",
+        id: `a-${requestId}`,
+        outcome: { memory: null, answer: "" },
+        streaming: true,
+      },
+    ]);
+
+    askGptStream(trimmed, memories, config, (text) => updateStreamingAnswer(requestId, text))
+      .then((gpt) =>
+        finishStreamingAnswer(requestId, { memory: gpt.memory, answer: gpt.answer }),
+      )
       .catch((error: unknown) =>
-        answer(requestId, {
+        finishStreamingAnswer(requestId, {
           ...localOutcome(trimmed, memories),
           error: error instanceof Error ? error.message : "OpenAI 호출에 실패했습니다.",
         }),
@@ -113,10 +164,16 @@ export function QuestionPanel({ memories, onSelectEvidence }: QuestionPanelProps
     <section className={styles.panel} aria-label="질문과 답변">
       <ApiKeySettings apiKey={apiKey} onChange={updateApiKey} />
 
-      <div className={styles.log} ref={logRef} role="log" aria-live="polite">
+      <div
+        className={styles.log}
+        ref={logRef}
+        role="log"
+        aria-live="polite"
+        onScroll={handleLogScroll}
+      >
         {entries.length === 0 && !pending ? (
           <p className={styles.placeholder}>
-            강의 내용을 물어보면 답변과 함께 그 말을 한 장면을 찾아줍니다.
+            강의 내용 질문 시 답변과 timestamp를 찾아줍니다.
           </p>
         ) : null}
 
@@ -133,10 +190,20 @@ export function QuestionPanel({ memories, onSelectEvidence }: QuestionPanelProps
                 </p>
               )}
 
-              {entry.outcome.answer === null ? (
+              {entry.streaming && !entry.outcome.answer ? (
+                <p className={styles.searching}>
+                  <span className={styles.spinner} aria-hidden="true" />
+                  GPT 답변을 생성하는 중...
+                </p>
+              ) : entry.outcome.answer === null ? (
                 <p className={styles.empty}>{EMPTY_MESSAGE}</p>
               ) : (
-                <p className={styles.answer}>{entry.outcome.answer}</p>
+                <p className={styles.answer}>
+                  {entry.outcome.answer}
+                  {entry.streaming ? (
+                    <span className={styles.streamCursor} aria-hidden="true" />
+                  ) : null}
+                </p>
               )}
 
               {entry.outcome.memory && (
@@ -149,7 +216,7 @@ export function QuestionPanel({ memories, onSelectEvidence }: QuestionPanelProps
           ),
         )}
 
-        {pending && (
+        {pending && !connected && (
           <p className={styles.searching}>
             <span className={styles.spinner} aria-hidden="true" />
             {connected ? "OpenAI에 근거와 함께 묻는 중..." : "로컬 데이터에서 근거를 찾는 중..."}
@@ -158,26 +225,26 @@ export function QuestionPanel({ memories, onSelectEvidence }: QuestionPanelProps
       </div>
 
       <form className={styles.form} onSubmit={handleSubmit}>
-        <label className={styles.label} htmlFor="question-input">
-          질문
-        </label>
-        <input
-          id="question-input"
-          className={styles.input}
-          type="text"
-          autoComplete="off"
-          placeholder="예) 시험에 나온다고 한 부분이 뭐야?"
-          value={question}
-          onChange={(event) => setQuestion(event.target.value)}
-        />
-        <button type="submit" className={styles.submit} disabled={pending}>
-          검색
-        </button>
+        <div className={styles.composer}>
+          <input
+            id="question-input"
+            className={styles.input}
+            type="text"
+            autoComplete="off"
+            aria-label="질문"
+            placeholder="예) 시험에 나온다고 한 부분이 뭐야?"
+            value={question}
+            onChange={(event) => setQuestion(event.target.value)}
+          />
+          <button type="submit" className={styles.submit} disabled={pending}>
+            검색
+          </button>
+        </div>
       </form>
 
       <p className={styles.note}>
         {connected
-          ? `OpenAI ${envModel()} · Memory Unit을 근거로 답변 생성`
+          ? "Memory Unit을 근거로 답변을 생성합니다."
           : "Local demo data · 사전 처리된 세션에서 로컬 검색"}
       </p>
     </section>

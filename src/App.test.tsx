@@ -111,7 +111,9 @@ describe("App 통합 흐름", () => {
     render(<App />);
 
     expect(
-      screen.getByText("ML Basics · Model, Loss Function, Optimizer"),
+      screen.getByRole("heading", {
+        name: "Topic : ML Basics · Model, Loss Function, Optimizer",
+      }),
     ).toBeInTheDocument();
     const firstPage = exampleSession.pages[0].pageNumber;
     expect(

@@ -26,8 +26,8 @@ export function HeaderStatus({
           AnythingNote
         </span>
         <span className={styles.divider} aria-hidden="true" />
-        <h1 className={styles.title} title={title}>
-          {title}
+        <h1 className={styles.title} title={`Topic : ${title}`}>
+          Topic : <span>{title}</span>
         </h1>
       </div>
 
