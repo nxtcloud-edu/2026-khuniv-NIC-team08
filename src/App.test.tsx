@@ -117,4 +117,20 @@ describe("App 통합 흐름", () => {
       "/example/lecture.mp4",
     );
   });
+
+  it("같은 발언을 다시 선택해도 영상이 그 시각으로 다시 이동한다", () => {
+    window.history.replaceState({}, "", "/?demo=example");
+    render(<App />);
+
+    const video = screen.getByLabelText("강의 영상 플레이어") as HTMLVideoElement;
+    const firstMemory = screen.getByText("00:00:40");
+
+    fireEvent.click(firstMemory);
+    expect(video.currentTime).toBe(40);
+
+    // 사용자가 영상을 직접 옮긴 뒤 같은 발언을 다시 선택하는 상황
+    video.currentTime = 300;
+    fireEvent.click(firstMemory);
+    expect(video.currentTime).toBe(40);
+  });
 });

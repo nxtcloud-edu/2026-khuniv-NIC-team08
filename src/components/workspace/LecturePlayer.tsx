@@ -4,16 +4,17 @@ import styles from "./LecturePlayer.module.css";
 
 interface LecturePlayerProps {
   src: string;
-  seekTo?: number;
+  /** 선택할 때마다 새 객체로 전달한다. 같은 시각을 다시 선택해도 이동시키기 위함. */
+  seek?: { seconds: number };
 }
 
-export function LecturePlayer({ src, seekTo }: LecturePlayerProps) {
+export function LecturePlayer({ src, seek }: LecturePlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    if (seekTo === undefined || !videoRef.current) return;
-    videoRef.current.currentTime = seekTo;
-  }, [seekTo]);
+    if (!seek || !videoRef.current) return;
+    videoRef.current.currentTime = seek.seconds;
+  }, [seek]);
 
   return (
     <section className={styles.player} aria-label="강의 영상">

@@ -98,3 +98,68 @@ describe("QuestionPanel", () => {
     expect(onSelectEvidence.mock.calls[0][0].importance).toBe("exam");
   });
 });
+
+describe("QuestionPanel · OpenAI 연결", () => {
+  afterEach(() => {
+    localStorage.clear();
+    vi.restoreAllMocks();
+  });
+
+  function connectAndAsk(question: string) {
+    fireEvent.change(screen.getByLabelText("API 키"), {
+      target: { value: "sk-test" },
+    });
+    ask(question);
+  }
+
+  it("키를 넣으면 GPT 답변과 GPT가 고른 근거를 보여준다", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      json: async () => ({
+        choices: [
+          {
+            message: {
+              content: JSON.stringify({
+                answer: "18:32에 PDF 12페이지를 보며 시험 범위를 언급했습니다.",
+                memoryId: "memory-003",
+              }),
+            },
+          },
+        ],
+      }),
+    } as Response);
+
+    render(<QuestionPanel memories={memories} onSelectEvidence={() => {}} />);
+    connectAndAsk("시험 얘기 정리해줘");
+
+    expect(await screen.findByText(/시험 범위를 언급했습니다/)).toBeInTheDocument();
+    expect(screen.getByText("18:32 · PDF 12페이지")).toBeInTheDocument();
+  });
+
+  it("OpenAI 호출이 실패하면 로컬 검색 결과로 되돌아간다", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: false,
+      status: 401,
+      text: async () => "invalid api key",
+    } as Response);
+
+    render(<QuestionPanel memories={memories} onSelectEvidence={() => {}} />);
+    connectAndAsk("시험에 나온다고 한 부분이 뭐야?");
+
+    expect(await screen.findByText(/401/)).toBeInTheDocument();
+    expect(screen.getByText(/시험에서 언급된 부분입니다\./)).toBeInTheDocument();
+    expect(screen.getByText("18:32 · PDF 12페이지")).toBeInTheDocument();
+  });
+
+  it("키가 없으면 OpenAI를 호출하지 않는다", () => {
+    const fetchMock = vi.spyOn(globalThis, "fetch");
+    vi.useFakeTimers();
+
+    render(<QuestionPanel memories={memories} onSelectEvidence={() => {}} />);
+    ask("시험에 나온다고 한 부분이 뭐야?");
+    finishSearch();
+
+    expect(fetchMock).not.toHaveBeenCalled();
+    vi.useRealTimers();
+  });
+});

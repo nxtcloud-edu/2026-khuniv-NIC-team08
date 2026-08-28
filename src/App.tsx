@@ -21,13 +21,16 @@ export default function App() {
     : demoSession;
   const { title, duration, pages, memories, videoPath } = session;
 
-  const [currentPage, setCurrentPage] = useState(pages[0].pageNumber);
+  const [currentPage, setCurrentPage] = useState(pages[0]?.pageNumber ?? 0);
   const [selectedMemory, setSelectedMemory] = useState<MemoryUnit | undefined>();
+  // 매번 새 객체를 만들어 같은 발언을 다시 선택해도 영상이 다시 이동하게 한다
+  const [seekRequest, setSeekRequest] = useState<{ seconds: number } | undefined>();
 
   // 타임라인 항목과 근거 카드는 같은 동작을 한다: 발언을 선택하고 그 장면으로 이동
   const selectMemory = (memory: MemoryUnit) => {
     setSelectedMemory(memory);
     setCurrentPage(memory.pageNumber);
+    setSeekRequest({ seconds: timestampToSeconds(memory.timestamp) });
   };
 
   return (
@@ -48,14 +51,7 @@ export default function App() {
           />
           {videoPath ? (
             <div className="appSideColumn">
-              <LecturePlayer
-                src={videoPath}
-                seekTo={
-                  selectedMemory
-                    ? timestampToSeconds(selectedMemory.timestamp)
-                    : undefined
-                }
-              />
+              <LecturePlayer src={videoPath} seek={seekRequest} />
               <Timeline
                 memories={memories}
                 selectedMemoryId={selectedMemory?.id}
