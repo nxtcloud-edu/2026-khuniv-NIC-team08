@@ -16,70 +16,2129 @@
   },
   "pages": [
     {
+      "pageNumber": 1,
+      "imagePath": "/example/pages/page-001.jpg",
+      "thumbnailPath": "/example/thumbs/page-001.jpg",
+      "title": "모델 최적화"
+    },
+    {
+      "pageNumber": 2,
+      "imagePath": "/example/pages/page-002.jpg",
+      "thumbnailPath": "/example/thumbs/page-002.jpg",
+      "title": "발표 순서"
+    },
+    {
       "pageNumber": 3,
       "imagePath": "/example/pages/page-003.jpg",
-      "title": "Types of Learning Problem"
+      "thumbnailPath": "/example/thumbs/page-003.jpg",
+      "title": "학습 방법"
+    },
+    {
+      "pageNumber": 4,
+      "imagePath": "/example/pages/page-004.jpg",
+      "thumbnailPath": "/example/thumbs/page-004.jpg",
+      "title": "모델 평가"
+    },
+    {
+      "pageNumber": 5,
+      "imagePath": "/example/pages/page-005.jpg",
+      "thumbnailPath": "/example/thumbs/page-005.jpg",
+      "title": "5페이지"
+    },
+    {
+      "pageNumber": 6,
+      "imagePath": "/example/pages/page-006.jpg",
+      "thumbnailPath": "/example/thumbs/page-006.jpg",
+      "title": "모델 클래스 정의"
+    },
+    {
+      "pageNumber": 7,
+      "imagePath": "/example/pages/page-007.jpg",
+      "thumbnailPath": "/example/thumbs/page-007.jpg",
+      "title": "수퍼바이즈드 학습"
+    },
+    {
+      "pageNumber": 8,
+      "imagePath": "/example/pages/page-008.jpg",
+      "thumbnailPath": "/example/thumbs/page-008.jpg",
+      "title": "확률 예측"
+    },
+    {
+      "pageNumber": 9,
+      "imagePath": "/example/pages/page-009.jpg",
+      "thumbnailPath": "/example/thumbs/page-009.jpg",
+      "title": "확률의 장점"
+    },
+    {
+      "pageNumber": 10,
+      "imagePath": "/example/pages/page-010.jpg",
+      "thumbnailPath": "/example/thumbs/page-010.jpg",
+      "title": "확률 표현 문제"
+    },
+    {
+      "pageNumber": 11,
+      "imagePath": "/example/pages/page-011.jpg",
+      "thumbnailPath": "/example/thumbs/page-011.jpg",
+      "title": "11페이지"
+    },
+    {
+      "pageNumber": 12,
+      "imagePath": "/example/pages/page-012.jpg",
+      "thumbnailPath": "/example/thumbs/page-012.jpg",
+      "title": "softmax 함수"
+    },
+    {
+      "pageNumber": 13,
+      "imagePath": "/example/pages/page-013.jpg",
+      "thumbnailPath": "/example/thumbs/page-013.jpg",
+      "title": "소프트맥스 함수"
+    },
+    {
+      "pageNumber": 14,
+      "imagePath": "/example/pages/page-014.jpg",
+      "thumbnailPath": "/example/thumbs/page-014.jpg",
+      "title": "모델 변경"
+    },
+    {
+      "pageNumber": 15,
+      "imagePath": "/example/pages/page-015.jpg",
+      "thumbnailPath": "/example/thumbs/page-015.jpg",
+      "title": "소프트맥스 함수"
+    },
+    {
+      "pageNumber": 16,
+      "imagePath": "/example/pages/page-016.jpg",
+      "thumbnailPath": "/example/thumbs/page-016.jpg",
+      "title": "소프트맥스 함수"
+    },
+    {
+      "pageNumber": 17,
+      "imagePath": "/example/pages/page-017.jpg",
+      "thumbnailPath": "/example/thumbs/page-017.jpg",
+      "title": "모델 클래스"
+    },
+    {
+      "pageNumber": 18,
+      "imagePath": "/example/pages/page-018.jpg",
+      "thumbnailPath": "/example/thumbs/page-018.jpg",
+      "title": "데이터 샘플링"
+    },
+    {
+      "pageNumber": 19,
+      "imagePath": "/example/pages/page-019.jpg",
+      "thumbnailPath": "/example/thumbs/page-019.jpg",
+      "title": "Supervised Learning"
     },
     {
       "pageNumber": 20,
       "imagePath": "/example/pages/page-020.jpg",
-      "title": "Loss function · log likelihood"
+      "thumbnailPath": "/example/thumbs/page-020.jpg",
+      "title": "로그 변환"
+    },
+    {
+      "pageNumber": 21,
+      "imagePath": "/example/pages/page-021.jpg",
+      "thumbnailPath": "/example/thumbs/page-021.jpg",
+      "title": "로스 함수"
+    },
+    {
+      "pageNumber": 22,
+      "imagePath": "/example/pages/page-022.jpg",
+      "thumbnailPath": "/example/thumbs/page-022.jpg",
+      "title": "로스 함수"
+    },
+    {
+      "pageNumber": 23,
+      "imagePath": "/example/pages/page-023.jpg",
+      "thumbnailPath": "/example/thumbs/page-023.jpg",
+      "title": "로지스틱 회귀"
+    },
+    {
+      "pageNumber": 24,
+      "imagePath": "/example/pages/page-024.jpg",
+      "thumbnailPath": "/example/thumbs/page-024.jpg",
+      "title": "멀티 레이블"
+    },
+    {
+      "pageNumber": 25,
+      "imagePath": "/example/pages/page-025.jpg",
+      "thumbnailPath": "/example/thumbs/page-025.jpg",
+      "title": "리스크 개념"
+    },
+    {
+      "pageNumber": 26,
+      "imagePath": "/example/pages/page-026.jpg",
+      "thumbnailPath": "/example/thumbs/page-026.jpg",
+      "title": "오버피팅"
+    },
+    {
+      "pageNumber": 27,
+      "imagePath": "/example/pages/page-027.jpg",
+      "thumbnailPath": "/example/thumbs/page-027.jpg",
+      "title": "리스크 해석"
+    },
+    {
+      "pageNumber": 28,
+      "imagePath": "/example/pages/page-028.jpg",
+      "thumbnailPath": "/example/thumbs/page-028.jpg",
+      "title": "정규화"
+    },
+    {
+      "pageNumber": 29,
+      "imagePath": "/example/pages/page-029.jpg",
+      "thumbnailPath": "/example/thumbs/page-029.jpg",
+      "title": "모델 평가"
     },
     {
       "pageNumber": 30,
       "imagePath": "/example/pages/page-030.jpg",
-      "title": "Regularization · bias and variance"
+      "thumbnailPath": "/example/thumbs/page-030.jpg",
+      "title": "정규화"
+    },
+    {
+      "pageNumber": 31,
+      "imagePath": "/example/pages/page-031.jpg",
+      "thumbnailPath": "/example/thumbs/page-031.jpg",
+      "title": "모델 학습"
+    },
+    {
+      "pageNumber": 32,
+      "imagePath": "/example/pages/page-032.jpg",
+      "thumbnailPath": "/example/thumbs/page-032.jpg",
+      "title": "오버피팅"
+    },
+    {
+      "pageNumber": 33,
+      "imagePath": "/example/pages/page-033.jpg",
+      "thumbnailPath": "/example/thumbs/page-033.jpg",
+      "title": "모델 설정"
+    },
+    {
+      "pageNumber": 34,
+      "imagePath": "/example/pages/page-034.jpg",
+      "thumbnailPath": "/example/thumbs/page-034.jpg",
+      "title": "로그 p 세타"
+    },
+    {
+      "pageNumber": 35,
+      "imagePath": "/example/pages/page-035.jpg",
+      "thumbnailPath": "/example/thumbs/page-035.jpg",
+      "title": "드롭아웃과 패널티"
+    },
+    {
+      "pageNumber": 36,
+      "imagePath": "/example/pages/page-036.jpg",
+      "thumbnailPath": "/example/thumbs/page-036.jpg",
+      "title": "확률 p"
+    },
+    {
+      "pageNumber": 37,
+      "imagePath": "/example/pages/page-037.jpg",
+      "thumbnailPath": "/example/thumbs/page-037.jpg",
+      "title": "p 값 설정"
+    },
+    {
+      "pageNumber": 38,
+      "imagePath": "/example/pages/page-038.jpg",
+      "thumbnailPath": "/example/thumbs/page-038.jpg",
+      "title": "드롭 아웃"
+    },
+    {
+      "pageNumber": 39,
+      "imagePath": "/example/pages/page-039.jpg",
+      "thumbnailPath": "/example/thumbs/page-039.jpg",
+      "title": "오버피팅"
+    },
+    {
+      "pageNumber": 40,
+      "imagePath": "/example/pages/page-040.jpg",
+      "thumbnailPath": "/example/thumbs/page-040.jpg",
+      "title": "40페이지"
+    },
+    {
+      "pageNumber": 41,
+      "imagePath": "/example/pages/page-041.jpg",
+      "thumbnailPath": "/example/thumbs/page-041.jpg",
+      "title": "데이터셋 구성"
+    },
+    {
+      "pageNumber": 42,
+      "imagePath": "/example/pages/page-042.jpg",
+      "thumbnailPath": "/example/thumbs/page-042.jpg",
+      "title": "바이어스 설명"
+    },
+    {
+      "pageNumber": 43,
+      "imagePath": "/example/pages/page-043.jpg",
+      "thumbnailPath": "/example/thumbs/page-043.jpg",
+      "title": "바이에스"
+    },
+    {
+      "pageNumber": 44,
+      "imagePath": "/example/pages/page-044.jpg",
+      "thumbnailPath": "/example/thumbs/page-044.jpg",
+      "title": "경량화 기법"
+    },
+    {
+      "pageNumber": 45,
+      "imagePath": "/example/pages/page-045.jpg",
+      "thumbnailPath": "/example/thumbs/page-045.jpg",
+      "title": "감소 방향"
+    },
+    {
+      "pageNumber": 46,
+      "imagePath": "/example/pages/page-046.jpg",
+      "thumbnailPath": "/example/thumbs/page-046.jpg",
+      "title": "안정점"
+    },
+    {
+      "pageNumber": 47,
+      "imagePath": "/example/pages/page-047.jpg",
+      "thumbnailPath": "/example/thumbs/page-047.jpg",
+      "title": "모델 로스"
+    },
+    {
+      "pageNumber": 48,
+      "imagePath": "/example/pages/page-048.jpg",
+      "thumbnailPath": "/example/thumbs/page-048.jpg",
+      "title": "플렉토 문제"
+    },
+    {
+      "pageNumber": 49,
+      "imagePath": "/example/pages/page-049.jpg",
+      "thumbnailPath": "/example/thumbs/page-049.jpg",
+      "title": "새들 포인트"
+    },
+    {
+      "pageNumber": 50,
+      "imagePath": "/example/pages/page-050.jpg",
+      "thumbnailPath": "/example/thumbs/page-050.jpg",
+      "title": "최적 방향"
+    },
+    {
+      "pageNumber": 51,
+      "imagePath": "/example/pages/page-051.jpg",
+      "thumbnailPath": "/example/thumbs/page-051.jpg",
+      "title": "모멘텀 개념"
+    },
+    {
+      "pageNumber": 52,
+      "imagePath": "/example/pages/page-052.jpg",
+      "thumbnailPath": "/example/thumbs/page-052.jpg",
+      "title": "모멘텀 식"
+    },
+    {
+      "pageNumber": 53,
+      "imagePath": "/example/pages/page-053.jpg",
+      "thumbnailPath": "/example/thumbs/page-053.jpg",
+      "title": "그래디언트 조정"
+    },
+    {
+      "pageNumber": 54,
+      "imagePath": "/example/pages/page-054.jpg",
+      "thumbnailPath": "/example/thumbs/page-054.jpg",
+      "title": "알고리즘 소개"
+    },
+    {
+      "pageNumber": 55,
+      "imagePath": "/example/pages/page-055.jpg",
+      "thumbnailPath": "/example/thumbs/page-055.jpg",
+      "title": "아담 알고리즘"
+    },
+    {
+      "pageNumber": 56,
+      "imagePath": "/example/pages/page-056.jpg",
+      "thumbnailPath": "/example/thumbs/page-056.jpg",
+      "title": "배치 업데이트"
+    },
+    {
+      "pageNumber": 57,
+      "imagePath": "/example/pages/page-057.jpg",
+      "thumbnailPath": "/example/thumbs/page-057.jpg",
+      "title": "러닝 레이트 조정"
+    },
+    {
+      "pageNumber": 58,
+      "imagePath": "/example/pages/page-058.jpg",
+      "thumbnailPath": "/example/thumbs/page-058.jpg",
+      "title": "옵티마이저 질문"
     },
     {
       "pageNumber": 59,
       "imagePath": "/example/pages/page-059.jpg",
-      "title": "Quiz"
+      "thumbnailPath": "/example/thumbs/page-059.jpg",
+      "title": "퀴즈 안내"
+    },
+    {
+      "pageNumber": 60,
+      "imagePath": "/example/pages/page-060.jpg",
+      "thumbnailPath": "/example/thumbs/page-060.jpg",
+      "title": "퀴즈 소개"
+    },
+    {
+      "pageNumber": 61,
+      "imagePath": "/example/pages/page-061.jpg",
+      "thumbnailPath": "/example/thumbs/page-061.jpg",
+      "title": "로시 개설"
+    },
+    {
+      "pageNumber": 62,
+      "imagePath": "/example/pages/page-062.jpg",
+      "thumbnailPath": "/example/thumbs/page-062.jpg",
+      "title": "소프트맥스"
+    },
+    {
+      "pageNumber": 63,
+      "imagePath": "/example/pages/page-063.jpg",
+      "thumbnailPath": "/example/thumbs/page-063.jpg",
+      "title": "최고 확률"
+    },
+    {
+      "pageNumber": 64,
+      "imagePath": "/example/pages/page-064.jpg",
+      "thumbnailPath": "/example/thumbs/page-064.jpg",
+      "title": "로스 계산"
+    },
+    {
+      "pageNumber": 65,
+      "imagePath": "/example/pages/page-065.jpg",
+      "thumbnailPath": "/example/thumbs/page-065.jpg",
+      "title": "배급라이제이션"
+    },
+    {
+      "pageNumber": 66,
+      "imagePath": "/example/pages/page-066.jpg",
+      "thumbnailPath": "/example/thumbs/page-066.jpg",
+      "title": "레귤라이제이션"
+    },
+    {
+      "pageNumber": 67,
+      "imagePath": "/example/pages/page-067.jpg",
+      "thumbnailPath": "/example/thumbs/page-067.jpg",
+      "title": "모델 비교"
+    },
+    {
+      "pageNumber": 68,
+      "imagePath": "/example/pages/page-068.jpg",
+      "thumbnailPath": "/example/thumbs/page-068.jpg",
+      "title": "68페이지"
     }
   ],
   "memories": [
     {
-      "id": "ml-memory-learning-types",
-      "timestamp": "00:00:40",
+      "id": "ml-001-p001",
+      "timestamp": "00:00:03",
+      "sourceStart": "14:01:28",
+      "sourceEnd": "14:01:33",
+      "pageNumber": 1,
+      "slideIndex": 0,
+      "transcript": "네. 이번에 ml bas optimization 을 발표하게 된 문상혁이라고 합니다.",
+      "summary": "모델 클래스와 평가 방법을 설명함",
+      "importance": "key",
+      "keywords": [
+        "ml bas optimization",
+        "모델 클래스",
+        "모델 선택",
+        "노스 옵션",
+        "평가"
+      ]
+    },
+    {
+      "id": "ml-002-p002",
+      "timestamp": "00:00:21",
+      "sourceStart": "14:01:46",
+      "sourceEnd": "14:01:51",
+      "pageNumber": 2,
+      "slideIndex": 1,
+      "transcript": "옵티마이저로 모델을 최적화 하는 방법 순으로 발표해 보려고 합니다.",
+      "summary": "모델 최적화 방법을 발표할 예정임",
+      "importance": "normal",
+      "keywords": [
+        "옵티마이저",
+        "모델",
+        "최적화",
+        "방법"
+      ]
+    },
+    {
+      "id": "ml-003-p003",
+      "timestamp": "00:00:29",
       "sourceStart": "14:01:54",
       "sourceEnd": "14:02:22",
       "pageNumber": 3,
+      "slideIndex": 2,
       "transcript": "그 모델을 러닝하는 방법은 이제 세 가지가 제시되어 있습니다. 첫 번째로 이제 superviser learning 그리고 이제 unsupervised learning 마지막으로 reinforce mand learning 이 있습니다. 그래서 supervised learning 같은 경우는 이제 정답이 붙어있는 데이터를 통해서 그 모델이 정답을 보고 이제 학습하는 방식이고 그리고 정답 레일 없이 그 데이터만 가지고 데이터의 구조를 학습하는 방식입니다. 그 다음에 reinforceman learning 같은 경우에는.",
-      "summary": "지도학습, 비지도학습, 강화학습의 차이를 설명함",
+      "summary": "세 가지 러닝 방법을 설명함",
       "importance": "key",
-      "keywords": ["학습 방식", "지도학습", "비지도학습", "강화학습", "supervised", "unsupervised", "reinforcement"]
+      "keywords": [
+        "supervised learning",
+        "unsupervised learning",
+        "reinforcement learning",
+        "학습 방법"
+      ]
     },
     {
-      "id": "ml-memory-log-likelihood",
-      "timestamp": "00:08:55",
+      "id": "ml-004-p004",
+      "timestamp": "00:01:11",
+      "sourceStart": "14:02:36",
+      "sourceEnd": "14:02:55",
+      "pageNumber": 4,
+      "slideIndex": 3,
+      "transcript": "그래서 이제 아까 처음에 말했듯이 이제 모델 클래스를 어떻게 우리가 모델을 표현할지 결정하고 그 다음에 로스펑션을 통해서 우리가 만든 모델이 좋은지 나쁜지 판단을 한 다음에 그 다음에 옵티마이즈를 통해서 이 손실 함수를 줄이기 위해서 파라메터를 어떻게 업데이트하고 고려할지 그런 걸 택하게 됩니다.",
+      "summary": "모델 표현과 로스펑션을 통한 평가 방법을 설명함",
+      "importance": "key",
+      "keywords": [
+        "모델 클래스",
+        "로스펑션",
+        "손실 함수",
+        "파라메터 업데이트"
+      ]
+    },
+    {
+      "id": "ml-005-p006",
+      "timestamp": "00:01:37",
+      "sourceStart": "14:03:02",
+      "sourceEnd": "14:03:14",
+      "pageNumber": 6,
+      "slideIndex": 5,
+      "transcript": "그래서 모델 클래스가 일단 뭔지부터 정의하고 들어가는데 모델 클래스는 이제 학습 파라미터 세타를 가진 함수 집합으로 예를 들어 우리가 이렇게 f x 처럼 리니어.",
+      "summary": "모델 클래스의 정의와 함수 집합을 설명함",
+      "importance": "key",
+      "keywords": [
+        "모델 클래스",
+        "학습 파라미터",
+        "함수 집합",
+        "세타 값"
+      ]
+    },
+    {
+      "id": "ml-006-p007",
+      "timestamp": "00:02:08",
+      "sourceStart": "14:03:33",
+      "sourceEnd": "14:03:49",
+      "pageNumber": 7,
+      "slideIndex": 6,
+      "transcript": "그래서 이제 수퍼파이스 러닝 같은 경우는 이런 식으로 이제 동작을 하게 됩니다. 우리가 데이터셋이 이렇게 주어지면 그거를 우리가 선택한 모델 넣은 다음에 그 다음에 데이터 자체에 있던 라벨이랑 라벨이랑 이제 비교하면서 우리의 예측 결과가 맞는지 틀린지 이제 보게 됩니다.",
+      "summary": "수퍼바이즈드 러닝의 동작 방식을 설명함",
+      "importance": "key",
+      "keywords": [
+        "수퍼바이즈드 러닝",
+        "데이터셋",
+        "라벨",
+        "예측 결과"
+      ]
+    },
+    {
+      "id": "ml-007-p008",
+      "timestamp": "00:02:42",
+      "sourceStart": "14:04:07",
+      "sourceEnd": "14:04:08",
+      "pageNumber": 8,
+      "slideIndex": 7,
+      "transcript": "그래서 이.",
+      "summary": "모델을 클래스별 확률로 변형하는 방법을 설명함",
+      "importance": "normal",
+      "keywords": [
+        "모델",
+        "레이블",
+        "클래스별 확률",
+        "변형"
+      ]
+    },
+    {
+      "id": "ml-008-p009",
+      "timestamp": "00:02:50",
+      "sourceStart": "14:04:15",
+      "sourceEnd": "14:04:34",
+      "pageNumber": 9,
+      "slideIndex": 8,
+      "transcript": "그래서 확률을 이제 레이블이 아니면 확률을 표현하게 되면 어떤 점이 좋냐? 일단은 모델의 불확실한 아까 같은 경우를 이제 표현할 수 있습니다. 여기 같은 경우 이제 엠리스 데이터를 좀 예시로 가져왔는데 지금 있는 데이터가 단 레이블임에도 둘 다 옷처럼 보이는 이런 불확실한 경우가 있습니다. 그리고 이제.",
+      "summary": "확률 표현의 장점을 설명함",
+      "importance": "key",
+      "keywords": [
+        "확률",
+        "불확실성",
+        "연속적인 데이터",
+        "자연스러운 표현"
+      ]
+    },
+    {
+      "id": "ml-009-p010",
+      "timestamp": "00:03:26",
+      "sourceStart": "14:04:51",
+      "sourceEnd": "14:05:00",
+      "pageNumber": 10,
+      "slideIndex": 9,
+      "transcript": "그렇게 되면 이제 확률로 표현해야 한다는 점은 이제 다들 이해가 되셨을 겁니다. 그렇게 되면 이제 문제가 어떻게 이 확률을 표현해야 할까라는 문제가 이제 발생하게 됩니다.",
+      "summary": "확률을 어떻게 표현할지에 대한 문제를 제기함",
+      "importance": "normal",
+      "keywords": [
+        "확률",
+        "표현",
+        "문제"
+      ]
+    },
+    {
+      "id": "ml-010-p012",
+      "timestamp": "00:03:37",
+      "sourceStart": "14:05:02",
+      "sourceEnd": "14:05:09",
+      "pageNumber": 12,
+      "slideIndex": 11,
+      "transcript": "피타는 우리가 지난 시간에 배웠듯이 확률의 조건에는 일단 퍼시픽 해야하는 조건이고 그 다음에 썸 투온.",
+      "summary": "확률 조건과 softmax 함수 생성 방법을 설명함",
+      "importance": "key",
+      "keywords": [
+        "피타",
+        "확률 조건",
+        "softmax",
+        "정규화"
+      ]
+    },
+    {
+      "id": "ml-011-p013",
+      "timestamp": "00:04:09",
+      "sourceStart": "14:05:34",
+      "sourceEnd": "14:05:47",
+      "pageNumber": 13,
+      "slideIndex": 12,
+      "transcript": "그리고 이제 다른 경우에서도 보통 z 제곱이나 이런 것들을 택하지 않으 왜 택하지 않냐? 이렇게 질문할 수 있는데 일단은 z 에서 작은 변화가 지수 함수를 넣음으로써 좀 더 크게 이거를.",
+      "summary": "소프트맥스 함수의 정의와 작동 원리를 설명함",
+      "importance": "key",
+      "keywords": [
+        "소프트맥스",
+        "확률",
+        "변환",
+        "맥스 함수"
+      ]
+    },
+    {
+      "id": "ml-012-p014",
+      "timestamp": "00:04:45",
+      "sourceStart": "14:06:10",
+      "sourceEnd": "14:06:19",
+      "pageNumber": 14,
+      "slideIndex": 13,
+      "transcript": "그렇게 해서 저희가 이제 바꾸게 된 모델이 이렇게 된다. 우리가 데이터셋을 가지고 이제 모델을 통해서 확률을 확률을.",
+      "summary": "모델을 통해 확률 벡터를 출력하는 방법을 설명함",
+      "importance": "key",
+      "keywords": [
+        "모델",
+        "확률",
+        "소프트맥스",
+        "벡터",
+        "최적화"
+      ]
+    },
+    {
+      "id": "ml-013-p015",
+      "timestamp": "00:05:26",
+      "sourceStart": "14:06:51",
+      "sourceEnd": "14:06:58",
+      "pageNumber": 15,
+      "slideIndex": 14,
+      "transcript": "네. 그래서 이제 소프트 맥스 함수에 대해서 조금 더 자세히 얘기해 보려고 합니다. 소프트맥스 함수.",
+      "summary": "소프트맥스 함수의 이름 유래와 동작 원리를 설명함",
+      "importance": "key",
+      "keywords": [
+        "소프트맥스",
+        "확률",
+        "부드럽게",
+        "변환",
+        "맥스 함수"
+      ]
+    },
+    {
+      "id": "ml-014-p016",
+      "timestamp": "00:06:04",
+      "sourceStart": "14:07:29",
+      "sourceEnd": "14:07:36",
+      "pageNumber": 16,
+      "slideIndex": 15,
+      "transcript": "앞으로 이제 다양한 곳에서 확률로 변환해야 할 때 이런 소프트맥스 함수를 자주 이용하게 될 겁니다.",
+      "summary": "소프트맥스 함수를 자주 이용하게 됨",
+      "importance": "key",
+      "keywords": [
+        "소프트맥스",
+        "확률",
+        "함수"
+      ]
+    },
+    {
+      "id": "ml-015-p017",
+      "timestamp": "00:06:13",
+      "sourceStart": "14:07:38",
+      "sourceEnd": "14:07:43",
+      "pageNumber": 17,
+      "slideIndex": 16,
+      "transcript": "그래서 지금까지 이제 모델 클래스에 관련된 부분이었는데 혹시 지금까지 질문이 있나요?",
+      "summary": "모델 클래스에 대한 질문을 받음",
+      "importance": "normal",
+      "keywords": [
+        "모델 클래스",
+        "질문",
+        "로스 동전"
+      ]
+    },
+    {
+      "id": "ml-016-p018",
+      "timestamp": "00:06:44",
+      "sourceStart": "14:08:09",
+      "sourceEnd": "14:08:24",
+      "pageNumber": 18,
+      "slideIndex": 17,
+      "transcript": "데이터 예를 들어 간단한 예시를 하자면 이 방에 지금 세 네 명이 있는데 우리가 각각 사람 이제 숫자를 이렇게 일 일 부터 백 까지 숫자를 만든다고 생각합시다. 그렇게 되면 각각 이제 숫자를 하나씩 부르고 그걸 합쳐서 데이터셋으로 만들 겁니다.",
+      "summary": "데이터셋을 만드는 방법과 독립성 가정에 대해 설명함",
+      "importance": "key",
+      "keywords": [
+        "데이터셋",
+        "샘플링",
+        "독립",
+        "확률",
+        "분포"
+      ]
+    },
+    {
+      "id": "ml-017-p019",
+      "timestamp": "00:08:08",
+      "sourceStart": "14:09:33",
+      "sourceEnd": "14:09:41",
+      "pageNumber": 19,
+      "slideIndex": 18,
+      "transcript": "그래서 이 supervise 목표가 데이터가 주어지면 레이블을 예측하는 거고 이 모델이 이것과 유사하도록 학습하게 됩니다.",
+      "summary": "supervise learn의 목표가 데이터가 주어지면 레이블을 예측하는 것임",
+      "importance": "key",
+      "keywords": [
+        "supervise learn",
+        "데이터",
+        "레이블",
+        "예측",
+        "확률"
+      ]
+    },
+    {
+      "id": "ml-018-p020",
+      "timestamp": "00:08:53",
       "sourceStart": "14:10:18",
       "sourceEnd": "14:10:37",
       "pageNumber": 20,
+      "slideIndex": 19,
       "transcript": "그런데 이제 확률이기 때문에 전부 다 영 에서 일 사이의 값일 겁니다. 이걸 이제 계속 곱해주는 방식으로 하자면 pd 라는 이 값 자체가 매우 작아지게 될 건데 그걸 이제 전체 다 로그를 씌움으로써 우리가 이 문제를 해결할 수 있습니다. 그래서 로그를 씌우게 되면 이제.",
-      "summary": "작은 확률을 계속 곱할 때 로그를 적용해 곱을 합으로 바꾸는 이유를 설명함",
+      "summary": "확률 값을 로그로 변환하여 문제를 해결하는 방법을 설명함",
       "importance": "key",
-      "keywords": ["로그", "확률", "likelihood", "우도", "곱", "loss function", "손실함수"]
+      "keywords": [
+        "확률",
+        "로그",
+        "pd",
+        "theta",
+        "likelihood"
+      ]
     },
     {
-      "id": "ml-memory-regularization",
+      "id": "ml-019-p021",
+      "timestamp": "00:09:56",
+      "sourceStart": "14:11:21",
+      "sourceEnd": "14:11:30",
+      "pageNumber": 21,
+      "slideIndex": 20,
+      "transcript": "이 값을 이제 지표 삼아서 loss 라고 하게 되고 보통 이제 로스 같은 경우는 미니마이즈 하는 걸로 좀 잘 이해가 되기 때문에 이거에 마이너스를 붙여서.",
+      "summary": "로스 함수를 미니마이즈하는 방법을 설명함",
+      "importance": "key",
+      "keywords": [
+        "로스",
+        "미니마이즈",
+        "최적화",
+        "함수",
+        "파라미터"
+      ]
+    },
+    {
+      "id": "ml-020-p022",
+      "timestamp": "00:10:26",
+      "sourceStart": "14:11:51",
+      "sourceEnd": "14:11:58",
+      "pageNumber": 22,
+      "slideIndex": 21,
+      "transcript": "크로네커 델타 함수를 통해서 손실에 희를 주게 되는 그런 손실함수도 있고 아니면 간단하게 리스크를.",
+      "summary": "로스 함수의 다양한 종류와 용도에 대해 설명함",
+      "importance": "key",
+      "keywords": [
+        "크로네커 델타",
+        "리스크",
+        "오차",
+        "확률분포",
+        "로스",
+        "용도",
+        "크로스 엔트로피"
+      ]
+    },
+    {
+      "id": "ml-021-p023",
+      "timestamp": "00:15:57",
+      "sourceStart": "14:17:22",
+      "sourceEnd": "14:17:32",
+      "pageNumber": 23,
+      "slideIndex": 22,
+      "transcript": "로지스틱 레그레션으로 한다고 하면 이제 우리가 linear function 을 모델을 slect 하고 그 다음에 네그티브 love likelio 를 통해서.",
+      "summary": "로지스틱 회귀에서 선형 함수를 모델로 선택하고 손실 함수를 정의함",
+      "importance": "key",
+      "keywords": [
+        "로지스틱 회귀",
+        "linear function",
+        "loss function",
+        "optimition method"
+      ]
+    },
+    {
+      "id": "ml-022-p024",
+      "timestamp": "00:16:27",
+      "sourceStart": "14:17:52",
+      "sourceEnd": "14:18:04",
+      "pageNumber": 24,
+      "slideIndex": 23,
+      "transcript": "멀티 레이블을 이제 프리딕션하는 건데 여기서 이제 binary classification 을 좀 줄이게 된다면 여기 있는 세타 값이 이제 두 개의 파라미터가 있었는데 그거를 이제 하나로 이렇게 퉁칠 수 있습니다.",
+      "summary": "멀티 레이블 예측에서 파라미터를 최적화하는 방법을 설명함",
+      "importance": "key",
+      "keywords": [
+        "멀티 레이블",
+        "binary classification",
+        "세타 값",
+        "모델 최적화"
+      ]
+    },
+    {
+      "id": "ml-023-p025",
+      "timestamp": "00:17:03",
+      "sourceStart": "14:18:28",
+      "sourceEnd": "14:18:36",
+      "pageNumber": 25,
+      "slideIndex": 24,
+      "transcript": "그래서 이제 계속 이어나가자면 이제 리스크라는 개념도 이제 저희가 loss function 을 다루게 되면 나오게 되는.",
+      "summary": "리스크와 경험적 리스크의 개념을 설명함",
+      "importance": "key",
+      "keywords": [
+        "리스크",
+        "loss function",
+        "경험적 리스크",
+        "모의고사"
+      ]
+    },
+    {
+      "id": "ml-024-p026",
+      "timestamp": "00:17:55",
+      "sourceStart": "14:19:20",
+      "sourceEnd": "14:19:29",
+      "pageNumber": 26,
+      "slideIndex": 25,
+      "transcript": "그래서 항상 이것을 갖지 않고 그거에 대한 케이스가 두 가지가 등장하게 되는데 첫 번째로 오버피팅. 그 다음에 두 번째로 언더피팅이 등장하게 됩니다.",
+      "summary": "오버피팅과 언더피팅의 개념을 설명함",
+      "importance": "key",
+      "keywords": [
+        "오버피팅",
+        "언더피팅",
+        "데이터셋",
+        "모델"
+      ]
+    },
+    {
+      "id": "ml-025-p027",
+      "timestamp": "00:18:24",
+      "sourceStart": "14:19:49",
+      "sourceEnd": "14:19:55",
+      "pageNumber": 27,
+      "slideIndex": 26,
+      "transcript": "네. 그래서 저희 같은 경우 이제 그 리스크를 이제 한번 좀 해석적으로 좀 이걸 해볼.",
+      "summary": "리스크를 해석적으로 분석하는 방법을 설명함",
+      "importance": "key",
+      "keywords": [
+        "리스크",
+        "회귀 모델",
+        "가우시안 분포",
+        "MSE"
+      ]
+    },
+    {
+      "id": "ml-026-p028",
+      "timestamp": "00:19:34",
+      "sourceStart": "14:20:59",
+      "sourceEnd": "14:21:00",
+      "pageNumber": 28,
+      "slideIndex": 27,
+      "transcript": "이제 데이터.",
+      "summary": "로스를 바이어스와 분산으로 쪼개는 방법을 설명함",
+      "importance": "key",
+      "keywords": [
+        "로스",
+        "바이어스",
+        "분산",
+        "오버피팅",
+        "언더피팅"
+      ]
+    },
+    {
+      "id": "ml-027-p029",
+      "timestamp": "00:20:10",
+      "sourceStart": "14:21:35",
+      "sourceEnd": "14:21:40",
+      "pageNumber": 29,
+      "slideIndex": 28,
+      "transcript": "이 overfitting 같은 경우는 high valiance 가 나타난 상황으로 볼 수 있고.",
+      "summary": "오버피팅과 언더피팅을 평가하는 방법을 설명함",
+      "importance": "key",
+      "keywords": [
+        "오버피팅",
+        "언더피팅",
+        "high variance",
+        "평균"
+      ]
+    },
+    {
+      "id": "ml-028-p028",
+      "timestamp": "00:20:37",
+      "sourceStart": "14:22:02",
+      "sourceEnd": "14:22:06",
+      "pageNumber": 28,
+      "slideIndex": 29,
+      "transcript": "아 네. 저는 엑스 다. 엑스가 그.",
+      "summary": "오버피팅과 언더피팅 문제를 해결하기 위한 정규화 개념을 설명함",
+      "importance": "key",
+      "keywords": [
+        "정규화",
+        "데이터",
+        "바이어스",
+        "모델",
+        "규제"
+      ]
+    },
+    {
+      "id": "ml-029-p029",
+      "timestamp": "00:22:13",
+      "sourceStart": "14:23:38",
+      "sourceEnd": "14:23:45",
+      "pageNumber": 29,
+      "slideIndex": 30,
+      "transcript": "그래서 오버피팅과 언더피팅이 일어나는 이유가 이러한 로스 안의 이러한 한글 때문에 해석될 수 있다고 보는 겁니다.",
+      "summary": "오버피팅과 언더피팅이 일어나는 이유를 로스의 한글로 해석할 수 있음을 설명함",
+      "importance": "key",
+      "keywords": [
+        "오버피팅",
+        "언더피팅",
+        "로스",
+        "한글"
+      ]
+    },
+    {
+      "id": "ml-030-p030",
       "timestamp": "00:22:23",
       "sourceStart": "14:23:48",
       "sourceEnd": "14:23:56",
       "pageNumber": 30,
+      "slideIndex": 31,
       "transcript": "네. 그래서 어쨌든 이게 문제인 건 알겠는데 그러면 이제 이걸 어떻게 해결할 것인가? 이제 그것이 등장하는 개념이 regularization 인데.",
-      "summary": "편향과 분산 문제를 해결하기 위한 정규화 개념을 도입함",
+      "summary": "오버피팅과 언더피팅 문제를 해결하기 위한 정규화 개념을 설명함",
       "importance": "key",
-      "keywords": ["정규화", "regularization", "편향", "분산", "bias", "variance"]
+      "keywords": [
+        "정규화",
+        "데이터",
+        "바이어스",
+        "모델",
+        "규제"
+      ]
     },
     {
-      "id": "ml-memory-quiz",
-      "timestamp": "00:50:35",
-      "sourceStart": "14:52:00",
-      "sourceEnd": "14:52:05",
-      "pageNumber": 59,
-      "transcript": "그럼 이제 마지막 퀴즈 풀고 이제 좀 한번 스터디 좀 맞춰보도록 하겠습니다.",
-      "summary": "강의 마지막에 모델·손실함수·정규화 흐름을 확인하는 퀴즈를 시작함",
+      "id": "ml-031-p031",
+      "timestamp": "00:26:31",
+      "sourceStart": "14:27:56",
+      "sourceEnd": "14:28:04",
+      "pageNumber": 31,
+      "slideIndex": 32,
+      "transcript": "그래서 이제 우리가 이제 모델을 보고 이제 아까 세타를 규제해야 한다는 걸 알게 됐는데 그러면 이제.",
+      "summary": "모델 학습과 관련된 보상 및 로스 개념을 설명함",
+      "importance": "key",
+      "keywords": [
+        "모델",
+        "학습",
+        "로스",
+        "보상",
+        "세타"
+      ]
+    },
+    {
+      "id": "ml-032-p032",
+      "timestamp": "00:27:54",
+      "sourceStart": "14:29:19",
+      "sourceEnd": "14:29:30",
+      "pageNumber": 32,
+      "slideIndex": 33,
+      "transcript": "좀 저런 이제 좀 오버피팅이 많이 된 함수가 특징이 그 세타의 파라미터 값이 조금 높게 설정된다는 특징들이 있습니다. 그렇게 되면 우리가 원하는 함수는.",
+      "summary": "오버피팅이란 세타의 파라미터 값이 높게 설정되는 현상을 설명함",
+      "importance": "key",
+      "keywords": [
+        "오버피팅",
+        "세타",
+        "파라미터",
+        "정규분포"
+      ]
+    },
+    {
+      "id": "ml-033-p033",
+      "timestamp": "00:28:50",
+      "sourceStart": "14:30:15",
+      "sourceEnd": "14:30:35",
+      "pageNumber": 33,
+      "slideIndex": 34,
+      "transcript": "간단하게 보관 데이터를 우리가 보관한다고 생각했을 때 세타가 높게 되면 그 조금 이제 이소값을 변경했을 때 그 올라가고 내려가고 하는 값이 많이 치솟게 될 겁니다. 근데 우리가 보통 생각하는 일반적인 모델 같은 경우는 그걸 이제 자연스럽게 통과하는 것이기 때문에.",
+      "summary": "모델에서 세타 값을 낮게 설정하는 것이 바람직함을 설명함",
+      "importance": "key",
+      "keywords": [
+        "세타",
+        "모델",
+        "확률",
+        "값",
+        "파동형"
+      ]
+    },
+    {
+      "id": "ml-034-p034",
+      "timestamp": "00:30:09",
+      "sourceStart": "14:31:34",
+      "sourceEnd": "14:31:47",
+      "pageNumber": 34,
+      "slideIndex": 35,
+      "transcript": "네. 그렇게 해서 이제 저기 있는 로그 p 세타를 아까 우리 아까 p 정규 분포를 넣어서 로그를 때리게 되면 저런 식이 나오게 됩니다.",
+      "summary": "로그 p 세타를 정규 분포에 적용하여 결과를 도출함",
+      "importance": "key",
+      "keywords": [
+        "로그 p 세타",
+        "정규 분포",
+        "constant",
+        "loss",
+        "regulization loss"
+      ]
+    },
+    {
+      "id": "ml-035-p035",
+      "timestamp": "00:30:59",
+      "sourceStart": "14:32:24",
+      "sourceEnd": "14:32:31",
+      "pageNumber": 35,
+      "slideIndex": 36,
+      "transcript": "그래서 그거 말고도 이제 앨범이나 l 이 그리고 이제 drop out 이나 gradient penalty 라는 다른 방식도 존재하게 됩니다.",
+      "summary": "드롭 아웃과 그레이디언트 패널티의 개념을 설명함",
+      "importance": "key",
+      "keywords": [
+        "드롭 아웃",
+        "gradient penalty",
+        "모델 변형",
+        "의존성 감소"
+      ]
+    },
+    {
+      "id": "ml-036-p036",
+      "timestamp": "00:31:44",
+      "sourceStart": "14:33:09",
+      "sourceEnd": "14:33:12",
+      "pageNumber": 36,
+      "slideIndex": 37,
+      "transcript": "트레이닝 타임 동안 이제 확률 p 로.",
+      "summary": "트레이닝 타임 동안 확률 p에 대해 설명함",
+      "importance": "key",
+      "keywords": [
+        "확률",
+        "피해자",
+        "마스크",
+        "영",
+        "신호 양"
+      ]
+    },
+    {
+      "id": "ml-037-p037",
+      "timestamp": "00:32:35",
+      "sourceStart": "14:34:00",
+      "sourceEnd": "14:34:11",
+      "pageNumber": 37,
+      "slideIndex": 38,
+      "transcript": "그래서 보통 p 값으로 이제 많이 사용하는 값이 이제 영 점 오 를 사용하게 되고 다만 특이하게 맨 처음에 넣는 인풋 같은 경우는 인풋 같은 경우도 이런 식으로 높게 설정해 버리면.",
+      "summary": "p 값을 설정하는 방법과 인풋 레이어의 설정에 대해 설명함",
+      "importance": "key",
+      "keywords": [
+        "p 값",
+        "인풋 레이어",
+        "설정"
+      ]
+    },
+    {
+      "id": "ml-038-p038",
+      "timestamp": "00:33:02",
+      "sourceStart": "14:34:27",
+      "sourceEnd": "14:34:36",
+      "pageNumber": 38,
+      "slideIndex": 39,
+      "transcript": "이런 식으로 아래 방법처럼 애초에 들어갈 때 들어갈 때 그 x 자체에 일 p 로 이렇게 보정을 해주면 우리가 트레이닝 할.",
+      "summary": "드롭 아웃 설정 방법과 overfitting 방지에 대해 설명함",
+      "importance": "key",
+      "keywords": [
+        "드롭 아웃",
+        "overfitting",
+        "트레이닝",
+        "테스트"
+      ]
+    },
+    {
+      "id": "ml-039-p039",
+      "timestamp": "00:33:25",
+      "sourceStart": "14:34:50",
+      "sourceEnd": "14:35:09",
+      "pageNumber": 39,
+      "slideIndex": 40,
+      "transcript": "무조건 죽여야 하는 것처럼 설명하긴 했는데 사실 좀 현대적인 관점에서는 오버 피팅 자체가 좀 나쁘지 않은 거라고 좀 보기도 합니다. 모델이 엄청나게 큰 경우에는 이 데이터에 대해서 조금 과적 합의 일어나더라도 그 가능한 해답이 좀 여러 개가 있을 수 있기 때문에 이 과정에서 조금.",
+      "summary": "오버피팅이 현대적 관점에서 나쁘지 않을 수 있음을 설명함",
+      "importance": "key",
+      "keywords": [
+        "오버피팅",
+        "모델",
+        "데이터",
+        "테스트 에러"
+      ]
+    },
+    {
+      "id": "ml-040-p041",
+      "timestamp": "00:34:28",
+      "sourceStart": "14:35:53",
+      "sourceEnd": "14:36:10",
+      "pageNumber": 41,
+      "slideIndex": 42,
+      "transcript": "이제 우리가 훈련에 사용할 트레이닝 셋 그다음에 validation set 우리가 이제 스스로 테스트하면서 하이퍼파라미터를 조정할 수 있도록 밸리데이션셋을 만들고 그 다음 마지막으로 우리가 모델이 진짜 끝났다라고 생각이 되면 테스터셋을 통해서 최종을 측정해서 내보내게 됩니다.",
+      "summary": "훈련, 검증, 테스트 셋의 역할을 설명함",
+      "importance": "key",
+      "keywords": [
+        "트레이닝 셋",
+        "validation set",
+        "테스터셋",
+        "하이퍼파라미터",
+        "모델"
+      ]
+    },
+    {
+      "id": "ml-041-p042",
+      "timestamp": "00:35:30",
+      "sourceStart": "14:36:55",
+      "sourceEnd": "14:36:59",
+      "pageNumber": 42,
+      "slideIndex": 43,
+      "transcript": "자신이 어떤 식으로 모델 튜닝을 해야 할지 좀 전략을 선택할 수 있습니다.",
+      "summary": "모델 튜닝 전략을 선택하는 방법을 설명함",
+      "importance": "key",
+      "keywords": [
+        "모델 튜닝",
+        "언더피팅",
+        "오버피팅",
+        "로스"
+      ]
+    },
+    {
+      "id": "ml-042-p043",
+      "timestamp": "00:35:42",
+      "sourceStart": "14:37:07",
+      "sourceEnd": "14:37:10",
+      "pageNumber": 43,
+      "slideIndex": 44,
+      "transcript": "저 혹시 전 슬라이드요 바이에스라는.",
+      "summary": "바이에스에 대해 설명함",
+      "importance": "key",
+      "keywords": [
+        "바이에스",
+        "그래프"
+      ]
+    },
+    {
+      "id": "ml-043-p042",
+      "timestamp": "00:36:13",
+      "sourceStart": "14:37:38",
+      "sourceEnd": "14:37:41",
+      "pageNumber": 42,
+      "slideIndex": 45,
+      "transcript": "그렇기 때문에 이게 아까 말한 그 바이어스입니다.",
+      "summary": "모델의 바이어스 현상에 대해 설명함",
+      "importance": "key",
+      "keywords": [
+        "바이어스",
+        "모델",
+        "로스",
+        "트레이닝"
+      ]
+    },
+    {
+      "id": "ml-044-p044",
+      "timestamp": "00:36:33",
+      "sourceStart": "14:37:58",
+      "sourceEnd": "14:38:11",
+      "pageNumber": 44,
+      "slideIndex": 47,
+      "transcript": "그래서 옵티마이저 같은 경우는 저희가 이제 가장 자신있고 많이 쓰는게 gradient descent 입니다. 그래서 어떤 우리의 로스가 주어졌을 때 그거에 이제 lenscape 를 보고 로스가 감소하는 방향을 찾은 다음에.",
+      "summary": "옵티마이저로서 gradient descent의 원리를 설명함",
+      "importance": "key",
+      "keywords": [
+        "옵티마이저",
+        "gradient descent",
+        "로스",
+        "lenscape",
+        "iterative"
+      ]
+    },
+    {
+      "id": "ml-045-p045",
+      "timestamp": "00:36:56",
+      "sourceStart": "14:38:21",
+      "sourceEnd": "14:38:33",
+      "pageNumber": 45,
+      "slideIndex": 48,
+      "transcript": "그 위치에서 gradient 를 그 함수가 이제 증가하는 방향이기 때문에 그거에 반대 방향으로 가자 그렇게 해서 스노프의 반대 방향을 이제 그 감소하는 방향으로 설정하게 됩니다.",
+      "summary": "감소하는 방향을 정의하고 gradient의 반대 방향으로 설정함",
+      "importance": "key",
+      "keywords": [
+        "감소하는 방향",
+        "gradient",
+        "스노프",
+        "gradient decent",
+        "로컬 optima"
+      ]
+    },
+    {
+      "id": "ml-046-p046",
+      "timestamp": "00:37:24",
+      "sourceStart": "14:38:49",
+      "sourceEnd": "14:38:52",
+      "pageNumber": 46,
+      "slideIndex": 49,
+      "transcript": "이거에 대해서 각각 이제 설명드리도록 하겠습니다.",
+      "summary": "안정점에 대해 설명함",
+      "importance": "key",
+      "keywords": [
+        "안정점",
+        "로컬업치마",
+        "국소 최적점"
+      ]
+    },
+    {
+      "id": "ml-047-p047",
+      "timestamp": "00:37:56",
+      "sourceStart": "14:39:21",
+      "sourceEnd": "14:39:28",
+      "pageNumber": 47,
+      "slideIndex": 50,
+      "transcript": "그러니까 국소 최적의 갇히는 것 하고 그 다음에 최적을 찾는 것하고 그거의 로스 차이가 그렇게 크지 않다. 큰 모드에서.",
+      "summary": "모델이 커질수록 로스의 분포 폭이 크지 않음을 설명함",
+      "importance": "key",
+      "keywords": [
+        "모델",
+        "로스",
+        "분포",
+        "최적",
+        "문제"
+      ]
+    },
+    {
+      "id": "ml-048-p048",
+      "timestamp": "00:38:09",
+      "sourceStart": "14:39:34",
+      "sourceEnd": "14:39:40",
+      "pageNumber": 48,
+      "slideIndex": 51,
+      "transcript": "그 다음에 그것보다 약간 더 문제인게 이제 플렉토가 있는데 기울기가 매우 작은 지역입니다.",
+      "summary": "플렉토의 기울기가 매우 작아 최적 솔루션에 도달하기 어려운 문제를 설명함",
+      "importance": "key",
+      "keywords": [
+        "플렉토",
+        "기울기",
+        "최적 솔루션",
+        "학습율"
+      ]
+    },
+    {
+      "id": "ml-049-p049",
+      "timestamp": "00:38:55",
+      "sourceStart": "14:40:20",
+      "sourceEnd": "14:40:41",
+      "pageNumber": 49,
+      "slideIndex": 52,
+      "transcript": "그래서 우리가 어떤 곳에 최적화했을 때 이 새들에서도 새들 자체가 어쨌든 로컬 미니멈 로컬 맥시멈 둘 다 그래디언트가 거의 영 에 가까운 지점이기 때문에 이 새들에 좀 갇힐 수가 있습니다. 그래서 어떤 지점이 이제 새들인지 확인하는 방법은 그거 이제 해쉬안을 구한 다음에 그거의 고유값을 딱 구한 다음에 그 고유값이.",
+      "summary": "새들 포인트의 특성과 확인 방법을 설명함",
+      "importance": "key",
+      "keywords": [
+        "새들 포인트",
+        "로컬 미니멈",
+        "로컬 맥시멈",
+        "해쉬안",
+        "고유값"
+      ]
+    },
+    {
+      "id": "ml-050-p050",
+      "timestamp": "00:39:58",
+      "sourceStart": "14:41:23",
+      "sourceEnd": "14:41:37",
+      "pageNumber": 50,
+      "slideIndex": 53,
+      "transcript": "그래서 어쨌든 이 세 가지 전부 다 문제를 일으키는 원흉은 결국에는 그 이유는 우리가 아까 감소하는 방향으로 가자 라고 했지만 결국에는 그 방향이 최적 방향은 아니게 됩니다.",
+      "summary": "최적 방향이 아니라는 문제를 설명함",
+      "importance": "key",
+      "keywords": [
+        "최적 방향",
+        "문제",
+        "감소",
+        "원흉"
+      ]
+    },
+    {
+      "id": "ml-051-p051",
+      "timestamp": "00:40:20",
+      "sourceStart": "14:41:45",
+      "sourceEnd": "14:41:51",
+      "pageNumber": 51,
+      "slideIndex": 54,
+      "transcript": "그래서 그거를 이제 해결하기 위한 방법 중 하나로 이제 모멘텀이 등장하게 되는데 모멘텀 같은 경우는.",
+      "summary": "모멘텀을 통해 과거 방향을 반영하여 디렉션을 결정하는 방법을 설명함",
+      "importance": "key",
+      "keywords": [
+        "모멘텀",
+        "디렉션",
+        "과거 방향"
+      ]
+    },
+    {
+      "id": "ml-052-p052",
+      "timestamp": "00:41:00",
+      "sourceStart": "14:42:25",
+      "sourceEnd": "14:42:36",
+      "pageNumber": 52,
+      "slideIndex": 55,
+      "transcript": "모멘텀에 대한 식으로 위쪽에 있는 두 점화식이 등장하게 되는데 두 번째 점화식에서 이제 계속적으로 이걸 넣어보게 되면 저런 식으로 식이 나오게 됩니다. 전개가 됩니다.",
+      "summary": "모멘텀의 점화식과 그 계수의 의미를 설명함",
+      "importance": "key",
+      "keywords": [
+        "모멘텀",
+        "점화식",
+        "계수"
+      ]
+    },
+    {
+      "id": "ml-053-p053",
+      "timestamp": "00:41:58",
+      "sourceStart": "14:43:23",
+      "sourceEnd": "14:43:40",
+      "pageNumber": 53,
+      "slideIndex": 56,
+      "transcript": "이제 gradient 스케일 자체를 조금 약간 조정해보자는 아이디어도 있습니다. 이제 이 예시 같은 경우는 우리가 아까 그래디언 디센트 방향인데 실제로 저 점에서 첫 번째로 이동할 때 아래쪽으로 이동했지만 실제로 우리가 최저점을 향해서 가야 하는 방향을 조금 더 오른쪽으로 많이 이동해줘야 한다.",
+      "summary": "그래디언트 스케일을 조정하여 최적점을 향해 가는 방법을 설명함",
+      "importance": "key",
+      "keywords": [
+        "그래디언트",
+        "스케일",
+        "러닝 레이트"
+      ]
+    },
+    {
+      "id": "ml-054-p054",
+      "timestamp": "00:42:52",
+      "sourceStart": "14:44:17",
+      "sourceEnd": "14:44:26",
+      "pageNumber": 54,
+      "slideIndex": 57,
+      "transcript": "네. 이런 알고리즘들이 좀 제시되는데 먼저 rmstrop 같은 경우는 rms 트럭 같은 경우는 gradient 제곱의 이동 평균을 사용해서.",
+      "summary": "RMSprop과 Adagrad 알고리즘의 특징과 차이를 설명함",
+      "importance": "key",
+      "keywords": [
+        "RMSprop",
+        "Adagrad",
+        "알고리즘"
+      ]
+    },
+    {
+      "id": "ml-055-p055",
+      "timestamp": "00:44:47",
+      "sourceStart": "14:46:12",
+      "sourceEnd": "14:46:28",
+      "pageNumber": 55,
+      "slideIndex": 58,
+      "transcript": "이런 식으로 rms 클럽과 모멘텀의 개념을 좀 합쳐서 만든 아이디어가 되는데 이제 그래디언트 이동 평균 그 함과 그 다음에 그래디언 제곱에 대한 이동 평균 이 두 아이디어를 전부 다 합하게 되는 겁니다. 그렇게 해서.",
+      "summary": "아담 알고리즘이 RMSprop과 모멘텀을 결합한 방법을 설명함",
+      "importance": "key",
+      "keywords": [
+        "아담",
+        "RMSprop",
+        "모멘텀"
+      ]
+    },
+    {
+      "id": "ml-056-p056",
+      "timestamp": "00:45:46",
+      "sourceStart": "14:47:11",
+      "sourceEnd": "14:47:24",
+      "pageNumber": 56,
+      "slideIndex": 59,
+      "transcript": "우리가 가진 데이터셋이 매우 클 수도 있습니다. 그래서 그런 경우에는 한 번에 그 모든 데이터셋을 다 넣는 것 자체가 좀 많이 비효율적이고 환불할 때 좀 오래 걸릴 수 있는데 그거를 이제 작은 데이터셋으로.",
+      "summary": "큰 데이터셋을 작은 배치로 나누어 업데이트하는 방법을 설명함",
       "importance": "normal",
-      "keywords": ["퀴즈", "마지막", "문제", "복습", "quiz"]
+      "keywords": [
+        "배치",
+        "업데이트",
+        "데이터셋"
+      ]
+    },
+    {
+      "id": "ml-057-p057",
+      "timestamp": "00:46:31",
+      "sourceStart": "14:47:56",
+      "sourceEnd": "14:48:03",
+      "pageNumber": 57,
+      "slideIndex": 60,
+      "transcript": "잘 탐색을 하는 게 중요할 중요하다는 좀 인식이 있을 겁니다. 그것을 이제 구현한 게 이제 디테일.",
+      "summary": "학습 진행에 따라 러닝 레이트를 조정하는 방법을 설명함",
+      "importance": "normal",
+      "keywords": [
+        "러닝 레이트",
+        "조정",
+        "학습"
+      ]
+    },
+    {
+      "id": "ml-058-p058",
+      "timestamp": "00:47:05",
+      "sourceStart": "14:48:30",
+      "sourceEnd": "14:48:36",
+      "pageNumber": 58,
+      "slideIndex": 61,
+      "transcript": "여기 같은 경우는 밸리에이션 loss 가 어느 정도 이제 변화가 좀 적어질 때 그때 이제.",
+      "summary": "옵티마이저에 대한 질문을 받고 강화학습의 문제를 설명함",
+      "importance": "normal",
+      "keywords": [
+        "옵티마이저",
+        "강화학습",
+        "문제"
+      ]
+    },
+    {
+      "id": "ml-059-p059",
+      "timestamp": "00:47:21",
+      "sourceStart": "14:48:46",
+      "sourceEnd": "14:48:50",
+      "pageNumber": 59,
+      "slideIndex": 62,
+      "transcript": "네. 그래서 여기까지가 이제 옵티마이저고 혹시 질문이 있나요?",
+      "summary": "퀴즈를 통해 모델 평가 과정을 이해하도록 유도함",
+      "importance": "exam",
+      "keywords": [
+        "퀴즈",
+        "모델",
+        "평가"
+      ]
+    },
+    {
+      "id": "ml-060-p060",
+      "timestamp": "00:50:46",
+      "sourceStart": "14:52:11",
+      "sourceEnd": "14:52:28",
+      "pageNumber": 60,
+      "slideIndex": 63,
+      "transcript": "이제 제가 이 퀴즈를 만든게 그래도 이제 모델을 우리가 만들고 모델이 노스를 통해서 이걸 평가하고 이런 과정 자체에 플로웍을 좀 이해했으면 좋겠다는 생각으로 좀 간단하게 만들어 봤는데 그래서 그냥 바로 하겠습니다.",
+      "summary": "모델을 만들고 평가하는 과정을 이해하기 위한 퀴즈를 소개함",
+      "importance": "normal",
+      "keywords": [
+        "모델",
+        "평가",
+        "퀴즈",
+        "플로웍"
+      ]
+    },
+    {
+      "id": "ml-061-p061",
+      "timestamp": "00:51:04",
+      "sourceStart": "14:52:29",
+      "sourceEnd": "14:52:39",
+      "pageNumber": 61,
+      "slideIndex": 64,
+      "transcript": "그래서 이제 로시를 개설하게 되면 이제 이렇게 내정을 하면 되겠죠. 리니어함수이기 때문에 거기서 로직을 만들고.",
+      "summary": "로시를 개설하고 리니어함수로 로직을 만들면 됨",
+      "importance": "key",
+      "keywords": [
+        "로시",
+        "리니어함수",
+        "로직"
+      ]
+    },
+    {
+      "id": "ml-062-p062",
+      "timestamp": "00:51:14",
+      "sourceStart": "14:52:39",
+      "sourceEnd": "14:52:45",
+      "pageNumber": 62,
+      "slideIndex": 65,
+      "transcript": "그걸 이제 아까 우리가 배웠던 소프트맥스 함수를 통해서 확률로 이렇게 바꿔줄 수 있을 겁니다.",
+      "summary": "소프트맥스 함수를 통해 확률로 변환할 수 있음",
+      "importance": "key",
+      "keywords": [
+        "소프트맥스",
+        "확률"
+      ]
+    },
+    {
+      "id": "ml-063-p063",
+      "timestamp": "00:51:22",
+      "sourceStart": "14:52:47",
+      "sourceEnd": "14:52:57",
+      "pageNumber": 63,
+      "slideIndex": 66,
+      "transcript": "확률로 바꿨으면 그거에 가장 높은 우리가 아까 max 처럼 한다고 했으니까 가장 높은 걸 이제 택하게 되죠. 그래서 우리는 이 모델은 이 데이터를 도그라고 예측을 하게 될 겁니다.",
+      "summary": "가장 높은 확률을 선택하여 데이터를 예측함",
+      "importance": "key",
+      "keywords": [
+        "최고",
+        "확률",
+        "예측"
+      ]
+    },
+    {
+      "id": "ml-064-p064",
+      "timestamp": "00:51:33",
+      "sourceStart": "14:52:58",
+      "sourceEnd": "14:53:15",
+      "pageNumber": 64,
+      "slideIndex": 67,
+      "transcript": "근데 문제는 이제 loss 를 계산해보면 네거티브 로그 라이크를 계산해보면 loss 가 영 점 육 이 나오게 되고 이제 이 loss 들을 다 모아서 우리가 모델이 제대로 됐냐? 이 세타란 값이 제대로 됐는지 그런 것을 좀 이해하게 됩니다.",
+      "summary": "네거티브 로그 라이크를 계산하여 loss를 이해함",
+      "importance": "key",
+      "keywords": [
+        "loss",
+        "네거티브 로그 라이크"
+      ]
+    },
+    {
+      "id": "ml-065-p065",
+      "timestamp": "00:51:51",
+      "sourceStart": "14:53:16",
+      "sourceEnd": "14:53:20",
+      "pageNumber": 65,
+      "slideIndex": 68,
+      "transcript": "그 다음에 이제 배급라이제이션 문제도 하나 만들어 봤는데.",
+      "summary": "배급라이제이션 문제를 만들어 봄",
+      "importance": "normal",
+      "keywords": [
+        "배급라이제이션"
+      ]
+    },
+    {
+      "id": "ml-066-p066",
+      "timestamp": "00:51:56",
+      "sourceStart": "14:53:21",
+      "sourceEnd": "14:53:22",
+      "pageNumber": 66,
+      "slideIndex": 69,
+      "transcript": "이제 막.",
+      "summary": "레귤라이제이션을 추가하여 loss가 달라질 수 있음을 설명함",
+      "importance": "key",
+      "keywords": [
+        "레귤라이제이션",
+        "loss"
+      ]
+    },
+    {
+      "id": "ml-067-p067",
+      "timestamp": "00:52:16",
+      "sourceStart": "14:53:41",
+      "sourceEnd": "14:53:53",
+      "pageNumber": 67,
+      "slideIndex": 70,
+      "transcript": "모델 a 가 regulization 이 안 됐을 때는 좀 더 좋다고 우리가 판단을 했었지만 레귤라이제이션 탑을 추가함으로써 오히려 모델 b 가 조금 더 괜찮은 모델이다 라고 판단이 좀 바뀔 수 있습니다.",
+      "summary": "레귤라이제이션 추가로 모델 b가 더 괜찮은 모델로 판단될 수 있음을 설명함",
+      "importance": "normal",
+      "keywords": [
+        "모델 a",
+        "모델 b",
+        "레귤라이제이션"
+      ]
+    }
+  ],
+  "pipeline": {
+    "sampledFrames": 3173,
+    "sampleIntervalSeconds": 1,
+    "signatureGrid": 32,
+    "transcriptCues": 495,
+    "assignedCues": 492,
+    "slideSegments": 71,
+    "pdfPages": 68,
+    "matchedPages": 67,
+    "memoryUnits": 67,
+    "annotatedBy": "openai:gpt-4o-mini"
+  },
+  "segments": [
+    {
+      "index": 0,
+      "pageNumber": 1,
+      "start": 0,
+      "end": 10,
+      "thumbnailPath": "/example/frames/seg-001.jpg",
+      "confidence": 0.9988
+    },
+    {
+      "index": 1,
+      "pageNumber": 2,
+      "start": 11,
+      "end": 28,
+      "thumbnailPath": "/example/frames/seg-002.jpg",
+      "confidence": 0.9979
+    },
+    {
+      "index": 2,
+      "pageNumber": 3,
+      "start": 29,
+      "end": 70,
+      "thumbnailPath": "/example/frames/seg-003.jpg",
+      "confidence": 0.9962
+    },
+    {
+      "index": 3,
+      "pageNumber": 4,
+      "start": 71,
+      "end": 91,
+      "thumbnailPath": "/example/frames/seg-004.jpg",
+      "confidence": 0.9971
+    },
+    {
+      "index": 4,
+      "pageNumber": 5,
+      "start": 92,
+      "end": 95,
+      "thumbnailPath": "/example/frames/seg-005.jpg",
+      "confidence": 0.9972
+    },
+    {
+      "index": 5,
+      "pageNumber": 6,
+      "start": 96,
+      "end": 126,
+      "thumbnailPath": "/example/frames/seg-006.jpg",
+      "confidence": 0.9963
+    },
+    {
+      "index": 6,
+      "pageNumber": 7,
+      "start": 127,
+      "end": 152,
+      "thumbnailPath": "/example/frames/seg-007.jpg",
+      "confidence": 0.9986
+    },
+    {
+      "index": 7,
+      "pageNumber": 8,
+      "start": 153,
+      "end": 167,
+      "thumbnailPath": "/example/frames/seg-008.jpg",
+      "confidence": 0.9983
+    },
+    {
+      "index": 8,
+      "pageNumber": 9,
+      "start": 168,
+      "end": 204,
+      "thumbnailPath": "/example/frames/seg-009.jpg",
+      "confidence": 0.9968
+    },
+    {
+      "index": 9,
+      "pageNumber": 10,
+      "start": 205,
+      "end": 210,
+      "thumbnailPath": "/example/frames/seg-010.jpg",
+      "confidence": 0.9985
+    },
+    {
+      "index": 10,
+      "pageNumber": 11,
+      "start": 211,
+      "end": 216,
+      "thumbnailPath": "/example/frames/seg-011.jpg",
+      "confidence": 0.9985
+    },
+    {
+      "index": 11,
+      "pageNumber": 12,
+      "start": 217,
+      "end": 241,
+      "thumbnailPath": "/example/frames/seg-012.jpg",
+      "confidence": 0.9971
+    },
+    {
+      "index": 12,
+      "pageNumber": 13,
+      "start": 242,
+      "end": 284,
+      "thumbnailPath": "/example/frames/seg-013.jpg",
+      "confidence": 0.9967
+    },
+    {
+      "index": 13,
+      "pageNumber": 14,
+      "start": 285,
+      "end": 324,
+      "thumbnailPath": "/example/frames/seg-014.jpg",
+      "confidence": 0.9985
+    },
+    {
+      "index": 14,
+      "pageNumber": 15,
+      "start": 325,
+      "end": 351,
+      "thumbnailPath": "/example/frames/seg-015.jpg",
+      "confidence": 0.9954
+    },
+    {
+      "index": 15,
+      "pageNumber": 16,
+      "start": 352,
+      "end": 372,
+      "thumbnailPath": "/example/frames/seg-016.jpg",
+      "confidence": 0.9954
+    },
+    {
+      "index": 16,
+      "pageNumber": 17,
+      "start": 373,
+      "end": 396,
+      "thumbnailPath": "/example/frames/seg-017.jpg",
+      "confidence": 0.997
+    },
+    {
+      "index": 17,
+      "pageNumber": 18,
+      "start": 397,
+      "end": 465,
+      "thumbnailPath": "/example/frames/seg-018.jpg",
+      "confidence": 0.9985
+    },
+    {
+      "index": 18,
+      "pageNumber": 19,
+      "start": 466,
+      "end": 532,
+      "thumbnailPath": "/example/frames/seg-019.jpg",
+      "confidence": 0.9979
+    },
+    {
+      "index": 19,
+      "pageNumber": 20,
+      "start": 533,
+      "end": 584,
+      "thumbnailPath": "/example/frames/seg-020.jpg",
+      "confidence": 0.9978
+    },
+    {
+      "index": 20,
+      "pageNumber": 21,
+      "start": 585,
+      "end": 617,
+      "thumbnailPath": "/example/frames/seg-021.jpg",
+      "confidence": 0.9971
+    },
+    {
+      "index": 21,
+      "pageNumber": 22,
+      "start": 618,
+      "end": 951,
+      "thumbnailPath": "/example/frames/seg-022.jpg",
+      "confidence": 0.9976
+    },
+    {
+      "index": 22,
+      "pageNumber": 23,
+      "start": 952,
+      "end": 982,
+      "thumbnailPath": "/example/frames/seg-023.jpg",
+      "confidence": 0.9973
+    },
+    {
+      "index": 23,
+      "pageNumber": 24,
+      "start": 983,
+      "end": 1022,
+      "thumbnailPath": "/example/frames/seg-024.jpg",
+      "confidence": 0.9974
+    },
+    {
+      "index": 24,
+      "pageNumber": 25,
+      "start": 1023,
+      "end": 1074,
+      "thumbnailPath": "/example/frames/seg-025.jpg",
+      "confidence": 0.9983
+    },
+    {
+      "index": 25,
+      "pageNumber": 26,
+      "start": 1075,
+      "end": 1103,
+      "thumbnailPath": "/example/frames/seg-026.jpg",
+      "confidence": 0.9973
+    },
+    {
+      "index": 26,
+      "pageNumber": 27,
+      "start": 1104,
+      "end": 1171,
+      "thumbnailPath": "/example/frames/seg-027.jpg",
+      "confidence": 0.9977
+    },
+    {
+      "index": 27,
+      "pageNumber": 28,
+      "start": 1172,
+      "end": 1209,
+      "thumbnailPath": "/example/frames/seg-028.jpg",
+      "confidence": 0.9979
+    },
+    {
+      "index": 28,
+      "pageNumber": 29,
+      "start": 1210,
+      "end": 1236,
+      "thumbnailPath": "/example/frames/seg-029.jpg",
+      "confidence": 0.9973
+    },
+    {
+      "index": 29,
+      "pageNumber": 28,
+      "start": 1237,
+      "end": 1327,
+      "thumbnailPath": "/example/frames/seg-030.jpg",
+      "confidence": 0.9979
+    },
+    {
+      "index": 30,
+      "pageNumber": 29,
+      "start": 1328,
+      "end": 1342,
+      "thumbnailPath": "/example/frames/seg-031.jpg",
+      "confidence": 0.9973
+    },
+    {
+      "index": 31,
+      "pageNumber": 30,
+      "start": 1343,
+      "end": 1407,
+      "thumbnailPath": "/example/frames/seg-032.jpg",
+      "confidence": 0.9976
+    },
+    {
+      "index": 32,
+      "pageNumber": 31,
+      "start": 1408,
+      "end": 1666,
+      "thumbnailPath": "/example/frames/seg-033.jpg",
+      "confidence": 0.9974
+    },
+    {
+      "index": 33,
+      "pageNumber": 32,
+      "start": 1667,
+      "end": 1703,
+      "thumbnailPath": "/example/frames/seg-034.jpg",
+      "confidence": 0.9975
+    },
+    {
+      "index": 34,
+      "pageNumber": 33,
+      "start": 1704,
+      "end": 1808,
+      "thumbnailPath": "/example/frames/seg-035.jpg",
+      "confidence": 0.9974
+    },
+    {
+      "index": 35,
+      "pageNumber": 34,
+      "start": 1809,
+      "end": 1851,
+      "thumbnailPath": "/example/frames/seg-036.jpg",
+      "confidence": 0.9975
+    },
+    {
+      "index": 36,
+      "pageNumber": 35,
+      "start": 1852,
+      "end": 1898,
+      "thumbnailPath": "/example/frames/seg-037.jpg",
+      "confidence": 0.9976
+    },
+    {
+      "index": 37,
+      "pageNumber": 36,
+      "start": 1899,
+      "end": 1954,
+      "thumbnailPath": "/example/frames/seg-038.jpg",
+      "confidence": 0.9953
+    },
+    {
+      "index": 38,
+      "pageNumber": 37,
+      "start": 1955,
+      "end": 1980,
+      "thumbnailPath": "/example/frames/seg-039.jpg",
+      "confidence": 0.9948
+    },
+    {
+      "index": 39,
+      "pageNumber": 38,
+      "start": 1981,
+      "end": 2000,
+      "thumbnailPath": "/example/frames/seg-040.jpg",
+      "confidence": 0.9971
+    },
+    {
+      "index": 40,
+      "pageNumber": 39,
+      "start": 2001,
+      "end": 2058,
+      "thumbnailPath": "/example/frames/seg-041.jpg",
+      "confidence": 0.9967
+    },
+    {
+      "index": 41,
+      "pageNumber": 40,
+      "start": 2059,
+      "end": 2064,
+      "thumbnailPath": "/example/frames/seg-042.jpg",
+      "confidence": 0.9972
+    },
+    {
+      "index": 42,
+      "pageNumber": 41,
+      "start": 2065,
+      "end": 2108,
+      "thumbnailPath": "/example/frames/seg-043.jpg",
+      "confidence": 0.9969
+    },
+    {
+      "index": 43,
+      "pageNumber": 42,
+      "start": 2109,
+      "end": 2136,
+      "thumbnailPath": "/example/frames/seg-044.jpg",
+      "confidence": 0.9966
+    },
+    {
+      "index": 44,
+      "pageNumber": 43,
+      "start": 2137,
+      "end": 2147,
+      "thumbnailPath": "/example/frames/seg-045.jpg",
+      "confidence": 0.9969
+    },
+    {
+      "index": 45,
+      "pageNumber": 42,
+      "start": 2148,
+      "end": 2189,
+      "thumbnailPath": "/example/frames/seg-046.jpg",
+      "confidence": 0.9965
+    },
+    {
+      "index": 46,
+      "pageNumber": 43,
+      "start": 2190,
+      "end": 2192,
+      "thumbnailPath": "/example/frames/seg-047.jpg",
+      "confidence": 0.9971
+    },
+    {
+      "index": 47,
+      "pageNumber": 44,
+      "start": 2193,
+      "end": 2211,
+      "thumbnailPath": "/example/frames/seg-048.jpg",
+      "confidence": 0.9985
+    },
+    {
+      "index": 48,
+      "pageNumber": 45,
+      "start": 2212,
+      "end": 2229,
+      "thumbnailPath": "/example/frames/seg-049.jpg",
+      "confidence": 0.9982
+    },
+    {
+      "index": 49,
+      "pageNumber": 46,
+      "start": 2230,
+      "end": 2248,
+      "thumbnailPath": "/example/frames/seg-050.jpg",
+      "confidence": 0.9964
+    },
+    {
+      "index": 50,
+      "pageNumber": 47,
+      "start": 2249,
+      "end": 2287,
+      "thumbnailPath": "/example/frames/seg-051.jpg",
+      "confidence": 0.9978
+    },
+    {
+      "index": 51,
+      "pageNumber": 48,
+      "start": 2288,
+      "end": 2325,
+      "thumbnailPath": "/example/frames/seg-052.jpg",
+      "confidence": 0.9976
+    },
+    {
+      "index": 52,
+      "pageNumber": 49,
+      "start": 2326,
+      "end": 2397,
+      "thumbnailPath": "/example/frames/seg-053.jpg",
+      "confidence": 0.9987
+    },
+    {
+      "index": 53,
+      "pageNumber": 50,
+      "start": 2398,
+      "end": 2418,
+      "thumbnailPath": "/example/frames/seg-054.jpg",
+      "confidence": 0.9975
+    },
+    {
+      "index": 54,
+      "pageNumber": 51,
+      "start": 2419,
+      "end": 2457,
+      "thumbnailPath": "/example/frames/seg-055.jpg",
+      "confidence": 0.9974
+    },
+    {
+      "index": 55,
+      "pageNumber": 52,
+      "start": 2458,
+      "end": 2515,
+      "thumbnailPath": "/example/frames/seg-056.jpg",
+      "confidence": 0.9901
+    },
+    {
+      "index": 56,
+      "pageNumber": 53,
+      "start": 2516,
+      "end": 2568,
+      "thumbnailPath": "/example/frames/seg-057.jpg",
+      "confidence": 0.9965
+    },
+    {
+      "index": 57,
+      "pageNumber": 54,
+      "start": 2569,
+      "end": 2681,
+      "thumbnailPath": "/example/frames/seg-058.jpg",
+      "confidence": 0.9947
+    },
+    {
+      "index": 58,
+      "pageNumber": 55,
+      "start": 2682,
+      "end": 2737,
+      "thumbnailPath": "/example/frames/seg-059.jpg",
+      "confidence": 0.9967
+    },
+    {
+      "index": 59,
+      "pageNumber": 56,
+      "start": 2738,
+      "end": 2784,
+      "thumbnailPath": "/example/frames/seg-060.jpg",
+      "confidence": 0.9973
+    },
+    {
+      "index": 60,
+      "pageNumber": 57,
+      "start": 2785,
+      "end": 2817,
+      "thumbnailPath": "/example/frames/seg-061.jpg",
+      "confidence": 0.9968
+    },
+    {
+      "index": 61,
+      "pageNumber": 58,
+      "start": 2818,
+      "end": 2840,
+      "thumbnailPath": "/example/frames/seg-062.jpg",
+      "confidence": 0.9959
+    },
+    {
+      "index": 62,
+      "pageNumber": 59,
+      "start": 2841,
+      "end": 3041,
+      "thumbnailPath": "/example/frames/seg-063.jpg",
+      "confidence": 0.9979
+    },
+    {
+      "index": 63,
+      "pageNumber": 60,
+      "start": 3042,
+      "end": 3062,
+      "thumbnailPath": "/example/frames/seg-064.jpg",
+      "confidence": 0.9978
+    },
+    {
+      "index": 64,
+      "pageNumber": 61,
+      "start": 3063,
+      "end": 3073,
+      "thumbnailPath": "/example/frames/seg-065.jpg",
+      "confidence": 0.9982
+    },
+    {
+      "index": 65,
+      "pageNumber": 62,
+      "start": 3074,
+      "end": 3081,
+      "thumbnailPath": "/example/frames/seg-066.jpg",
+      "confidence": 0.9977
+    },
+    {
+      "index": 66,
+      "pageNumber": 63,
+      "start": 3082,
+      "end": 3092,
+      "thumbnailPath": "/example/frames/seg-067.jpg",
+      "confidence": 0.9976
+    },
+    {
+      "index": 67,
+      "pageNumber": 64,
+      "start": 3093,
+      "end": 3110,
+      "thumbnailPath": "/example/frames/seg-068.jpg",
+      "confidence": 0.9972
+    },
+    {
+      "index": 68,
+      "pageNumber": 65,
+      "start": 3111,
+      "end": 3115,
+      "thumbnailPath": "/example/frames/seg-069.jpg",
+      "confidence": 0.9984
+    },
+    {
+      "index": 69,
+      "pageNumber": 66,
+      "start": 3116,
+      "end": 3129,
+      "thumbnailPath": "/example/frames/seg-070.jpg",
+      "confidence": 0.9983
+    },
+    {
+      "index": 70,
+      "pageNumber": 67,
+      "start": 3130,
+      "end": 3149,
+      "thumbnailPath": "/example/frames/seg-071.jpg",
+      "confidence": 0.998
     }
   ]
 }

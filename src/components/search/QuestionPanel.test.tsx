@@ -37,6 +37,27 @@ describe("QuestionPanel", () => {
     expect(screen.queryByText(/근거를 찾는 중/)).not.toBeInTheDocument();
   });
 
+  it("질문과 답변이 대화로 쌓인다", () => {
+    render(<QuestionPanel memories={memories} onSelectEvidence={() => {}} />);
+
+    ask("시험에 나온다고 한 부분이 뭐야?");
+    finishSearch();
+    ask("과제는 언제까지야?");
+    finishSearch();
+
+    // 앞선 질문과 답변이 지워지지 않는다
+    expect(screen.getByText("시험에 나온다고 한 부분이 뭐야?")).toBeInTheDocument();
+    expect(screen.getByText("과제는 언제까지야?")).toBeInTheDocument();
+    expect(screen.getAllByText(/PDF \d+페이지 장면이며/)).toHaveLength(2);
+  });
+
+  it("질문을 보내면 입력칸이 비워진다", () => {
+    render(<QuestionPanel memories={memories} onSelectEvidence={() => {}} />);
+
+    ask("시험에 나온다고 한 부분이 뭐야?");
+    expect(screen.getByLabelText("질문")).toHaveValue("");
+  });
+
   it("시험 질문에 시험 Memory Unit 답변과 근거를 보여준다", () => {
     render(<QuestionPanel memories={memories} onSelectEvidence={() => {}} />);
 

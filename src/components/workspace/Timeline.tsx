@@ -6,6 +6,8 @@ import styles from "./Timeline.module.css";
 export interface TimelineProps {
   memories: MemoryUnit[];
   selectedMemoryId?: string;
+  /** 재생 중 지금 지나가고 있는 발언 (선택과는 별개의 약한 표시) */
+  playheadMemoryId?: string;
   onSelect: (memory: MemoryUnit) => void;
 }
 
@@ -27,9 +29,11 @@ const IMPORTANCE_CLASS: Record<MemoryImportance, string> = {
 export function Timeline({
   memories,
   selectedMemoryId,
+  playheadMemoryId,
   onSelect,
 }: TimelineProps) {
   const selectedRef = useRef<HTMLButtonElement>(null);
+  const playheadRef = useRef<HTMLButtonElement>(null);
 
   // 근거 카드로 선택된 항목이 스크롤 밖에 있어도 보이게 한다.
   useEffect(() => {
@@ -39,6 +43,15 @@ export function Timeline({
       behavior: "smooth",
     });
   }, [selectedMemoryId]);
+
+  // 재생 중에는 지나가는 발언을 따라 스크롤한다.
+  useEffect(() => {
+    if (!playheadMemoryId || playheadMemoryId === selectedMemoryId) return;
+    playheadRef.current?.scrollIntoView?.({
+      block: "nearest",
+      behavior: "smooth",
+    });
+  }, [playheadMemoryId, selectedMemoryId]);
 
   return (
     <section className={styles.timeline} aria-label="발언 타임라인">
@@ -53,12 +66,14 @@ export function Timeline({
         <ul className={styles.list}>
           {memories.map((memory) => {
             const isSelected = memory.id === selectedMemoryId;
+            const isPlayhead = memory.id === playheadMemoryId;
             return (
               <li key={memory.id}>
                 <button
                   type="button"
-                  ref={isSelected ? selectedRef : undefined}
+                  ref={isSelected ? selectedRef : isPlayhead ? playheadRef : undefined}
                   className={`${styles.item} ${isSelected ? styles.itemSelected : ""}`}
+                  data-playhead={isPlayhead ? "true" : undefined}
                   aria-current={isSelected ? "true" : undefined}
                   onClick={() => onSelect(memory)}
                 >

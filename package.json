@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "dev:example": "vite --open \"/?demo=example\"",
+    "dev:demo": "vite --open \"/?demo=example&flow=full\"",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "test": "vitest run",
@@ -13,7 +14,8 @@
     "smoke": "npm run example:check && npm run test && npm run build",
     "example:prepare": "node tools/example-fixture.mjs prepare",
     "example:check": "node tools/example-fixture.mjs check",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "session:build": "node tools/build-session.mjs"
   },
   "dependencies": {
     "react": "^19.2.8",

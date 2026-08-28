@@ -1,0 +1,196 @@
+.screen {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: var(--space-6);
+  overflow: auto;
+}
+
+.card {
+  width: min(920px, 100%);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-7) var(--space-6) var(--space-6);
+  text-align: center;
+}
+
+.head {
+  display: grid;
+  gap: var(--space-3);
+  justify-items: center;
+  margin-bottom: var(--space-6);
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-text-muted);
+  letter-spacing: 0.02em;
+}
+
+.logoMark {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-sm);
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--text-2xl);
+  line-height: var(--leading-tight);
+  color: var(--color-text);
+}
+
+.subtitle {
+  margin: 0;
+  max-width: 46ch;
+  font-size: var(--text-md);
+  line-height: var(--leading-normal);
+  color: var(--color-text-muted);
+}
+
+.slots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.slot {
+  position: relative;
+  border: 2px dashed var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-muted);
+  transition: border-color 120ms ease, background-color 120ms ease;
+}
+
+.slot[data-over="true"],
+.slot:focus-within {
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
+}
+
+.slot[data-filled="true"] {
+  border-style: solid;
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
+}
+
+/* 화면에서 감추되 키보드 초점과 라벨 연결은 살려둔다 */
+.input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.slotBody {
+  display: grid;
+  gap: var(--space-1);
+  justify-items: center;
+  padding: var(--space-5) var(--space-3);
+  cursor: pointer;
+  min-height: 168px;
+  align-content: center;
+}
+
+.slotIcon {
+  font-size: 26px;
+  line-height: 1;
+  margin-bottom: var(--space-1);
+}
+
+.slot[data-filled="true"] .slotIcon {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.slotLabel {
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.slotHint {
+  font-size: var(--text-xs);
+  color: var(--color-text-subtle);
+  font-family: var(--font-mono);
+}
+
+.slotAction {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-top: var(--space-2);
+}
+
+.fileName {
+  max-width: 100%;
+  font-size: var(--text-sm);
+  color: var(--color-accent-strong);
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fileSize {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+}
+
+.start {
+  width: min(320px, 100%);
+  padding: var(--space-3) var(--space-5);
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+  font-size: var(--text-md);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 120ms ease;
+}
+
+.start:hover:not(:disabled) {
+  background: var(--color-accent-strong);
+}
+
+.start:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+.start:disabled {
+  background: var(--color-border-strong);
+  cursor: not-allowed;
+}
+
+.note {
+  margin: var(--space-3) 0 0;
+  font-size: var(--text-sm);
+  color: var(--color-text-subtle);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slot,
+  .start {
+    transition: none;
+  }
+}

@@ -10,3 +10,6 @@ ROLE.md
 .env
 .env.local
 .env.*.local
+
+# LLM 주석 캐시 (재생성 비용 절약용, 재현에는 불필요)
+example/.llm-cache.json

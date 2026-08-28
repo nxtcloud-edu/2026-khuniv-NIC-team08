@@ -3,6 +3,8 @@ import { act, fireEvent, render, screen } from "@testing-library/react";
 
 import App from "./App";
 import { demoSession } from "./data/demoSession";
+import { exampleSession } from "./data/exampleSession";
+import { timestampToSeconds } from "./lib/playback";
 
 const EVIDENCE_CARD = /선택하면 해당 장면으로 이동합니다/;
 
@@ -93,15 +95,15 @@ describe("App 통합 흐름", () => {
   it("과제·핵심 질문도 각각의 Memory Unit을 근거로 돌려준다", () => {
     render(<App />);
 
+    // 대화가 쌓이므로 마지막 근거 카드가 방금 물어본 질문의 답이다
+    const lastEvidence = () =>
+      screen.getAllByRole("button", { name: EVIDENCE_CARD }).at(-1) as HTMLElement;
+
     ask("과제는 언제까지야?");
-    expect(screen.getByRole("button", { name: EVIDENCE_CARD })).toHaveTextContent(
-      "23:10 · PDF 15페이지",
-    );
+    expect(lastEvidence()).toHaveTextContent("23:10 · PDF 15페이지");
 
     ask("핵심 개념이 뭐야?");
-    expect(screen.getByRole("button", { name: EVIDENCE_CARD })).toHaveTextContent(
-      "12:05 · PDF 10페이지",
-    );
+    expect(lastEvidence()).toHaveTextContent("12:05 · PDF 10페이지");
   });
 
   it("example 모드에서는 실제 강의 fixture를 불러온다", () => {
@@ -111,7 +113,10 @@ describe("App 통합 흐름", () => {
     expect(
       screen.getByText("ML Basics · Model, Loss Function, Optimizer"),
     ).toBeInTheDocument();
-    expect(screen.getByAltText(/PDF 3페이지/)).toBeInTheDocument();
+    const firstPage = exampleSession.pages[0].pageNumber;
+    expect(
+      screen.getByAltText(new RegExp(`PDF ${firstPage}페이지`)),
+    ).toBeInTheDocument();
     expect(screen.getByLabelText("강의 영상 플레이어")).toHaveAttribute(
       "src",
       "/example/lecture.mp4",
@@ -123,14 +128,16 @@ describe("App 통합 흐름", () => {
     render(<App />);
 
     const video = screen.getByLabelText("강의 영상 플레이어") as HTMLVideoElement;
-    const firstMemory = screen.getByText("00:00:40");
+    const { timestamp } = exampleSession.memories[0];
+    const seconds = timestampToSeconds(timestamp);
+    const firstMemory = screen.getAllByText(timestamp)[0];
 
     fireEvent.click(firstMemory);
-    expect(video.currentTime).toBe(40);
+    expect(video.currentTime).toBe(seconds);
 
     // 사용자가 영상을 직접 옮긴 뒤 같은 발언을 다시 선택하는 상황
-    video.currentTime = 300;
+    video.currentTime = seconds + 260;
     fireEvent.click(firstMemory);
-    expect(video.currentTime).toBe(40);
+    expect(video.currentTime).toBe(seconds);
   });
 });

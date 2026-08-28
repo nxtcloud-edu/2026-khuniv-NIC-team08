@@ -7,6 +7,8 @@ export const exampleSession: DemoSession = {
   duration: manifest.duration,
   videoPath: manifest.fixture.videoPath,
   pages: manifest.pages,
+  segments: manifest.segments,
+  pipeline: manifest.pipeline,
   memories: manifest.memories.map((memory) => ({
     id: memory.id,
     timestamp: memory.timestamp,
@@ -15,5 +17,6 @@ export const exampleSession: DemoSession = {
     summary: memory.summary,
     importance: memory.importance as MemoryImportance,
     keywords: memory.keywords,
+    slideIndex: memory.slideIndex,
   })),
 };
