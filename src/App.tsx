@@ -3,13 +3,23 @@ import { useState } from "react";
 import { HeaderStatus } from "./components/workspace/HeaderStatus";
 import { DocumentViewer } from "./components/workspace/DocumentViewer";
 import { Timeline } from "./components/workspace/Timeline";
+import { LecturePlayer } from "./components/workspace/LecturePlayer";
 import { QuestionPanel } from "./components/search/QuestionPanel";
 import { demoSession } from "./data/demoSession";
+import { exampleSession } from "./data/exampleSession";
 import type { MemoryUnit } from "./types/session";
 import "./styles/app.css";
 
+function timestampToSeconds(timestamp: string): number {
+  const [hours, minutes, seconds] = timestamp.split(":").map(Number);
+  return hours * 3600 + minutes * 60 + seconds;
+}
+
 export default function App() {
-  const { title, duration, pages, memories } = demoSession;
+  const session = new URLSearchParams(window.location.search).get("demo") === "example"
+    ? exampleSession
+    : demoSession;
+  const { title, duration, pages, memories, videoPath } = session;
 
   const [currentPage, setCurrentPage] = useState(pages[0].pageNumber);
   const [selectedMemory, setSelectedMemory] = useState<MemoryUnit | undefined>();
@@ -36,11 +46,29 @@ export default function App() {
             highlightedPage={selectedMemory?.pageNumber}
             onPageChange={setCurrentPage}
           />
-          <Timeline
-            memories={memories}
-            selectedMemoryId={selectedMemory?.id}
-            onSelect={selectMemory}
-          />
+          {videoPath ? (
+            <div className="appSideColumn">
+              <LecturePlayer
+                src={videoPath}
+                seekTo={
+                  selectedMemory
+                    ? timestampToSeconds(selectedMemory.timestamp)
+                    : undefined
+                }
+              />
+              <Timeline
+                memories={memories}
+                selectedMemoryId={selectedMemory?.id}
+                onSelect={selectMemory}
+              />
+            </div>
+          ) : (
+            <Timeline
+              memories={memories}
+              selectedMemoryId={selectedMemory?.id}
+              onSelect={selectMemory}
+            />
+          )}
         </div>
 
         <QuestionPanel memories={memories} onSelectEvidence={selectMemory} />

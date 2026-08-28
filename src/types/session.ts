@@ -24,6 +24,8 @@ export interface DemoSession {
   title: string;
   /** "HH:MM:SS" 형식 */
   duration: string;
+  /** 실제 강의 fixture가 제공될 때 사용하는 로컬 영상 경로 */
+  videoPath?: string;
   pages: DocumentPage[];
   memories: MemoryUnit[];
 }

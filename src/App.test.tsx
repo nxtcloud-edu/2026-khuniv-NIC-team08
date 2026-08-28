@@ -23,6 +23,7 @@ describe("App 통합 흐름", () => {
 
   afterEach(() => {
     vi.useRealTimers();
+    window.history.replaceState({}, "", "/");
   });
 
   it("최초 실행 시 데모 세션과 첫 페이지를 보여준다", () => {
@@ -100,6 +101,20 @@ describe("App 통합 흐름", () => {
     ask("핵심 개념이 뭐야?");
     expect(screen.getByRole("button", { name: EVIDENCE_CARD })).toHaveTextContent(
       "12:05 · PDF 10페이지",
+    );
+  });
+
+  it("example 모드에서는 실제 강의 fixture를 불러온다", () => {
+    window.history.replaceState({}, "", "/?demo=example");
+    render(<App />);
+
+    expect(
+      screen.getByText("ML Basics · Model, Loss Function, Optimizer"),
+    ).toBeInTheDocument();
+    expect(screen.getByAltText(/PDF 3페이지/)).toBeInTheDocument();
+    expect(screen.getByLabelText("강의 영상 플레이어")).toHaveAttribute(
+      "src",
+      "/example/lecture.mp4",
     );
   });
 });

@@ -9,6 +9,9 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
+    "smoke": "npm run example:check && npm run test && npm run build",
+    "example:prepare": "node tools/example-fixture.mjs prepare",
+    "example:check": "node tools/example-fixture.mjs check",
     "lint": "eslint ."
   },
   "dependencies": {

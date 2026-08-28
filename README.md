@@ -13,7 +13,7 @@
 [![Vitest](https://img.shields.io/badge/Vitest-4.1-6E9F18?logo=vitest&logoColor=white)](https://vitest.dev/)
 ![Status](https://img.shields.io/badge/status-concept%20MVP-0E7C86)
 
-[소개](#소개) · [핵심 기능](#핵심-기능) · [빠른 시작](#빠른-시작) · [동작 방식](#동작-방식) · [MVP 범위](#mvp-범위)
+[소개](#소개) · [핵심 기능](#핵심-기능) · [빠른 시작](#빠른-시작) · [실제 강의 데모](#실제-강의-데모와-smoke-테스트) · [동작 방식](#동작-방식) · [MVP 범위](#mvp-범위)
 
 **2026 경희대학교 Nexus Innovation Challenge · 08팀 AOM**
 
@@ -68,7 +68,39 @@ npm run dev
 
 터미널에 표시되는 주소를 브라우저에서 엽니다. 기본 주소는 `http://localhost:5173`입니다.
 
-## 사용해 보기
+## 실제 강의 데모와 Smoke 테스트
+
+저장소에는 실제 머신러닝 강의의 PDF, 녹음 전사, 개인정보 영역을 제거한 공개용 영상과 대표 페이지가 포함되어 있습니다. clone 직후 다음 명령으로 데모에 필요한 파일과 앱을 한 번에 점검할 수 있습니다.
+
+```bash
+npm install
+npm run smoke
+```
+
+`smoke`는 다음 항목을 순서대로 확인합니다.
+
+1. PDF 68페이지, 전사 495개 구간, 4개 `Memory Unit`, 공개용 영상과 페이지 이미지의 무결성
+2. 전체 단위·컴포넌트 테스트
+3. TypeScript 검사와 프로덕션 빌드
+
+점검이 끝나면 개발 서버를 실행합니다.
+
+```bash
+npm run dev
+```
+
+브라우저에서 `http://localhost:5173/?demo=example`을 열면 실제 강의 세션이 표시됩니다. 타임라인이나 검색 근거를 선택하면 PDF 페이지와 발언이 함께 강조되고 영상도 해당 시각으로 이동합니다.
+
+| 예시 질문 | 연결되는 근거 |
+| --- | --- |
+| `학습 방식 세 가지가 뭐야?` | 지도학습·비지도학습·강화학습 설명 |
+| `확률을 계속 곱하면 작아지는 문제는 어떻게 해결해?` | 로그 우도 설명 |
+| `정규화가 뭐야?` | 편향·분산과 정규화 설명 |
+| `마지막 퀴즈는 언제야?` | 강의 마지막 퀴즈 |
+
+fixture 구성과 재생성 방법은 [example/EXAMPLE.md](example/EXAMPLE.md)에서 확인할 수 있습니다. 재생성할 때만 원본 강의 영상과 `ffmpeg`가 필요합니다.
+
+## 기본 mock 데모 사용해 보기
 
 1. 앱을 열어 준비된 운영체제 강의 세션을 확인합니다.
 2. 오른쪽 타임라인에서 발언을 선택해 연결된 문서 페이지로 이동합니다.
@@ -84,8 +116,6 @@ npm run dev
 | `과제는 언제까지야?` | `23:10 · PDF 15페이지` 과제 안내 |
 | `핵심 개념이 뭐야?` | `12:05 · PDF 10페이지` 핵심 개념 설명 |
 | `오늘 점심 메뉴가 뭐야?` | 관련 근거 없음 |
-
-30초 발표 시연 순서는 [DEMO.md](DEMO.md)에서 확인할 수 있습니다.
 
 ## 동작 방식
 
@@ -134,16 +164,20 @@ interface MemoryUnit {
 ## 프로젝트 구조
 
 ```text
-public/demo/pages/          시연용 강의 페이지 이미지
+example/                    실제 강의 원본 자료, manifest와 사용 안내
+public/
+├─ demo/pages/              기본 mock 데모 페이지 이미지
+└─ example/                 실제 강의 공개용 영상과 대표 페이지
 src/
 ├─ components/
 │  ├─ search/               질문 패널과 근거 카드
-│  └─ workspace/            문서 뷰어, 타임라인, 세션 상태
-├─ data/demoSession.ts      사전 처리된 데모 세션
+│  └─ workspace/            문서 뷰어, 강의 영상, 타임라인, 세션 상태
+├─ data/                    기본 mock과 실제 강의 세션 데이터
 ├─ lib/search.ts            로컬 검색과 답변 생성
 ├─ styles/                  디자인 토큰과 전역 스타일
 ├─ types/session.ts         세션과 Memory Unit 타입
 └─ App.tsx                  화면 상태와 상호작용 통합
+tools/                      실제 강의 fixture 생성·검증 스크립트
 ```
 
 ## 개발 명령어
@@ -155,21 +189,23 @@ src/
 | `npm run preview` | 프로덕션 빌드 결과 미리보기 |
 | `npm run test` | 전체 테스트 실행 |
 | `npm run test:watch` | 테스트 감시 모드 실행 |
+| `npm run smoke` | 실제 강의 fixture, 전체 테스트, 프로덕션 빌드 일괄 점검 |
+| `npm run example:check` | 실제 강의 fixture 무결성 검사 |
+| `npm run example:prepare` | 원본 영상과 PDF로 공개용 fixture 재생성 (`ffmpeg` 필요) |
 | `npm run lint` | ESLint 검사 |
 
 변경 사항은 다음 명령으로 한 번에 검증할 수 있습니다.
 
 ```bash
 npm run lint
-npm run test
-npm run build
+npm run smoke
 ```
 
 ## MVP 범위
 
 | 현재 구현 | 향후 확장 |
 | --- | --- |
-| 사전 처리된 단일 강의 세션 | 실시간 마이크·시스템 오디오 녹음 |
+| 기본 mock과 실제 강의 fixture | 실시간 마이크·시스템 오디오 녹음 |
 | PDF 페이지 이미지 탐색 | 실시간 화면 캡처, 변화 감지, OCR |
 | 발언 타임라인과 중요도 배지 | Whisper 기반 음성 인식 |
 | 발언과 페이지를 잇는 Memory Unit | BM25·임베딩 기반 하이브리드 검색 |
@@ -177,12 +213,6 @@ npm run build
 | 근거 선택 시 문서·발언 동시 강조 | 세션 저장소와 데스크톱 앱 배포 |
 
 화면의 `On-device concept demo`와 `Local demo data` 표시는 현재 기능이 실제 온디바이스 AI 파이프라인이 아니라, 제품 경험을 검증하기 위한 로컬 콘셉트 데모임을 뜻합니다.
-
-## 관련 문서
-
-- [DEMO.md](DEMO.md) — 30초 발표 시연 순서와 촬영 체크리스트
-- [PLAN.md](PLAN.md) — MVP 목표, 범위, 데이터 모델과 완료 기준
-- [ROLE.md](ROLE.md) — 구현 역할과 컴포넌트 계약
 
 ---
 

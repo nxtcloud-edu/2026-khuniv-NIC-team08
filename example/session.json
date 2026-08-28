@@ -1,0 +1,85 @@
+{
+  "id": "ml-basics-2026-07-08",
+  "title": "ML Basics · Model, Loss Function, Optimizer",
+  "duration": "00:52:52",
+  "recordingStartedAt": "14:01:25",
+  "expectedPdfPages": 68,
+  "expectedTranscriptCues": 495,
+  "source": {
+    "video": "20260708_딥러닝_1.mp4",
+    "pdf": "MLbasics_문상혁.pdf",
+    "transcript": "DAVIAN Basic Study 2026-07-08 14_00(GMT+9_00).txt"
+  },
+  "fixture": {
+    "videoPath": "/example/lecture.mp4",
+    "videoFilter": "crop=2700:1518:4:141,scale=1280:720,fps=5"
+  },
+  "pages": [
+    {
+      "pageNumber": 3,
+      "imagePath": "/example/pages/page-003.jpg",
+      "title": "Types of Learning Problem"
+    },
+    {
+      "pageNumber": 20,
+      "imagePath": "/example/pages/page-020.jpg",
+      "title": "Loss function · log likelihood"
+    },
+    {
+      "pageNumber": 30,
+      "imagePath": "/example/pages/page-030.jpg",
+      "title": "Regularization · bias and variance"
+    },
+    {
+      "pageNumber": 59,
+      "imagePath": "/example/pages/page-059.jpg",
+      "title": "Quiz"
+    }
+  ],
+  "memories": [
+    {
+      "id": "ml-memory-learning-types",
+      "timestamp": "00:00:40",
+      "sourceStart": "14:01:54",
+      "sourceEnd": "14:02:22",
+      "pageNumber": 3,
+      "transcript": "그 모델을 러닝하는 방법은 이제 세 가지가 제시되어 있습니다. 첫 번째로 이제 superviser learning 그리고 이제 unsupervised learning 마지막으로 reinforce mand learning 이 있습니다. 그래서 supervised learning 같은 경우는 이제 정답이 붙어있는 데이터를 통해서 그 모델이 정답을 보고 이제 학습하는 방식이고 그리고 정답 레일 없이 그 데이터만 가지고 데이터의 구조를 학습하는 방식입니다. 그 다음에 reinforceman learning 같은 경우에는.",
+      "summary": "지도학습, 비지도학습, 강화학습의 차이를 설명함",
+      "importance": "key",
+      "keywords": ["학습 방식", "지도학습", "비지도학습", "강화학습", "supervised", "unsupervised", "reinforcement"]
+    },
+    {
+      "id": "ml-memory-log-likelihood",
+      "timestamp": "00:08:55",
+      "sourceStart": "14:10:18",
+      "sourceEnd": "14:10:37",
+      "pageNumber": 20,
+      "transcript": "그런데 이제 확률이기 때문에 전부 다 영 에서 일 사이의 값일 겁니다. 이걸 이제 계속 곱해주는 방식으로 하자면 pd 라는 이 값 자체가 매우 작아지게 될 건데 그걸 이제 전체 다 로그를 씌움으로써 우리가 이 문제를 해결할 수 있습니다. 그래서 로그를 씌우게 되면 이제.",
+      "summary": "작은 확률을 계속 곱할 때 로그를 적용해 곱을 합으로 바꾸는 이유를 설명함",
+      "importance": "key",
+      "keywords": ["로그", "확률", "likelihood", "우도", "곱", "loss function", "손실함수"]
+    },
+    {
+      "id": "ml-memory-regularization",
+      "timestamp": "00:22:23",
+      "sourceStart": "14:23:48",
+      "sourceEnd": "14:23:56",
+      "pageNumber": 30,
+      "transcript": "네. 그래서 어쨌든 이게 문제인 건 알겠는데 그러면 이제 이걸 어떻게 해결할 것인가? 이제 그것이 등장하는 개념이 regularization 인데.",
+      "summary": "편향과 분산 문제를 해결하기 위한 정규화 개념을 도입함",
+      "importance": "key",
+      "keywords": ["정규화", "regularization", "편향", "분산", "bias", "variance"]
+    },
+    {
+      "id": "ml-memory-quiz",
+      "timestamp": "00:50:35",
+      "sourceStart": "14:52:00",
+      "sourceEnd": "14:52:05",
+      "pageNumber": 59,
+      "transcript": "그럼 이제 마지막 퀴즈 풀고 이제 좀 한번 스터디 좀 맞춰보도록 하겠습니다.",
+      "summary": "강의 마지막에 모델·손실함수·정규화 흐름을 확인하는 퀴즈를 시작함",
+      "importance": "normal",
+      "keywords": ["퀴즈", "마지막", "문제", "복습", "quiz"]
+    }
+  ]
+}
