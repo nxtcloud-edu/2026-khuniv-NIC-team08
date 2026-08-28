@@ -1,11 +1,11 @@
 /**
- * example/의 원본(영상·PDF·전사)에서 session.json을 실제로 생성한다.
+ * data/의 원본(영상·PDF·전사)에서 session.json을 실제로 생성한다.
  *
  *   영상 프레임 -+
  *   PDF 페이지 --+- 이미지 매칭 -> 슬라이드 구간 -+- 전사 결합 -> LLM 요약 -> Memory Unit
  *                                                +- 대표 프레임 썸네일
  *
- * manifest(example/session.json)의 source/fixture/recordingStartedAt은 입력으로 두고,
+ * manifest(data/session.json)의 source/fixture/recordingStartedAt은 입력으로 두고,
  * pages·segments·memories·pipeline만 다시 계산해 덮어쓴다.
  */
 
@@ -33,12 +33,12 @@ const MIN_RUN_SECONDS = 3; // 이보다 짧은 조각은 전환 흔들림으로 
 const THUMBNAIL_OFFSET_SECONDS = 2; // 구간 시작 직후 (전환 잔상 회피)
 const LLM_BATCH_SIZE = 10;
 
-const manifestPath = join(root, "example", "session.json");
+const manifestPath = join(root, "data", "session.json");
 const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
-const exampleDir = join(root, "example");
-const pagesDir = join(root, "public", "example", "pages");
-const framesDir = join(root, "public", "example", "frames");
-const thumbsDir = join(root, "public", "example", "thumbs");
+const dataDir = join(root, "data");
+const pagesDir = join(root, "public", "data", "pages");
+const framesDir = join(root, "public", "data", "frames");
+const thumbsDir = join(root, "public", "data", "thumbs");
 const workDir = join(root, "node_modules", ".cache", "anythingnote");
 
 const skipLlm = process.argv.includes("--skip-llm");
@@ -77,7 +77,7 @@ const step = (index, label) => console.log(`[${index}/6] ${label}`);
 
 // -- 1. PDF 페이지 ------------------------------------------------------------
 step(1, "PDF 페이지 추출");
-const pdfPages = extractJpegPages(join(exampleDir, manifest.source.pdf));
+const pdfPages = extractJpegPages(join(dataDir, manifest.source.pdf));
 if (pdfPages.length !== manifest.expectedPdfPages) {
   fail(`PDF 페이지 ${manifest.expectedPdfPages}장을 기대했지만 ${pdfPages.length}장을 찾았습니다`);
 }
@@ -144,14 +144,14 @@ segments.forEach((segment, index) => {
     "-q:v", "5",
     join(framesDir, name),
   ]);
-  segment.thumbnailPath = `/example/frames/${name}`;
+  segment.thumbnailPath = `/data/frames/${name}`;
 });
 console.log(`      썸네일 ${segments.length}장`);
 
 // -- 5. 전사 결합 -------------------------------------------------------------
 step(5, "전사를 슬라이드 구간에 배정");
 const cues = parseTranscript(
-  readFileSync(join(exampleDir, manifest.source.transcript), "utf8"),
+  readFileSync(join(dataDir, manifest.source.transcript), "utf8"),
   manifest.recordingStartedAt,
 );
 if (cues.length !== manifest.expectedTranscriptCues) {
@@ -168,7 +168,7 @@ const { items: annotations, source: annotatedBy } = await annotate(spoken, {
   skipLlm,
   batchSize: LLM_BATCH_SIZE,
   env: readEnv(),
-  cachePath: join(exampleDir, ".llm-cache.json"),
+  cachePath: join(dataDir, ".llm-cache.json"),
   onProgress: (done, total) => process.stdout.write(`\r      ${done}/${total} 구간 요약`),
 });
 process.stdout.write("\n");
@@ -203,8 +203,8 @@ spoken.forEach((segment, index) => {
 
 const pages = pdfPages.map((page) => ({
   pageNumber: page.pageNumber,
-  imagePath: `/example/pages/${pageFileName(page.pageNumber)}`,
-  thumbnailPath: `/example/thumbs/${pageFileName(page.pageNumber)}`,
+  imagePath: `/data/pages/${pageFileName(page.pageNumber)}`,
+  thumbnailPath: `/data/thumbs/${pageFileName(page.pageNumber)}`,
   title: titleByPage.get(page.pageNumber)?.title ?? `${page.pageNumber}페이지`,
 }));
 

@@ -6,7 +6,7 @@ import { exampleSession } from "./exampleSession";
 
 describe("exampleSession", () => {
   it("실제 PDF에서 추출한 페이지와 로컬 영상을 참조한다", () => {
-    expect(exampleSession.videoPath).toBe("/example/lecture.mp4");
+    expect(exampleSession.videoPath).toBe("/data/lecture.mp4");
     expect(existsSync(resolve("public", exampleSession.videoPath!.slice(1)))).toBe(true);
 
     for (const page of exampleSession.pages) {

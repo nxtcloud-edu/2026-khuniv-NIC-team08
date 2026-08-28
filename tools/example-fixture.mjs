@@ -11,8 +11,8 @@ import {
 } from "./example-fixture-lib.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const exampleDir = join(root, "example");
-const manifestPath = join(exampleDir, "session.json");
+const dataDir = join(root, "data");
+const manifestPath = join(dataDir, "session.json");
 const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
 
 function fail(message) {
@@ -20,7 +20,7 @@ function fail(message) {
 }
 
 function sourcePath(name) {
-  return join(exampleDir, manifest.source[name]);
+  return join(dataDir, manifest.source[name]);
 }
 
 function fixturePath(webPath) {
@@ -30,8 +30,8 @@ function fixturePath(webPath) {
 function validateFixture() {
   const pdfPath = sourcePath("pdf");
   const transcriptPath = sourcePath("transcript");
-  if (!existsSync(pdfPath)) fail(`Missing example PDF: ${pdfPath}`);
-  if (!existsSync(transcriptPath)) fail(`Missing example transcript: ${transcriptPath}`);
+  if (!existsSync(pdfPath)) fail(`Missing data PDF: ${pdfPath}`);
+  if (!existsSync(transcriptPath)) fail(`Missing data transcript: ${transcriptPath}`);
 
   const pdfPages = extractJpegPages(pdfPath);
   if (pdfPages.length !== manifest.expectedPdfPages) {

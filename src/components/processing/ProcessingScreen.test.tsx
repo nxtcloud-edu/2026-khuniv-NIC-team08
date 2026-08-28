@@ -8,7 +8,7 @@ const session: DemoSession = {
   id: "s",
   title: "테스트 강의",
   duration: "00:52:52",
-  videoPath: "/example/lecture.mp4",
+  videoPath: "/data/lecture.mp4",
   pages: [
     { pageNumber: 1, imagePath: "/p1.jpg", thumbnailPath: "/t1.jpg", title: "첫 장" },
     { pageNumber: 2, imagePath: "/p2.jpg", thumbnailPath: "/t2.jpg", title: "둘째 장" },

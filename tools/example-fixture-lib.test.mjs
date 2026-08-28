@@ -9,8 +9,8 @@ import {
   secondsToTimestamp,
 } from "./example-fixture-lib.mjs";
 
-const pdfPath = "example/MLbasics_문상혁.pdf";
-const transcriptPath = "example/DAVIAN Basic Study 2026-07-08 14_00(GMT+9_00).txt";
+const pdfPath = "data/MLbasics_문상혁.pdf";
+const transcriptPath = "data/DAVIAN Basic Study 2026-07-08 14_00(GMT+9_00).txt";
 
 describe("example fixture helpers", () => {
   it("시간 형식을 초 단위로 왕복 변환한다", () => {
@@ -32,6 +32,6 @@ describe("example fixture helpers", () => {
   });
 
   it("생성된 강의 fixture가 MP4 형식이다", () => {
-    expect(isMp4File("public/example/lecture.mp4")).toBe(true);
+    expect(isMp4File("public/data/lecture.mp4")).toBe(true);
   });
 });

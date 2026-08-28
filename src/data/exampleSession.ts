@@ -1,4 +1,4 @@
-import manifest from "../../example/session.json";
+import manifest from "../../data/session.json";
 import type { DemoSession, MemoryImportance } from "../types/session";
 
 export const exampleSession: DemoSession = {

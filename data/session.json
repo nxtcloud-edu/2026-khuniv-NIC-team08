@@ -11,416 +11,416 @@
     "transcript": "DAVIAN Basic Study 2026-07-08 14_00(GMT+9_00).txt"
   },
   "fixture": {
-    "videoPath": "/example/lecture.mp4",
+    "videoPath": "/data/lecture.mp4",
     "videoFilter": "crop=2700:1518:4:141,scale=1280:720,fps=5"
   },
   "pages": [
     {
       "pageNumber": 1,
-      "imagePath": "/example/pages/page-001.jpg",
-      "thumbnailPath": "/example/thumbs/page-001.jpg",
+      "imagePath": "/data/pages/page-001.jpg",
+      "thumbnailPath": "/data/thumbs/page-001.jpg",
       "title": "모델 최적화"
     },
     {
       "pageNumber": 2,
-      "imagePath": "/example/pages/page-002.jpg",
-      "thumbnailPath": "/example/thumbs/page-002.jpg",
+      "imagePath": "/data/pages/page-002.jpg",
+      "thumbnailPath": "/data/thumbs/page-002.jpg",
       "title": "발표 순서"
     },
     {
       "pageNumber": 3,
-      "imagePath": "/example/pages/page-003.jpg",
-      "thumbnailPath": "/example/thumbs/page-003.jpg",
+      "imagePath": "/data/pages/page-003.jpg",
+      "thumbnailPath": "/data/thumbs/page-003.jpg",
       "title": "학습 방법"
     },
     {
       "pageNumber": 4,
-      "imagePath": "/example/pages/page-004.jpg",
-      "thumbnailPath": "/example/thumbs/page-004.jpg",
+      "imagePath": "/data/pages/page-004.jpg",
+      "thumbnailPath": "/data/thumbs/page-004.jpg",
       "title": "모델 평가"
     },
     {
       "pageNumber": 5,
-      "imagePath": "/example/pages/page-005.jpg",
-      "thumbnailPath": "/example/thumbs/page-005.jpg",
+      "imagePath": "/data/pages/page-005.jpg",
+      "thumbnailPath": "/data/thumbs/page-005.jpg",
       "title": "5페이지"
     },
     {
       "pageNumber": 6,
-      "imagePath": "/example/pages/page-006.jpg",
-      "thumbnailPath": "/example/thumbs/page-006.jpg",
+      "imagePath": "/data/pages/page-006.jpg",
+      "thumbnailPath": "/data/thumbs/page-006.jpg",
       "title": "모델 클래스 정의"
     },
     {
       "pageNumber": 7,
-      "imagePath": "/example/pages/page-007.jpg",
-      "thumbnailPath": "/example/thumbs/page-007.jpg",
+      "imagePath": "/data/pages/page-007.jpg",
+      "thumbnailPath": "/data/thumbs/page-007.jpg",
       "title": "수퍼바이즈드 학습"
     },
     {
       "pageNumber": 8,
-      "imagePath": "/example/pages/page-008.jpg",
-      "thumbnailPath": "/example/thumbs/page-008.jpg",
+      "imagePath": "/data/pages/page-008.jpg",
+      "thumbnailPath": "/data/thumbs/page-008.jpg",
       "title": "확률 예측"
     },
     {
       "pageNumber": 9,
-      "imagePath": "/example/pages/page-009.jpg",
-      "thumbnailPath": "/example/thumbs/page-009.jpg",
+      "imagePath": "/data/pages/page-009.jpg",
+      "thumbnailPath": "/data/thumbs/page-009.jpg",
       "title": "확률의 장점"
     },
     {
       "pageNumber": 10,
-      "imagePath": "/example/pages/page-010.jpg",
-      "thumbnailPath": "/example/thumbs/page-010.jpg",
+      "imagePath": "/data/pages/page-010.jpg",
+      "thumbnailPath": "/data/thumbs/page-010.jpg",
       "title": "확률 표현 문제"
     },
     {
       "pageNumber": 11,
-      "imagePath": "/example/pages/page-011.jpg",
-      "thumbnailPath": "/example/thumbs/page-011.jpg",
+      "imagePath": "/data/pages/page-011.jpg",
+      "thumbnailPath": "/data/thumbs/page-011.jpg",
       "title": "11페이지"
     },
     {
       "pageNumber": 12,
-      "imagePath": "/example/pages/page-012.jpg",
-      "thumbnailPath": "/example/thumbs/page-012.jpg",
+      "imagePath": "/data/pages/page-012.jpg",
+      "thumbnailPath": "/data/thumbs/page-012.jpg",
       "title": "softmax 함수"
     },
     {
       "pageNumber": 13,
-      "imagePath": "/example/pages/page-013.jpg",
-      "thumbnailPath": "/example/thumbs/page-013.jpg",
+      "imagePath": "/data/pages/page-013.jpg",
+      "thumbnailPath": "/data/thumbs/page-013.jpg",
       "title": "소프트맥스 함수"
     },
     {
       "pageNumber": 14,
-      "imagePath": "/example/pages/page-014.jpg",
-      "thumbnailPath": "/example/thumbs/page-014.jpg",
+      "imagePath": "/data/pages/page-014.jpg",
+      "thumbnailPath": "/data/thumbs/page-014.jpg",
       "title": "모델 변경"
     },
     {
       "pageNumber": 15,
-      "imagePath": "/example/pages/page-015.jpg",
-      "thumbnailPath": "/example/thumbs/page-015.jpg",
+      "imagePath": "/data/pages/page-015.jpg",
+      "thumbnailPath": "/data/thumbs/page-015.jpg",
       "title": "소프트맥스 함수"
     },
     {
       "pageNumber": 16,
-      "imagePath": "/example/pages/page-016.jpg",
-      "thumbnailPath": "/example/thumbs/page-016.jpg",
+      "imagePath": "/data/pages/page-016.jpg",
+      "thumbnailPath": "/data/thumbs/page-016.jpg",
       "title": "소프트맥스 함수"
     },
     {
       "pageNumber": 17,
-      "imagePath": "/example/pages/page-017.jpg",
-      "thumbnailPath": "/example/thumbs/page-017.jpg",
+      "imagePath": "/data/pages/page-017.jpg",
+      "thumbnailPath": "/data/thumbs/page-017.jpg",
       "title": "모델 클래스"
     },
     {
       "pageNumber": 18,
-      "imagePath": "/example/pages/page-018.jpg",
-      "thumbnailPath": "/example/thumbs/page-018.jpg",
+      "imagePath": "/data/pages/page-018.jpg",
+      "thumbnailPath": "/data/thumbs/page-018.jpg",
       "title": "데이터 샘플링"
     },
     {
       "pageNumber": 19,
-      "imagePath": "/example/pages/page-019.jpg",
-      "thumbnailPath": "/example/thumbs/page-019.jpg",
+      "imagePath": "/data/pages/page-019.jpg",
+      "thumbnailPath": "/data/thumbs/page-019.jpg",
       "title": "Supervised Learning"
     },
     {
       "pageNumber": 20,
-      "imagePath": "/example/pages/page-020.jpg",
-      "thumbnailPath": "/example/thumbs/page-020.jpg",
+      "imagePath": "/data/pages/page-020.jpg",
+      "thumbnailPath": "/data/thumbs/page-020.jpg",
       "title": "로그 변환"
     },
     {
       "pageNumber": 21,
-      "imagePath": "/example/pages/page-021.jpg",
-      "thumbnailPath": "/example/thumbs/page-021.jpg",
+      "imagePath": "/data/pages/page-021.jpg",
+      "thumbnailPath": "/data/thumbs/page-021.jpg",
       "title": "로스 함수"
     },
     {
       "pageNumber": 22,
-      "imagePath": "/example/pages/page-022.jpg",
-      "thumbnailPath": "/example/thumbs/page-022.jpg",
+      "imagePath": "/data/pages/page-022.jpg",
+      "thumbnailPath": "/data/thumbs/page-022.jpg",
       "title": "로스 함수"
     },
     {
       "pageNumber": 23,
-      "imagePath": "/example/pages/page-023.jpg",
-      "thumbnailPath": "/example/thumbs/page-023.jpg",
+      "imagePath": "/data/pages/page-023.jpg",
+      "thumbnailPath": "/data/thumbs/page-023.jpg",
       "title": "로지스틱 회귀"
     },
     {
       "pageNumber": 24,
-      "imagePath": "/example/pages/page-024.jpg",
-      "thumbnailPath": "/example/thumbs/page-024.jpg",
+      "imagePath": "/data/pages/page-024.jpg",
+      "thumbnailPath": "/data/thumbs/page-024.jpg",
       "title": "멀티 레이블"
     },
     {
       "pageNumber": 25,
-      "imagePath": "/example/pages/page-025.jpg",
-      "thumbnailPath": "/example/thumbs/page-025.jpg",
+      "imagePath": "/data/pages/page-025.jpg",
+      "thumbnailPath": "/data/thumbs/page-025.jpg",
       "title": "리스크 개념"
     },
     {
       "pageNumber": 26,
-      "imagePath": "/example/pages/page-026.jpg",
-      "thumbnailPath": "/example/thumbs/page-026.jpg",
+      "imagePath": "/data/pages/page-026.jpg",
+      "thumbnailPath": "/data/thumbs/page-026.jpg",
       "title": "오버피팅"
     },
     {
       "pageNumber": 27,
-      "imagePath": "/example/pages/page-027.jpg",
-      "thumbnailPath": "/example/thumbs/page-027.jpg",
+      "imagePath": "/data/pages/page-027.jpg",
+      "thumbnailPath": "/data/thumbs/page-027.jpg",
       "title": "리스크 해석"
     },
     {
       "pageNumber": 28,
-      "imagePath": "/example/pages/page-028.jpg",
-      "thumbnailPath": "/example/thumbs/page-028.jpg",
+      "imagePath": "/data/pages/page-028.jpg",
+      "thumbnailPath": "/data/thumbs/page-028.jpg",
       "title": "정규화"
     },
     {
       "pageNumber": 29,
-      "imagePath": "/example/pages/page-029.jpg",
-      "thumbnailPath": "/example/thumbs/page-029.jpg",
+      "imagePath": "/data/pages/page-029.jpg",
+      "thumbnailPath": "/data/thumbs/page-029.jpg",
       "title": "모델 평가"
     },
     {
       "pageNumber": 30,
-      "imagePath": "/example/pages/page-030.jpg",
-      "thumbnailPath": "/example/thumbs/page-030.jpg",
+      "imagePath": "/data/pages/page-030.jpg",
+      "thumbnailPath": "/data/thumbs/page-030.jpg",
       "title": "정규화"
     },
     {
       "pageNumber": 31,
-      "imagePath": "/example/pages/page-031.jpg",
-      "thumbnailPath": "/example/thumbs/page-031.jpg",
+      "imagePath": "/data/pages/page-031.jpg",
+      "thumbnailPath": "/data/thumbs/page-031.jpg",
       "title": "모델 학습"
     },
     {
       "pageNumber": 32,
-      "imagePath": "/example/pages/page-032.jpg",
-      "thumbnailPath": "/example/thumbs/page-032.jpg",
+      "imagePath": "/data/pages/page-032.jpg",
+      "thumbnailPath": "/data/thumbs/page-032.jpg",
       "title": "오버피팅"
     },
     {
       "pageNumber": 33,
-      "imagePath": "/example/pages/page-033.jpg",
-      "thumbnailPath": "/example/thumbs/page-033.jpg",
+      "imagePath": "/data/pages/page-033.jpg",
+      "thumbnailPath": "/data/thumbs/page-033.jpg",
       "title": "모델 설정"
     },
     {
       "pageNumber": 34,
-      "imagePath": "/example/pages/page-034.jpg",
-      "thumbnailPath": "/example/thumbs/page-034.jpg",
+      "imagePath": "/data/pages/page-034.jpg",
+      "thumbnailPath": "/data/thumbs/page-034.jpg",
       "title": "로그 p 세타"
     },
     {
       "pageNumber": 35,
-      "imagePath": "/example/pages/page-035.jpg",
-      "thumbnailPath": "/example/thumbs/page-035.jpg",
+      "imagePath": "/data/pages/page-035.jpg",
+      "thumbnailPath": "/data/thumbs/page-035.jpg",
       "title": "드롭아웃과 패널티"
     },
     {
       "pageNumber": 36,
-      "imagePath": "/example/pages/page-036.jpg",
-      "thumbnailPath": "/example/thumbs/page-036.jpg",
+      "imagePath": "/data/pages/page-036.jpg",
+      "thumbnailPath": "/data/thumbs/page-036.jpg",
       "title": "확률 p"
     },
     {
       "pageNumber": 37,
-      "imagePath": "/example/pages/page-037.jpg",
-      "thumbnailPath": "/example/thumbs/page-037.jpg",
+      "imagePath": "/data/pages/page-037.jpg",
+      "thumbnailPath": "/data/thumbs/page-037.jpg",
       "title": "p 값 설정"
     },
     {
       "pageNumber": 38,
-      "imagePath": "/example/pages/page-038.jpg",
-      "thumbnailPath": "/example/thumbs/page-038.jpg",
+      "imagePath": "/data/pages/page-038.jpg",
+      "thumbnailPath": "/data/thumbs/page-038.jpg",
       "title": "드롭 아웃"
     },
     {
       "pageNumber": 39,
-      "imagePath": "/example/pages/page-039.jpg",
-      "thumbnailPath": "/example/thumbs/page-039.jpg",
+      "imagePath": "/data/pages/page-039.jpg",
+      "thumbnailPath": "/data/thumbs/page-039.jpg",
       "title": "오버피팅"
     },
     {
       "pageNumber": 40,
-      "imagePath": "/example/pages/page-040.jpg",
-      "thumbnailPath": "/example/thumbs/page-040.jpg",
+      "imagePath": "/data/pages/page-040.jpg",
+      "thumbnailPath": "/data/thumbs/page-040.jpg",
       "title": "40페이지"
     },
     {
       "pageNumber": 41,
-      "imagePath": "/example/pages/page-041.jpg",
-      "thumbnailPath": "/example/thumbs/page-041.jpg",
+      "imagePath": "/data/pages/page-041.jpg",
+      "thumbnailPath": "/data/thumbs/page-041.jpg",
       "title": "데이터셋 구성"
     },
     {
       "pageNumber": 42,
-      "imagePath": "/example/pages/page-042.jpg",
-      "thumbnailPath": "/example/thumbs/page-042.jpg",
+      "imagePath": "/data/pages/page-042.jpg",
+      "thumbnailPath": "/data/thumbs/page-042.jpg",
       "title": "바이어스 설명"
     },
     {
       "pageNumber": 43,
-      "imagePath": "/example/pages/page-043.jpg",
-      "thumbnailPath": "/example/thumbs/page-043.jpg",
+      "imagePath": "/data/pages/page-043.jpg",
+      "thumbnailPath": "/data/thumbs/page-043.jpg",
       "title": "바이에스"
     },
     {
       "pageNumber": 44,
-      "imagePath": "/example/pages/page-044.jpg",
-      "thumbnailPath": "/example/thumbs/page-044.jpg",
+      "imagePath": "/data/pages/page-044.jpg",
+      "thumbnailPath": "/data/thumbs/page-044.jpg",
       "title": "경량화 기법"
     },
     {
       "pageNumber": 45,
-      "imagePath": "/example/pages/page-045.jpg",
-      "thumbnailPath": "/example/thumbs/page-045.jpg",
+      "imagePath": "/data/pages/page-045.jpg",
+      "thumbnailPath": "/data/thumbs/page-045.jpg",
       "title": "감소 방향"
     },
     {
       "pageNumber": 46,
-      "imagePath": "/example/pages/page-046.jpg",
-      "thumbnailPath": "/example/thumbs/page-046.jpg",
+      "imagePath": "/data/pages/page-046.jpg",
+      "thumbnailPath": "/data/thumbs/page-046.jpg",
       "title": "안정점"
     },
     {
       "pageNumber": 47,
-      "imagePath": "/example/pages/page-047.jpg",
-      "thumbnailPath": "/example/thumbs/page-047.jpg",
+      "imagePath": "/data/pages/page-047.jpg",
+      "thumbnailPath": "/data/thumbs/page-047.jpg",
       "title": "모델 로스"
     },
     {
       "pageNumber": 48,
-      "imagePath": "/example/pages/page-048.jpg",
-      "thumbnailPath": "/example/thumbs/page-048.jpg",
+      "imagePath": "/data/pages/page-048.jpg",
+      "thumbnailPath": "/data/thumbs/page-048.jpg",
       "title": "플렉토 문제"
     },
     {
       "pageNumber": 49,
-      "imagePath": "/example/pages/page-049.jpg",
-      "thumbnailPath": "/example/thumbs/page-049.jpg",
+      "imagePath": "/data/pages/page-049.jpg",
+      "thumbnailPath": "/data/thumbs/page-049.jpg",
       "title": "새들 포인트"
     },
     {
       "pageNumber": 50,
-      "imagePath": "/example/pages/page-050.jpg",
-      "thumbnailPath": "/example/thumbs/page-050.jpg",
+      "imagePath": "/data/pages/page-050.jpg",
+      "thumbnailPath": "/data/thumbs/page-050.jpg",
       "title": "최적 방향"
     },
     {
       "pageNumber": 51,
-      "imagePath": "/example/pages/page-051.jpg",
-      "thumbnailPath": "/example/thumbs/page-051.jpg",
+      "imagePath": "/data/pages/page-051.jpg",
+      "thumbnailPath": "/data/thumbs/page-051.jpg",
       "title": "모멘텀 개념"
     },
     {
       "pageNumber": 52,
-      "imagePath": "/example/pages/page-052.jpg",
-      "thumbnailPath": "/example/thumbs/page-052.jpg",
+      "imagePath": "/data/pages/page-052.jpg",
+      "thumbnailPath": "/data/thumbs/page-052.jpg",
       "title": "모멘텀 식"
     },
     {
       "pageNumber": 53,
-      "imagePath": "/example/pages/page-053.jpg",
-      "thumbnailPath": "/example/thumbs/page-053.jpg",
+      "imagePath": "/data/pages/page-053.jpg",
+      "thumbnailPath": "/data/thumbs/page-053.jpg",
       "title": "그래디언트 조정"
     },
     {
       "pageNumber": 54,
-      "imagePath": "/example/pages/page-054.jpg",
-      "thumbnailPath": "/example/thumbs/page-054.jpg",
+      "imagePath": "/data/pages/page-054.jpg",
+      "thumbnailPath": "/data/thumbs/page-054.jpg",
       "title": "알고리즘 소개"
     },
     {
       "pageNumber": 55,
-      "imagePath": "/example/pages/page-055.jpg",
-      "thumbnailPath": "/example/thumbs/page-055.jpg",
+      "imagePath": "/data/pages/page-055.jpg",
+      "thumbnailPath": "/data/thumbs/page-055.jpg",
       "title": "아담 알고리즘"
     },
     {
       "pageNumber": 56,
-      "imagePath": "/example/pages/page-056.jpg",
-      "thumbnailPath": "/example/thumbs/page-056.jpg",
+      "imagePath": "/data/pages/page-056.jpg",
+      "thumbnailPath": "/data/thumbs/page-056.jpg",
       "title": "배치 업데이트"
     },
     {
       "pageNumber": 57,
-      "imagePath": "/example/pages/page-057.jpg",
-      "thumbnailPath": "/example/thumbs/page-057.jpg",
+      "imagePath": "/data/pages/page-057.jpg",
+      "thumbnailPath": "/data/thumbs/page-057.jpg",
       "title": "러닝 레이트 조정"
     },
     {
       "pageNumber": 58,
-      "imagePath": "/example/pages/page-058.jpg",
-      "thumbnailPath": "/example/thumbs/page-058.jpg",
+      "imagePath": "/data/pages/page-058.jpg",
+      "thumbnailPath": "/data/thumbs/page-058.jpg",
       "title": "옵티마이저 질문"
     },
     {
       "pageNumber": 59,
-      "imagePath": "/example/pages/page-059.jpg",
-      "thumbnailPath": "/example/thumbs/page-059.jpg",
+      "imagePath": "/data/pages/page-059.jpg",
+      "thumbnailPath": "/data/thumbs/page-059.jpg",
       "title": "퀴즈 안내"
     },
     {
       "pageNumber": 60,
-      "imagePath": "/example/pages/page-060.jpg",
-      "thumbnailPath": "/example/thumbs/page-060.jpg",
+      "imagePath": "/data/pages/page-060.jpg",
+      "thumbnailPath": "/data/thumbs/page-060.jpg",
       "title": "퀴즈 소개"
     },
     {
       "pageNumber": 61,
-      "imagePath": "/example/pages/page-061.jpg",
-      "thumbnailPath": "/example/thumbs/page-061.jpg",
+      "imagePath": "/data/pages/page-061.jpg",
+      "thumbnailPath": "/data/thumbs/page-061.jpg",
       "title": "로시 개설"
     },
     {
       "pageNumber": 62,
-      "imagePath": "/example/pages/page-062.jpg",
-      "thumbnailPath": "/example/thumbs/page-062.jpg",
+      "imagePath": "/data/pages/page-062.jpg",
+      "thumbnailPath": "/data/thumbs/page-062.jpg",
       "title": "소프트맥스"
     },
     {
       "pageNumber": 63,
-      "imagePath": "/example/pages/page-063.jpg",
-      "thumbnailPath": "/example/thumbs/page-063.jpg",
+      "imagePath": "/data/pages/page-063.jpg",
+      "thumbnailPath": "/data/thumbs/page-063.jpg",
       "title": "최고 확률"
     },
     {
       "pageNumber": 64,
-      "imagePath": "/example/pages/page-064.jpg",
-      "thumbnailPath": "/example/thumbs/page-064.jpg",
+      "imagePath": "/data/pages/page-064.jpg",
+      "thumbnailPath": "/data/thumbs/page-064.jpg",
       "title": "로스 계산"
     },
     {
       "pageNumber": 65,
-      "imagePath": "/example/pages/page-065.jpg",
-      "thumbnailPath": "/example/thumbs/page-065.jpg",
+      "imagePath": "/data/pages/page-065.jpg",
+      "thumbnailPath": "/data/thumbs/page-065.jpg",
       "title": "배급라이제이션"
     },
     {
       "pageNumber": 66,
-      "imagePath": "/example/pages/page-066.jpg",
-      "thumbnailPath": "/example/thumbs/page-066.jpg",
+      "imagePath": "/data/pages/page-066.jpg",
+      "thumbnailPath": "/data/thumbs/page-066.jpg",
       "title": "레귤라이제이션"
     },
     {
       "pageNumber": 67,
-      "imagePath": "/example/pages/page-067.jpg",
-      "thumbnailPath": "/example/thumbs/page-067.jpg",
+      "imagePath": "/data/pages/page-067.jpg",
+      "thumbnailPath": "/data/thumbs/page-067.jpg",
       "title": "모델 비교"
     },
     {
       "pageNumber": 68,
-      "imagePath": "/example/pages/page-068.jpg",
-      "thumbnailPath": "/example/thumbs/page-068.jpg",
+      "imagePath": "/data/pages/page-068.jpg",
+      "thumbnailPath": "/data/thumbs/page-068.jpg",
       "title": "68페이지"
     }
   ],
@@ -1577,7 +1577,7 @@
       "pageNumber": 1,
       "start": 0,
       "end": 10,
-      "thumbnailPath": "/example/frames/seg-001.jpg",
+      "thumbnailPath": "/data/frames/seg-001.jpg",
       "confidence": 0.9988
     },
     {
@@ -1585,7 +1585,7 @@
       "pageNumber": 2,
       "start": 11,
       "end": 28,
-      "thumbnailPath": "/example/frames/seg-002.jpg",
+      "thumbnailPath": "/data/frames/seg-002.jpg",
       "confidence": 0.9979
     },
     {
@@ -1593,7 +1593,7 @@
       "pageNumber": 3,
       "start": 29,
       "end": 70,
-      "thumbnailPath": "/example/frames/seg-003.jpg",
+      "thumbnailPath": "/data/frames/seg-003.jpg",
       "confidence": 0.9962
     },
     {
@@ -1601,7 +1601,7 @@
       "pageNumber": 4,
       "start": 71,
       "end": 91,
-      "thumbnailPath": "/example/frames/seg-004.jpg",
+      "thumbnailPath": "/data/frames/seg-004.jpg",
       "confidence": 0.9971
     },
     {
@@ -1609,7 +1609,7 @@
       "pageNumber": 5,
       "start": 92,
       "end": 95,
-      "thumbnailPath": "/example/frames/seg-005.jpg",
+      "thumbnailPath": "/data/frames/seg-005.jpg",
       "confidence": 0.9972
     },
     {
@@ -1617,7 +1617,7 @@
       "pageNumber": 6,
       "start": 96,
       "end": 126,
-      "thumbnailPath": "/example/frames/seg-006.jpg",
+      "thumbnailPath": "/data/frames/seg-006.jpg",
       "confidence": 0.9963
     },
     {
@@ -1625,7 +1625,7 @@
       "pageNumber": 7,
       "start": 127,
       "end": 152,
-      "thumbnailPath": "/example/frames/seg-007.jpg",
+      "thumbnailPath": "/data/frames/seg-007.jpg",
       "confidence": 0.9986
     },
     {
@@ -1633,7 +1633,7 @@
       "pageNumber": 8,
       "start": 153,
       "end": 167,
-      "thumbnailPath": "/example/frames/seg-008.jpg",
+      "thumbnailPath": "/data/frames/seg-008.jpg",
       "confidence": 0.9983
     },
     {
@@ -1641,7 +1641,7 @@
       "pageNumber": 9,
       "start": 168,
       "end": 204,
-      "thumbnailPath": "/example/frames/seg-009.jpg",
+      "thumbnailPath": "/data/frames/seg-009.jpg",
       "confidence": 0.9968
     },
     {
@@ -1649,7 +1649,7 @@
       "pageNumber": 10,
       "start": 205,
       "end": 210,
-      "thumbnailPath": "/example/frames/seg-010.jpg",
+      "thumbnailPath": "/data/frames/seg-010.jpg",
       "confidence": 0.9985
     },
     {
@@ -1657,7 +1657,7 @@
       "pageNumber": 11,
       "start": 211,
       "end": 216,
-      "thumbnailPath": "/example/frames/seg-011.jpg",
+      "thumbnailPath": "/data/frames/seg-011.jpg",
       "confidence": 0.9985
     },
     {
@@ -1665,7 +1665,7 @@
       "pageNumber": 12,
       "start": 217,
       "end": 241,
-      "thumbnailPath": "/example/frames/seg-012.jpg",
+      "thumbnailPath": "/data/frames/seg-012.jpg",
       "confidence": 0.9971
     },
     {
@@ -1673,7 +1673,7 @@
       "pageNumber": 13,
       "start": 242,
       "end": 284,
-      "thumbnailPath": "/example/frames/seg-013.jpg",
+      "thumbnailPath": "/data/frames/seg-013.jpg",
       "confidence": 0.9967
     },
     {
@@ -1681,7 +1681,7 @@
       "pageNumber": 14,
       "start": 285,
       "end": 324,
-      "thumbnailPath": "/example/frames/seg-014.jpg",
+      "thumbnailPath": "/data/frames/seg-014.jpg",
       "confidence": 0.9985
     },
     {
@@ -1689,7 +1689,7 @@
       "pageNumber": 15,
       "start": 325,
       "end": 351,
-      "thumbnailPath": "/example/frames/seg-015.jpg",
+      "thumbnailPath": "/data/frames/seg-015.jpg",
       "confidence": 0.9954
     },
     {
@@ -1697,7 +1697,7 @@
       "pageNumber": 16,
       "start": 352,
       "end": 372,
-      "thumbnailPath": "/example/frames/seg-016.jpg",
+      "thumbnailPath": "/data/frames/seg-016.jpg",
       "confidence": 0.9954
     },
     {
@@ -1705,7 +1705,7 @@
       "pageNumber": 17,
       "start": 373,
       "end": 396,
-      "thumbnailPath": "/example/frames/seg-017.jpg",
+      "thumbnailPath": "/data/frames/seg-017.jpg",
       "confidence": 0.997
     },
     {
@@ -1713,7 +1713,7 @@
       "pageNumber": 18,
       "start": 397,
       "end": 465,
-      "thumbnailPath": "/example/frames/seg-018.jpg",
+      "thumbnailPath": "/data/frames/seg-018.jpg",
       "confidence": 0.9985
     },
     {
@@ -1721,7 +1721,7 @@
       "pageNumber": 19,
       "start": 466,
       "end": 532,
-      "thumbnailPath": "/example/frames/seg-019.jpg",
+      "thumbnailPath": "/data/frames/seg-019.jpg",
       "confidence": 0.9979
     },
     {
@@ -1729,7 +1729,7 @@
       "pageNumber": 20,
       "start": 533,
       "end": 584,
-      "thumbnailPath": "/example/frames/seg-020.jpg",
+      "thumbnailPath": "/data/frames/seg-020.jpg",
       "confidence": 0.9978
     },
     {
@@ -1737,7 +1737,7 @@
       "pageNumber": 21,
       "start": 585,
       "end": 617,
-      "thumbnailPath": "/example/frames/seg-021.jpg",
+      "thumbnailPath": "/data/frames/seg-021.jpg",
       "confidence": 0.9971
     },
     {
@@ -1745,7 +1745,7 @@
       "pageNumber": 22,
       "start": 618,
       "end": 951,
-      "thumbnailPath": "/example/frames/seg-022.jpg",
+      "thumbnailPath": "/data/frames/seg-022.jpg",
       "confidence": 0.9976
     },
     {
@@ -1753,7 +1753,7 @@
       "pageNumber": 23,
       "start": 952,
       "end": 982,
-      "thumbnailPath": "/example/frames/seg-023.jpg",
+      "thumbnailPath": "/data/frames/seg-023.jpg",
       "confidence": 0.9973
     },
     {
@@ -1761,7 +1761,7 @@
       "pageNumber": 24,
       "start": 983,
       "end": 1022,
-      "thumbnailPath": "/example/frames/seg-024.jpg",
+      "thumbnailPath": "/data/frames/seg-024.jpg",
       "confidence": 0.9974
     },
     {
@@ -1769,7 +1769,7 @@
       "pageNumber": 25,
       "start": 1023,
       "end": 1074,
-      "thumbnailPath": "/example/frames/seg-025.jpg",
+      "thumbnailPath": "/data/frames/seg-025.jpg",
       "confidence": 0.9983
     },
     {
@@ -1777,7 +1777,7 @@
       "pageNumber": 26,
       "start": 1075,
       "end": 1103,
-      "thumbnailPath": "/example/frames/seg-026.jpg",
+      "thumbnailPath": "/data/frames/seg-026.jpg",
       "confidence": 0.9973
     },
     {
@@ -1785,7 +1785,7 @@
       "pageNumber": 27,
       "start": 1104,
       "end": 1171,
-      "thumbnailPath": "/example/frames/seg-027.jpg",
+      "thumbnailPath": "/data/frames/seg-027.jpg",
       "confidence": 0.9977
     },
     {
@@ -1793,7 +1793,7 @@
       "pageNumber": 28,
       "start": 1172,
       "end": 1209,
-      "thumbnailPath": "/example/frames/seg-028.jpg",
+      "thumbnailPath": "/data/frames/seg-028.jpg",
       "confidence": 0.9979
     },
     {
@@ -1801,7 +1801,7 @@
       "pageNumber": 29,
       "start": 1210,
       "end": 1236,
-      "thumbnailPath": "/example/frames/seg-029.jpg",
+      "thumbnailPath": "/data/frames/seg-029.jpg",
       "confidence": 0.9973
     },
     {
@@ -1809,7 +1809,7 @@
       "pageNumber": 28,
       "start": 1237,
       "end": 1327,
-      "thumbnailPath": "/example/frames/seg-030.jpg",
+      "thumbnailPath": "/data/frames/seg-030.jpg",
       "confidence": 0.9979
     },
     {
@@ -1817,7 +1817,7 @@
       "pageNumber": 29,
       "start": 1328,
       "end": 1342,
-      "thumbnailPath": "/example/frames/seg-031.jpg",
+      "thumbnailPath": "/data/frames/seg-031.jpg",
       "confidence": 0.9973
     },
     {
@@ -1825,7 +1825,7 @@
       "pageNumber": 30,
       "start": 1343,
       "end": 1407,
-      "thumbnailPath": "/example/frames/seg-032.jpg",
+      "thumbnailPath": "/data/frames/seg-032.jpg",
       "confidence": 0.9976
     },
     {
@@ -1833,7 +1833,7 @@
       "pageNumber": 31,
       "start": 1408,
       "end": 1666,
-      "thumbnailPath": "/example/frames/seg-033.jpg",
+      "thumbnailPath": "/data/frames/seg-033.jpg",
       "confidence": 0.9974
     },
     {
@@ -1841,7 +1841,7 @@
       "pageNumber": 32,
       "start": 1667,
       "end": 1703,
-      "thumbnailPath": "/example/frames/seg-034.jpg",
+      "thumbnailPath": "/data/frames/seg-034.jpg",
       "confidence": 0.9975
     },
     {
@@ -1849,7 +1849,7 @@
       "pageNumber": 33,
       "start": 1704,
       "end": 1808,
-      "thumbnailPath": "/example/frames/seg-035.jpg",
+      "thumbnailPath": "/data/frames/seg-035.jpg",
       "confidence": 0.9974
     },
     {
@@ -1857,7 +1857,7 @@
       "pageNumber": 34,
       "start": 1809,
       "end": 1851,
-      "thumbnailPath": "/example/frames/seg-036.jpg",
+      "thumbnailPath": "/data/frames/seg-036.jpg",
       "confidence": 0.9975
     },
     {
@@ -1865,7 +1865,7 @@
       "pageNumber": 35,
       "start": 1852,
       "end": 1898,
-      "thumbnailPath": "/example/frames/seg-037.jpg",
+      "thumbnailPath": "/data/frames/seg-037.jpg",
       "confidence": 0.9976
     },
     {
@@ -1873,7 +1873,7 @@
       "pageNumber": 36,
       "start": 1899,
       "end": 1954,
-      "thumbnailPath": "/example/frames/seg-038.jpg",
+      "thumbnailPath": "/data/frames/seg-038.jpg",
       "confidence": 0.9953
     },
     {
@@ -1881,7 +1881,7 @@
       "pageNumber": 37,
       "start": 1955,
       "end": 1980,
-      "thumbnailPath": "/example/frames/seg-039.jpg",
+      "thumbnailPath": "/data/frames/seg-039.jpg",
       "confidence": 0.9948
     },
     {
@@ -1889,7 +1889,7 @@
       "pageNumber": 38,
       "start": 1981,
       "end": 2000,
-      "thumbnailPath": "/example/frames/seg-040.jpg",
+      "thumbnailPath": "/data/frames/seg-040.jpg",
       "confidence": 0.9971
     },
     {
@@ -1897,7 +1897,7 @@
       "pageNumber": 39,
       "start": 2001,
       "end": 2058,
-      "thumbnailPath": "/example/frames/seg-041.jpg",
+      "thumbnailPath": "/data/frames/seg-041.jpg",
       "confidence": 0.9967
     },
     {
@@ -1905,7 +1905,7 @@
       "pageNumber": 40,
       "start": 2059,
       "end": 2064,
-      "thumbnailPath": "/example/frames/seg-042.jpg",
+      "thumbnailPath": "/data/frames/seg-042.jpg",
       "confidence": 0.9972
     },
     {
@@ -1913,7 +1913,7 @@
       "pageNumber": 41,
       "start": 2065,
       "end": 2108,
-      "thumbnailPath": "/example/frames/seg-043.jpg",
+      "thumbnailPath": "/data/frames/seg-043.jpg",
       "confidence": 0.9969
     },
     {
@@ -1921,7 +1921,7 @@
       "pageNumber": 42,
       "start": 2109,
       "end": 2136,
-      "thumbnailPath": "/example/frames/seg-044.jpg",
+      "thumbnailPath": "/data/frames/seg-044.jpg",
       "confidence": 0.9966
     },
     {
@@ -1929,7 +1929,7 @@
       "pageNumber": 43,
       "start": 2137,
       "end": 2147,
-      "thumbnailPath": "/example/frames/seg-045.jpg",
+      "thumbnailPath": "/data/frames/seg-045.jpg",
       "confidence": 0.9969
     },
     {
@@ -1937,7 +1937,7 @@
       "pageNumber": 42,
       "start": 2148,
       "end": 2189,
-      "thumbnailPath": "/example/frames/seg-046.jpg",
+      "thumbnailPath": "/data/frames/seg-046.jpg",
       "confidence": 0.9965
     },
     {
@@ -1945,7 +1945,7 @@
       "pageNumber": 43,
       "start": 2190,
       "end": 2192,
-      "thumbnailPath": "/example/frames/seg-047.jpg",
+      "thumbnailPath": "/data/frames/seg-047.jpg",
       "confidence": 0.9971
     },
     {
@@ -1953,7 +1953,7 @@
       "pageNumber": 44,
       "start": 2193,
       "end": 2211,
-      "thumbnailPath": "/example/frames/seg-048.jpg",
+      "thumbnailPath": "/data/frames/seg-048.jpg",
       "confidence": 0.9985
     },
     {
@@ -1961,7 +1961,7 @@
       "pageNumber": 45,
       "start": 2212,
       "end": 2229,
-      "thumbnailPath": "/example/frames/seg-049.jpg",
+      "thumbnailPath": "/data/frames/seg-049.jpg",
       "confidence": 0.9982
     },
     {
@@ -1969,7 +1969,7 @@
       "pageNumber": 46,
       "start": 2230,
       "end": 2248,
-      "thumbnailPath": "/example/frames/seg-050.jpg",
+      "thumbnailPath": "/data/frames/seg-050.jpg",
       "confidence": 0.9964
     },
     {
@@ -1977,7 +1977,7 @@
       "pageNumber": 47,
       "start": 2249,
       "end": 2287,
-      "thumbnailPath": "/example/frames/seg-051.jpg",
+      "thumbnailPath": "/data/frames/seg-051.jpg",
       "confidence": 0.9978
     },
     {
@@ -1985,7 +1985,7 @@
       "pageNumber": 48,
       "start": 2288,
       "end": 2325,
-      "thumbnailPath": "/example/frames/seg-052.jpg",
+      "thumbnailPath": "/data/frames/seg-052.jpg",
       "confidence": 0.9976
     },
     {
@@ -1993,7 +1993,7 @@
       "pageNumber": 49,
       "start": 2326,
       "end": 2397,
-      "thumbnailPath": "/example/frames/seg-053.jpg",
+      "thumbnailPath": "/data/frames/seg-053.jpg",
       "confidence": 0.9987
     },
     {
@@ -2001,7 +2001,7 @@
       "pageNumber": 50,
       "start": 2398,
       "end": 2418,
-      "thumbnailPath": "/example/frames/seg-054.jpg",
+      "thumbnailPath": "/data/frames/seg-054.jpg",
       "confidence": 0.9975
     },
     {
@@ -2009,7 +2009,7 @@
       "pageNumber": 51,
       "start": 2419,
       "end": 2457,
-      "thumbnailPath": "/example/frames/seg-055.jpg",
+      "thumbnailPath": "/data/frames/seg-055.jpg",
       "confidence": 0.9974
     },
     {
@@ -2017,7 +2017,7 @@
       "pageNumber": 52,
       "start": 2458,
       "end": 2515,
-      "thumbnailPath": "/example/frames/seg-056.jpg",
+      "thumbnailPath": "/data/frames/seg-056.jpg",
       "confidence": 0.9901
     },
     {
@@ -2025,7 +2025,7 @@
       "pageNumber": 53,
       "start": 2516,
       "end": 2568,
-      "thumbnailPath": "/example/frames/seg-057.jpg",
+      "thumbnailPath": "/data/frames/seg-057.jpg",
       "confidence": 0.9965
     },
     {
@@ -2033,7 +2033,7 @@
       "pageNumber": 54,
       "start": 2569,
       "end": 2681,
-      "thumbnailPath": "/example/frames/seg-058.jpg",
+      "thumbnailPath": "/data/frames/seg-058.jpg",
       "confidence": 0.9947
     },
     {
@@ -2041,7 +2041,7 @@
       "pageNumber": 55,
       "start": 2682,
       "end": 2737,
-      "thumbnailPath": "/example/frames/seg-059.jpg",
+      "thumbnailPath": "/data/frames/seg-059.jpg",
       "confidence": 0.9967
     },
     {
@@ -2049,7 +2049,7 @@
       "pageNumber": 56,
       "start": 2738,
       "end": 2784,
-      "thumbnailPath": "/example/frames/seg-060.jpg",
+      "thumbnailPath": "/data/frames/seg-060.jpg",
       "confidence": 0.9973
     },
     {
@@ -2057,7 +2057,7 @@
       "pageNumber": 57,
       "start": 2785,
       "end": 2817,
-      "thumbnailPath": "/example/frames/seg-061.jpg",
+      "thumbnailPath": "/data/frames/seg-061.jpg",
       "confidence": 0.9968
     },
     {
@@ -2065,7 +2065,7 @@
       "pageNumber": 58,
       "start": 2818,
       "end": 2840,
-      "thumbnailPath": "/example/frames/seg-062.jpg",
+      "thumbnailPath": "/data/frames/seg-062.jpg",
       "confidence": 0.9959
     },
     {
@@ -2073,7 +2073,7 @@
       "pageNumber": 59,
       "start": 2841,
       "end": 3041,
-      "thumbnailPath": "/example/frames/seg-063.jpg",
+      "thumbnailPath": "/data/frames/seg-063.jpg",
       "confidence": 0.9979
     },
     {
@@ -2081,7 +2081,7 @@
       "pageNumber": 60,
       "start": 3042,
       "end": 3062,
-      "thumbnailPath": "/example/frames/seg-064.jpg",
+      "thumbnailPath": "/data/frames/seg-064.jpg",
       "confidence": 0.9978
     },
     {
@@ -2089,7 +2089,7 @@
       "pageNumber": 61,
       "start": 3063,
       "end": 3073,
-      "thumbnailPath": "/example/frames/seg-065.jpg",
+      "thumbnailPath": "/data/frames/seg-065.jpg",
       "confidence": 0.9982
     },
     {
@@ -2097,7 +2097,7 @@
       "pageNumber": 62,
       "start": 3074,
       "end": 3081,
-      "thumbnailPath": "/example/frames/seg-066.jpg",
+      "thumbnailPath": "/data/frames/seg-066.jpg",
       "confidence": 0.9977
     },
     {
@@ -2105,7 +2105,7 @@
       "pageNumber": 63,
       "start": 3082,
       "end": 3092,
-      "thumbnailPath": "/example/frames/seg-067.jpg",
+      "thumbnailPath": "/data/frames/seg-067.jpg",
       "confidence": 0.9976
     },
     {
@@ -2113,7 +2113,7 @@
       "pageNumber": 64,
       "start": 3093,
       "end": 3110,
-      "thumbnailPath": "/example/frames/seg-068.jpg",
+      "thumbnailPath": "/data/frames/seg-068.jpg",
       "confidence": 0.9972
     },
     {
@@ -2121,7 +2121,7 @@
       "pageNumber": 65,
       "start": 3111,
       "end": 3115,
-      "thumbnailPath": "/example/frames/seg-069.jpg",
+      "thumbnailPath": "/data/frames/seg-069.jpg",
       "confidence": 0.9984
     },
     {
@@ -2129,7 +2129,7 @@
       "pageNumber": 66,
       "start": 3116,
       "end": 3129,
-      "thumbnailPath": "/example/frames/seg-070.jpg",
+      "thumbnailPath": "/data/frames/seg-070.jpg",
       "confidence": 0.9983
     },
     {
@@ -2137,7 +2137,7 @@
       "pageNumber": 67,
       "start": 3130,
       "end": 3149,
-      "thumbnailPath": "/example/frames/seg-071.jpg",
+      "thumbnailPath": "/data/frames/seg-071.jpg",
       "confidence": 0.998
     }
   ]

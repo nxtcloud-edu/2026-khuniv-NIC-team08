@@ -5,11 +5,11 @@ dist
 PLAN.md
 ROLE.md
 .review-*
-/example/20260708_딥러닝_1.mp4
+/data/20260708_딥러닝_1.mp4
 
 .env
 .env.local
 .env.*.local
 
 # LLM 주석 캐시 (재생성 비용 절약용, 재현에는 불필요)
-example/.llm-cache.json
+data/.llm-cache.json

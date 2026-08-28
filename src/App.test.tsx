@@ -119,7 +119,7 @@ describe("App 통합 흐름", () => {
     ).toBeInTheDocument();
     expect(screen.getByLabelText("강의 영상 플레이어")).toHaveAttribute(
       "src",
-      "/example/lecture.mp4",
+      "/data/lecture.mp4",
     );
   });
 
